@@ -51,7 +51,7 @@ public class Result extends JPanel {
 		int dataStartFrom=80;
 		
 		JLabel lblSrno = new JLabel("S.No");
-		lblSrno.setFont(new Font("Franklin Gothic Book", Font.BOLD, 18));
+		lblSrno.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		lblSrno.setBackground(SystemColor.activeCaption);
 		lblSrno.setBounds(10, 11, 51, 25);
 		p.add(lblSrno);
@@ -60,7 +60,7 @@ public class Result extends JPanel {
 		for(int i=0;i<noOfCol;i++)
 		{
 			lblColHead[i] = new JLabel(colHead[i]);
-			lblColHead[i].setFont(new Font("Franklin Gothic Book", Font.BOLD, 18));
+			lblColHead[i].setFont(new Font("Kayak Sans", Font.BOLD, 18));
 			lblColHead[i].setBackground(SystemColor.RED);
 			lblColHead[i].setHorizontalAlignment(JLabel.CENTER);
 			lblColHead[i].setBounds(dataStartFrom+150*i+distanceBetweenTwoColoumns*i, 11, 150, 25);

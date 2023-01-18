@@ -117,7 +117,7 @@ public class EditCourse extends JPanel implements ItemListener{
 		
 		updateEachMark = new JComboBox<Integer>();
 		updateEachMark.setModel(new DefaultComboBoxModel<Integer>(new Integer[] {1,2,3,4,5,6,7,8}));
-		updateEachMark.setFont(new Font("SimSun", Font.BOLD, 19));
+		updateEachMark.setFont(new Font("Kayak Sans", Font.BOLD, 19));
 		updateEachMark.setBounds(862, 261, 57, 21);
 		updateEachMark.setSelectedIndex(eachMark-1);
 		add(updateEachMark);
@@ -134,7 +134,8 @@ public class EditCourse extends JPanel implements ItemListener{
 		add(lblTotalQuestions);
 		
 		JButton save = new JButton("Save");
-		save.setForeground(new Color(128, 0, 128));
+		save.setBorder(new LineBorder(new Color(0, 0, 140), 1, true));
+		save.setForeground(new Color(0,0,140));
 		save.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -157,15 +158,15 @@ public class EditCourse extends JPanel implements ItemListener{
 		});
 		
 		JButton back = new JButton("BACK");
-		back.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+		back.setBorder(new LineBorder(new Color(0, 0, 140), 1, true));
 		back.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				MainFrame.AddPanel(new CoursePanel());
 			}
 		});
-		back.setForeground(new Color(255, 20, 147));
-		back.setFont(new Font("Courier New", Font.PLAIN, 18));
-		back.setBounds(882, 11, 98, 54);
+		back.setForeground(new Color(0,0,140));
+		back.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
+		back.setBounds(10, 600, 89, 50);
 		add(back);
 
 		JLabel label_1 = new JLabel(":");
@@ -212,8 +213,8 @@ public class EditCourse extends JPanel implements ItemListener{
 		JLabel lblCourseName = new JLabel("Course Name");
 		lblCourseName.setBounds(781, 113, 87, 24);
 		add(lblCourseName);
-		save.setFont(new Font("Courier New", Font.PLAIN, 18));
-		save.setBounds(882, 495, 98, 54);
+		save.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
+		save.setBounds(1170, 600, 100, 50);
 		add(save);
 				
 		jt=new JTabbedPane();
@@ -227,14 +228,14 @@ public class EditCourse extends JPanel implements ItemListener{
 		JLabel lblOnlineExamination = new JLabel("Course : "+CourseName);
 		lblOnlineExamination.setBounds(10, 11, 501, 68);
 		lblOnlineExamination.setForeground(new Color(25, 25, 112));
-		lblOnlineExamination.setBackground(Color.GREEN);
+		lblOnlineExamination.setBackground(Color.WHITE);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
-		lblOnlineExamination.setFont(new Font("Lucida Handwriting", Font.BOLD, 41));
+		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		add(lblOnlineExamination);
 		
 		JCheckBox chckbxHide = new JCheckBox("HIDE");
 		chckbxHide.setOpaque(false);
-		chckbxHide.setFont(new Font("Corbel", Font.BOLD, 18));
+		chckbxHide.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		chckbxHide.setBounds(781, 26, 76, 24);
 		add(chckbxHide);
 		chckbxHide.addItemListener(this);
@@ -244,9 +245,9 @@ public class EditCourse extends JPanel implements ItemListener{
 			chckbxHide.setSelected(false);
 			
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(0, 0, 990, 558);
-		lblNewLabel.setIcon(new ImageIcon("..\\images\\PIC19.PNG"));
-		lblNewLabel.setBorder(new LineBorder(new Color(0, 128, 0), 4));
+		lblNewLabel.setBounds(0, 0, 1920, 1080);
+		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
+		lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		add(lblNewLabel);
 		
@@ -266,7 +267,7 @@ public class EditCourse extends JPanel implements ItemListener{
 	private JPanel New()
 	{
 		JPanel New=new JPanel();
-		New.setBackground(new Color(50, 205, 50));
+		New.setBackground(new Color(255,255,255));
 		New.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -276,46 +277,46 @@ public class EditCourse extends JPanel implements ItemListener{
 		
 		NqStatement = new JTextArea();
 		NqStatement.setBorder(new LineBorder(new Color(65, 105, 225), 2, true));
-		NqStatement.setFont(new Font("Monospaced", Font.BOLD, 20));
+		NqStatement.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		
 		NqID = new JTextField();
 		NqID.setBounds(182, 15, 147, 20);
-		NqID.setFont(new Font("Rod", Font.BOLD, 18));
+		NqID.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		New.add(NqID);
 		scrollPane.setViewportView(NqStatement);
 		
 		JLabel lblQuestionId = new JLabel(" Question ID : ");
 		lblQuestionId.setBounds(10, 11, 165, 23);
-		lblQuestionId.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 18));
+		lblQuestionId.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		New.add(lblQuestionId);
 		
 		JLabel lblQuestionStatement = new JLabel("Question statement : ");
-		lblQuestionStatement.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 18));
+		lblQuestionStatement.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		lblQuestionStatement.setBounds(20, 46, 230, 23);
 		New.add(lblQuestionStatement);
 		
 		JLabel lblOption = new JLabel("Option 1");
-		lblOption.setFont(new Font("Monospaced", Font.BOLD, 18));
+		lblOption.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		lblOption.setBounds(53, 231, 91, 23);
 		New.add(lblOption);
 		
 		JLabel lblOption_1 = new JLabel("Option 2");
-		lblOption_1.setFont(new Font("Monospaced", Font.BOLD, 18));
+		lblOption_1.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		lblOption_1.setBounds(53, 265, 91, 23);
 		New.add(lblOption_1);
 		
 		JLabel lblOption_2 = new JLabel("Option 3");
-		lblOption_2.setFont(new Font("Monospaced", Font.BOLD, 18));
+		lblOption_2.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		lblOption_2.setBounds(53, 299, 91, 23);
 		New.add(lblOption_2);
 		
 		JLabel lblOption_3 = new JLabel("Option 4");
-		lblOption_3.setFont(new Font("Monospaced", Font.BOLD, 18));
+		lblOption_3.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		lblOption_3.setBounds(53, 333, 91, 23);
 		New.add(lblOption_3);
 		
 		JLabel lblCorrectOption = new JLabel("Correct option : ");
-		lblCorrectOption.setFont(new Font("Monospaced", Font.BOLD, 18));
+		lblCorrectOption.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		lblCorrectOption.setBounds(53, 380, 187, 23);
 		New.add(lblCorrectOption);
 		
@@ -332,22 +333,22 @@ public class EditCourse extends JPanel implements ItemListener{
 		});
 		
 		No1 = new JTextField();
-		No1.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		No1.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		No1.setBounds(154, 231, 560, 20);
 		New.add(No1);
 		
 		No2 = new JTextField();
-		No2.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		No2.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		No2.setBounds(154, 269, 560, 20);
 		New.add(No2);
 		
 		No3 = new JTextField();
-		No3.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		No3.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		No3.setBounds(154, 298, 560, 20);
 		New.add(No3);
 		
 		No4 = new JTextField();
-		No4.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		No4.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		No4.setBounds(154, 336, 560, 20);
 		New.add(No4);
 		
@@ -378,8 +379,9 @@ public class EditCourse extends JPanel implements ItemListener{
 				}
 			}
 		});
-		btnSave.setForeground(new Color(139, 0, 0));
-		btnSave.setFont(new Font("Simplified Arabic Fixed", Font.PLAIN, 18));
+		btnSave.setForeground(new Color( 0, 0,140));
+		btnSave.setBackground(new Color(215,215,255));
+		btnSave.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		btnSave.setBounds(594, 375, 120, 37);
 		New.add(btnSave);
 		return New;
@@ -396,22 +398,22 @@ public class EditCourse extends JPanel implements ItemListener{
 	private JPanel View()
 	{
 		JPanel View=new JPanel();
-		View.setBackground(Color.PINK);
+		View.setBackground(Color.WHITE);
 		View.setLayout(null);
 		
 		VcorrectOptionLabel = new JLabel();
-		VcorrectOptionLabel.setFont(new Font("Courier New", Font.PLAIN, 16));
+		VcorrectOptionLabel.setFont(new Font("Kayak Sans", Font.PLAIN, 16));
 		VcorrectOptionLabel.setBounds(246, 381, 105, 21);
 		View.add(VcorrectOptionLabel);
 		
 		JLabel label = new JLabel(" Question ID : ");
 		label.setBounds(10, 12, 148, 23);
-		label.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 18));
+		label.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		View.add(label);
 		
 		JLabel label_1 = new JLabel("Question statement : ");
 		label_1.setBounds(20, 46, 218, 23);
-		label_1.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 18));
+		label_1.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		View.add(label_1);
 		
 		VqIdCombo = new JComboBox<String>();
@@ -447,52 +449,52 @@ public class EditCourse extends JPanel implements ItemListener{
 		
 		VqStatement = new JTextArea();
 		VqStatement.setEditable(false);
-		VqStatement.setFont(new Font("Monospaced", Font.BOLD, 20));
+		VqStatement.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		VqStatement.setBorder(new LineBorder(new Color(65, 105, 225), 2, true));
 		scrollPane.setViewportView(VqStatement);
 		
 		JLabel label_2 = new JLabel("Option 1");
-		label_2.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_2.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_2.setBounds(47, 232, 91, 23);
 		View.add(label_2);
 		
 		JLabel label_3 = new JLabel("Option 2");
-		label_3.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_3.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_3.setBounds(47, 266, 91, 23);
 		View.add(label_3);
 		
 		JLabel label_4 = new JLabel("Option 3");
-		label_4.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_4.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_4.setBounds(47, 300, 91, 23);
 		View.add(label_4);
 		
 		JLabel label_5 = new JLabel("Option 4");
-		label_5.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_5.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_5.setBounds(47, 334, 91, 23);
 		View.add(label_5);
 		
 		JLabel label_6 = new JLabel("Correct option : ");
-		label_6.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_6.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_6.setBounds(47, 381, 187, 23);
 		View.add(label_6);
 		
 		Vo1 = new JTextField();
-		Vo1.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		Vo1.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		Vo1.setBounds(156, 232, 560, 20);
 		View.add(Vo1);
 		
 		Vo2 = new JTextField();
-		Vo2.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		Vo2.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		Vo2.setBounds(156, 270, 560, 20);
 		View.add(Vo2);
 		
 		Vo3 = new JTextField();
-		Vo3.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		Vo3.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		Vo3.setBounds(156, 299, 560, 20);
 		View.add(Vo3);
 		
 		Vo4 = new JTextField();
-		Vo4.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		Vo4.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		Vo4.setBounds(156, 337, 560, 20);
 		View.add(Vo4);
 		return View;
@@ -517,63 +519,63 @@ public class EditCourse extends JPanel implements ItemListener{
 		Update.add(scrollPane);
 		
 		UqStatement = new JTextArea();
-		UqStatement.setFont(new Font("Monospaced", Font.BOLD, 20));
+		UqStatement.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		UqStatement.setBorder(new LineBorder(new Color(65, 105, 225), 2, true));
 		scrollPane.setViewportView(UqStatement);
 		
 		
 		JLabel label = new JLabel(" Question ID : ");
-		label.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 18));
+		label.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label.setBounds(12, 12, 165, 23);
 		Update.add(label);
 		
 		JLabel label_1 = new JLabel("Question statement : ");
-		label_1.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 18));
+		label_1.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_1.setBounds(22, 47, 230, 23);
 		Update.add(label_1);
 		
 		JLabel label_2 = new JLabel("Option 1");
-		label_2.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_2.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_2.setBounds(55, 232, 91, 23);
 		Update.add(label_2);
 		
 		Uo1 = new JTextField();
-		Uo1.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		Uo1.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		Uo1.setBounds(156, 232, 560, 20);
 		Update.add(Uo1);
 		
 		JLabel label_3 = new JLabel("Option 2");
-		label_3.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_3.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_3.setBounds(55, 266, 91, 23);
 		Update.add(label_3);
 		
 		Uo2 = new JTextField();
-		Uo2.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		Uo2.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		Uo2.setBounds(156, 270, 560, 20);
 		Update.add(Uo2);
 		
 		JLabel label_4 = new JLabel("Option 3");
-		label_4.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_4.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_4.setBounds(55, 300, 91, 23);
 		Update.add(label_4);
 		
 		Uo3 = new JTextField();
-		Uo3.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		Uo3.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		Uo3.setBounds(156, 299, 560, 20);
 		Update.add(Uo3);
 		
 		JLabel label_5 = new JLabel("Option 4");
-		label_5.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_5.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_5.setBounds(55, 334, 91, 23);
 		Update.add(label_5);
 		
 		Uo4 = new JTextField();
-		Uo4.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		Uo4.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		Uo4.setBounds(156, 337, 560, 20);
 		Update.add(Uo4);
 		
 		JLabel label_6 = new JLabel("Correct option : ");
-		label_6.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_6.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_6.setBounds(55, 381, 187, 23);
 		Update.add(label_6);
 		
@@ -608,7 +610,7 @@ public class EditCourse extends JPanel implements ItemListener{
 		
 		UcorrectOptionS = new JComboBox<String>();
 		UcorrectOptionS.setModel(new DefaultComboBoxModel<String>(new String[] {"Option 1", "Option 2", "Option 3", "Option 4"}));
-		UcorrectOptionS.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
+		UcorrectOptionS.setFont(new Font("Kayak Sans", Font.PLAIN, 13));
 		UcorrectOptionS.setBounds(260, 383, 78, 23);
 		Update.add(UcorrectOptionS);
 		UcorrectOptionS.addActionListener(new ActionListener() {
@@ -648,8 +650,8 @@ public class EditCourse extends JPanel implements ItemListener{
 				}
 			}
 		});
-		btnUpdate.setForeground(new Color(139, 0, 0));
-		btnUpdate.setFont(new Font("Simplified Arabic Fixed", Font.PLAIN, 18));
+		btnUpdate.setForeground(new Color( 0, 0,140));
+		btnUpdate.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		btnUpdate.setBounds(597, 376, 120, 31);
 		Update.add(btnUpdate);
 		return Update;
@@ -665,21 +667,21 @@ public class EditCourse extends JPanel implements ItemListener{
 	private JPanel Remove()
 	{
 		JPanel Remove=new JPanel();
-		Remove.setBackground(new Color(255, 99, 71));
+		Remove.setBackground(new Color(0,0,140));
 		Remove.setLayout(null);
 		
 		RcorrectOptionLabel = new JLabel("");
-		RcorrectOptionLabel.setFont(new Font("Courier New", Font.PLAIN, 16));
+		RcorrectOptionLabel.setFont(new Font("Kayak Sans", Font.PLAIN, 16));
 		RcorrectOptionLabel.setBounds(248, 381, 105, 21);
 		Remove.add(RcorrectOptionLabel);
 		
 		JLabel label = new JLabel(" Question ID : ");
-		label.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 18));
+		label.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label.setBounds(12, 12, 148, 23);
 		Remove.add(label);
 		
 		JLabel label_1 = new JLabel("Question statement : ");
-		label_1.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 18));
+		label_1.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_1.setBounds(22, 46, 218, 23);
 		Remove.add(label_1);
 		
@@ -718,32 +720,32 @@ public class EditCourse extends JPanel implements ItemListener{
 		
 		RqStatement = new JTextArea();
 		RqStatement.setEditable(false);
-		RqStatement.setFont(new Font("Monospaced", Font.BOLD, 20));
+		RqStatement.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		RqStatement.setBorder(new LineBorder(new Color(65, 105, 225), 2, true));
 		scrollPane.setViewportView(RqStatement);
 		
 		JLabel label_2 = new JLabel("Option 1");
-		label_2.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_2.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_2.setBounds(49, 232, 91, 23);
 		Remove.add(label_2);
 		
 		JLabel label_3 = new JLabel("Option 2");
-		label_3.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_3.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_3.setBounds(49, 266, 91, 23);
 		Remove.add(label_3);
 		
 		JLabel label_4 = new JLabel("Option 3");
-		label_4.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_4.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_4.setBounds(49, 300, 91, 23);
 		Remove.add(label_4);
 		
 		JLabel label_5 = new JLabel("Option 4");
-		label_5.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_5.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_5.setBounds(49, 334, 91, 23);
 		Remove.add(label_5);
 		
 		JLabel label_6 = new JLabel("Correct option : ");
-		label_6.setFont(new Font("Monospaced", Font.BOLD, 18));
+		label_6.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label_6.setBounds(49, 381, 187, 23);
 		Remove.add(label_6);
 		
@@ -760,28 +762,28 @@ public class EditCourse extends JPanel implements ItemListener{
 				}		
 			}
 		});
-		btnRemove.setForeground(new Color(139, 0, 0));
-		btnRemove.setFont(new Font("Simplified Arabic Fixed", Font.PLAIN, 18));
+		btnRemove.setForeground(new Color( 0, 0,140));
+		btnRemove.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		btnRemove.setBounds(605, 381, 120, 37);
 		Remove.add(btnRemove);
 		
 		Ro1 = new JTextField();
-		Ro1.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		Ro1.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		Ro1.setBounds(158, 232, 560, 20);
 		Remove.add(Ro1);
 		
 		Ro2 = new JTextField();
-		Ro2.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		Ro2.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		Ro2.setBounds(158, 270, 560, 20);
 		Remove.add(Ro2);
 		
 		Ro3 = new JTextField();
-		Ro3.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		Ro3.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		Ro3.setBounds(158, 299, 560, 20);
 		Remove.add(Ro3);
 		
 		Ro4 = new JTextField();
-		Ro4.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		Ro4.setFont(new Font("Kayak Sans", Font.BOLD, 12));
 		Ro4.setBounds(158, 337, 560, 20);
 		Remove.add(Ro4);
 		return Remove;

@@ -32,59 +32,59 @@ public class ShowResult extends JPanel {
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(SystemColor.inactiveCaption);
-		panel.setBounds(208, 109, 575, 401);
+		panel.setBounds(400, 109, 575, 420);
 		add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblCourseName = new JLabel("Course name : ");
-		lblCourseName.setFont(new Font("Shruti", Font.PLAIN, 18));
+		lblCourseName.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		lblCourseName.setBounds(39, 11, 202, 31);
 		panel.add(lblCourseName);
 		
 		JLabel lblCourseName_1 = new JLabel("Time taken : ");
-		lblCourseName_1.setFont(new Font("Shruti", Font.PLAIN, 18));
+		lblCourseName_1.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		lblCourseName_1.setBounds(39, 53, 202, 31);
 		panel.add(lblCourseName_1);
 		
 		JLabel lblTotalQuestions = new JLabel("Total questions : ");
-		lblTotalQuestions.setFont(new Font("Shruti", Font.PLAIN, 18));
+		lblTotalQuestions.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		lblTotalQuestions.setBounds(39, 95, 202, 31);
 		panel.add(lblTotalQuestions);
 		
 		JLabel lblAttemptedQuestions = new JLabel("Attempted questions : ");
-		lblAttemptedQuestions.setFont(new Font("Shruti", Font.PLAIN, 18));
+		lblAttemptedQuestions.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		lblAttemptedQuestions.setBounds(39, 137, 202, 31);
 		panel.add(lblAttemptedQuestions);
 		
 		JLabel lblCorrectQuestions = new JLabel("Correct questions : ");
-		lblCorrectQuestions.setFont(new Font("Shruti", Font.PLAIN, 18));
+		lblCorrectQuestions.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		lblCorrectQuestions.setBounds(39, 179, 202, 31);
 		panel.add(lblCorrectQuestions);
 		
 		JLabel lblWrongQuestions = new JLabel("Wrong questions : ");
-		lblWrongQuestions.setFont(new Font("Shruti", Font.PLAIN, 18));
+		lblWrongQuestions.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		lblWrongQuestions.setBounds(39, 221, 202, 31);
 		panel.add(lblWrongQuestions);
 		
 		JLabel lblScore = new JLabel("Marks obtained : ");
-		lblScore.setFont(new Font("Shruti", Font.PLAIN, 18));
+		lblScore.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		lblScore.setBounds(39, 263, 202, 31);
 		panel.add(lblScore);
 		
 		JLabel lblTotalMarks = new JLabel("Total marks : ");
-		lblTotalMarks.setFont(new Font("Shruti", Font.PLAIN, 18));
+		lblTotalMarks.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		lblTotalMarks.setBounds(39, 305, 202, 31);
 		panel.add(lblTotalMarks);
 		
 		JLabel lblPercentage = new JLabel("Percentage : ");
-		lblPercentage.setFont(new Font("Shruti", Font.PLAIN, 18));
+		lblPercentage.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		lblPercentage.setBounds(39, 347, 202, 31);
 		panel.add(lblPercentage);
 		
 		JLabel r0 = new JLabel(r[0]);
 		r0.setHorizontalTextPosition(SwingConstants.CENTER);
 		r0.setHorizontalAlignment(SwingConstants.CENTER);
-		r0.setFont(new Font("Raavi", Font.BOLD, 20));
+		r0.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		r0.setBounds(296, 11, 180, 31);
 		panel.add(r0);
 		
@@ -92,7 +92,7 @@ public class ShowResult extends JPanel {
 		r1.setForeground(Color.BLACK);
 		r1.setHorizontalTextPosition(SwingConstants.CENTER);
 		r1.setHorizontalAlignment(SwingConstants.CENTER);
-		r1.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		r1.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		r1.setBounds(296, 55, 180, 31);
 		panel.add(r1);
 		
@@ -100,7 +100,7 @@ public class ShowResult extends JPanel {
 		r2.setForeground(Color.BLACK);
 		r2.setHorizontalTextPosition(SwingConstants.CENTER);
 		r2.setHorizontalAlignment(SwingConstants.CENTER);
-		r2.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		r2.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		r2.setBounds(296, 95, 180, 31);
 		panel.add(r2);
 		
@@ -108,7 +108,7 @@ public class ShowResult extends JPanel {
 		r3.setForeground(Color.BLACK);
 		r3.setHorizontalTextPosition(SwingConstants.CENTER);
 		r3.setHorizontalAlignment(SwingConstants.CENTER);
-		r3.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		r3.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		r3.setBounds(296, 137, 180, 31);
 		panel.add(r3);
 		
@@ -116,7 +116,7 @@ public class ShowResult extends JPanel {
 		r4.setForeground(Color.BLACK);
 		r4.setHorizontalTextPosition(SwingConstants.CENTER);
 		r4.setHorizontalAlignment(SwingConstants.CENTER);
-		r4.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		r4.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		r4.setBounds(296, 179, 180, 31);
 		panel.add(r4);
 		
@@ -124,7 +124,7 @@ public class ShowResult extends JPanel {
 		r5.setForeground(Color.BLACK);
 		r5.setHorizontalTextPosition(SwingConstants.CENTER);
 		r5.setHorizontalAlignment(SwingConstants.CENTER);
-		r5.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		r5.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		r5.setBounds(296, 221, 180, 31);
 		panel.add(r5);
 		
@@ -132,7 +132,7 @@ public class ShowResult extends JPanel {
 		r6.setForeground(Color.BLACK);
 		r6.setHorizontalTextPosition(SwingConstants.CENTER);
 		r6.setHorizontalAlignment(SwingConstants.CENTER);
-		r6.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		r6.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		r6.setBounds(296, 263, 180, 31);
 		panel.add(r6);
 		
@@ -140,7 +140,7 @@ public class ShowResult extends JPanel {
 		r7.setForeground(Color.BLACK);
 		r7.setHorizontalTextPosition(SwingConstants.CENTER);
 		r7.setHorizontalAlignment(SwingConstants.CENTER);
-		r7.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		r7.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		r7.setBounds(296, 305, 180, 31);
 		panel.add(r7);
 		
@@ -148,7 +148,7 @@ public class ShowResult extends JPanel {
 		label_8.setForeground(Color.BLACK);
 		label_8.setHorizontalTextPosition(SwingConstants.CENTER);
 		label_8.setHorizontalAlignment(SwingConstants.CENTER);
-		label_8.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		label_8.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		label_8.setBounds(296, 347, 180, 31);
 		panel.add(label_8);
 		
@@ -174,9 +174,9 @@ public class ShowResult extends JPanel {
 				}
 			}
 		});
-		save.setForeground(new Color(0, 255, 0));
-		save.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		save.setBounds(862, 511, 120, 36);
+		save.setForeground(new Color(0, 0, 140));
+		save.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		save.setBounds(1150, 550, 120, 50);
 		add(save);
 		
 		JButton Discard = new JButton("DISCARD");
@@ -186,24 +186,24 @@ public class ShowResult extends JPanel {
 				MainFrame.AddPanel(new UserPanel(Username));
 			}
 		});
-		Discard.setForeground(new Color(255, 0, 0));
-		Discard.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		Discard.setBounds(10, 511, 152, 36);
+		Discard.setForeground(new Color(0, 0, 140));
+		Discard.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		Discard.setBounds(10, 550, 152, 50);
 		add(Discard);
 		
 		JLabel lblOnlineExamination = new JLabel("RESULT");
-		lblOnlineExamination.setForeground(new Color(240, 255, 240));
+		lblOnlineExamination.setForeground(new Color(0, 0, 140));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
-		lblOnlineExamination.setFont(new Font("Lucida Handwriting", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(361, 43, 270, 72);
+		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
+		lblOnlineExamination.setBounds(500, 43, 270, 72);
 		add(lblOnlineExamination);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("..\\images\\PIC22.PNG"));
-		lblNewLabel.setBorder(new LineBorder(new Color(255, 0, 0), 4));
+		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
+		lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel.setBounds(0, 0, 990, 558);
+		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
 	}
 }

@@ -48,9 +48,9 @@ public class CoursePanel extends JPanel {
 		CD=new CourseDetails();
 		
 		comboBox= new JComboBox<String>();
-		comboBox.setFont(new Font("Verdana", Font.BOLD, 18));
+		comboBox.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		comboBox.setModel(new DefaultComboBoxModel<String>(CD.Courses));
-		comboBox.setBounds(320, 223, 206, 36);
+		comboBox.setBounds(400, 223, 206, 36);
 		comboBox.setSelectedIndex(-1);
 		add(comboBox);
 //		SelectedCourse=CD.Courses[0];
@@ -71,9 +71,9 @@ public class CoursePanel extends JPanel {
 					JOptionPane.showMessageDialog(null, "No course selected.\nSelect course first.");
 			}
 		});
-		btnViewCourse.setForeground(new Color(119, 136, 153));
-		btnViewCourse.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnViewCourse.setBounds(542, 224, 206, 36);
+		btnViewCourse.setForeground(new Color(0,0,140));
+		btnViewCourse.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnViewCourse.setBounds(622, 224, 206, 36);
 		add(btnViewCourse);
 		
 		JButton btnDeleteCourse = new JButton("DELETE COURSE");
@@ -103,9 +103,9 @@ public class CoursePanel extends JPanel {
 				}
 			}
 		});
-		btnDeleteCourse.setForeground(new Color(255, 0, 0));
-		btnDeleteCourse.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnDeleteCourse.setBounds(542, 271, 206, 36);
+		btnDeleteCourse.setForeground(new Color(0, 0,140));
+		btnDeleteCourse.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnDeleteCourse.setBounds(622, 271, 206, 36);
 		add(btnDeleteCourse);
 		
 		JButton btnAddNewCourse = new JButton("ADD NEW COURSE");
@@ -115,9 +115,9 @@ public class CoursePanel extends JPanel {
 				MainFrame.AddPanel(new AddNewCourse());
 			}
 		});
-		btnAddNewCourse.setForeground(new Color(0, 255, 0));
-		btnAddNewCourse.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnAddNewCourse.setBounds(304, 318, 444, 88);
+		btnAddNewCourse.setForeground(new Color(0,0,140));
+		btnAddNewCourse.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnAddNewCourse.setBounds(400, 318, 444, 88);
 		add(btnAddNewCourse);
 		
 		JButton btnNewButton = new JButton("BACK");
@@ -126,25 +126,25 @@ public class CoursePanel extends JPanel {
 				MainFrame.AddPanel(new MainAdmin());
 			}
 		});
-		btnNewButton.setForeground(new Color(75, 0, 130));
-		btnNewButton.setBackground(new Color(250, 128, 114));
-		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnNewButton.setBounds(10, 511, 89, 36);
+		btnNewButton.setForeground(new Color(0,0,140));
+		btnNewButton.setBackground(new Color(215,215,255));
+		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("MANAGE COURSES");
-		lblOnlineExamination.setForeground(new Color(176, 224, 230));
+		lblOnlineExamination.setForeground(new Color(0,0,140));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
-		lblOnlineExamination.setFont(new Font("Lucida Handwriting", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(194, 30, 603, 105);
+		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
+		lblOnlineExamination.setBounds(350, 30, 603, 105);
 		add(lblOnlineExamination);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("..\\images\\PIC16.PNG"));
-		lblNewLabel.setBorder(new LineBorder(new Color(0, 128, 0), 4));
+		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
+		lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel.setBounds(0, 0, 990, 558);
+		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
 
 	}

@@ -1,18 +1,11 @@
 package admin;
 
 import java.awt.Color;
-
-
-
-
-
 import java.awt.Font;
-import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.sql.Statement;
-
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -20,11 +13,12 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
-import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
-import results.CourseResult;
-import main.MainFrame;
+import javax.swing.border.MatteBorder;
+
 import database.Connect;
+import main.MainFrame;
+import results.CourseResult;
 
 @SuppressWarnings("serial")
 public class CoursesResult extends JPanel {
@@ -71,30 +65,31 @@ public class CoursesResult extends JPanel {
 				setLayout(null);
 				
 				JButton btnSearch = new JButton("SEARCH");
+				btnSearch.setToolTipText("SEARCH");
 				btnSearch.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
 						//Show details of that username
 						new CourseResult(CourseName);
 					}
 				});
-				btnSearch.setForeground(new Color(188, 143, 143));
-				btnSearch.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-				btnSearch.setBackground(SystemColor.textInactiveText);
-				btnSearch.setBounds(739, 223, 125, 36);
+				btnSearch.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
+				btnSearch.setForeground(new Color(0, 0, 140));
+				btnSearch.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+				btnSearch.setBounds(800, 223, 125, 36);
 				add(btnSearch);
 				
 				
 				
 				JLabel lblUsersForVerification = new JLabel("Available Courses");
-				lblUsersForVerification.setForeground(new Color(220, 20, 60));
-				lblUsersForVerification.setFont(new Font("Sylfaen", Font.BOLD, 18));
-				lblUsersForVerification.setBounds(234, 223, 156, 28);
+				lblUsersForVerification.setForeground(new Color(0,0,140));
+				lblUsersForVerification.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+				lblUsersForVerification.setBounds(300, 223, 156, 28);
 				add(lblUsersForVerification);
 				
 				comboBox = new JComboBox<String>();
 				comboBox.setModel(new DefaultComboBoxModel<String>(DATA));
-				comboBox.setFont(new Font("Shruti", Font.BOLD, 16));
-				comboBox.setBounds(434, 223, 266, 30);
+				comboBox.setFont(new Font("Kayak Sans", Font.BOLD, 16));
+				comboBox.setBounds(500, 223, 266, 30);
 				add(comboBox);
 				CourseName=DATA[0];
 				comboBox.addActionListener(new ActionListener() {
@@ -110,25 +105,25 @@ public class CoursesResult extends JPanel {
 						MainFrame.AddPanel(new MainAdmin());
 					}
 				});
-				btnNewButton.setForeground(new Color(0, 0, 205));
-				btnNewButton.setBackground(UIManager.getColor("Button.disabledForeground"));
-				btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-				btnNewButton.setBounds(10, 512, 125, 36);
+				btnNewButton.setForeground(new Color(0, 0, 140));
+				btnNewButton.setBackground(new Color(215, 215, 255));
+				btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+				btnNewButton.setBounds(10, 600, 89, 50);
 				add(btnNewButton);
 				
 				JLabel lblOnlineExamination = new JLabel("COURSES");
-				lblOnlineExamination.setForeground(new Color(139, 0, 0));
+				lblOnlineExamination.setForeground(new Color(0,0,140));
 				lblOnlineExamination.setBackground(Color.GREEN);
 				lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
-				lblOnlineExamination.setFont(new Font("Lucida Handwriting", Font.BOLD, 41));
-				lblOnlineExamination.setBounds(307, 28, 378, 82);
+				lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
+				lblOnlineExamination.setBounds(400, 28, 378, 82);
 				add(lblOnlineExamination);
 				
 				JLabel lblNewLabel = new JLabel("");
-				lblNewLabel.setIcon(new ImageIcon("..\\images\\PIC34.PNG"));
-				lblNewLabel.setBorder(new LineBorder(new Color(135, 206, 235), 4));
+				lblNewLabel.setIcon(new ImageIcon("assets\\\\image.jpg"));
+				lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
 				lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-				lblNewLabel.setBounds(0, 0, 990, 558);
+				lblNewLabel.setBounds(0, 0, 1920, 1080);
 				add(lblNewLabel);
 			}
 

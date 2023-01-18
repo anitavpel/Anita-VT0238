@@ -115,17 +115,17 @@ public class BeginTest extends JPanel {
 		
 		JLabel lblCourseName = new JLabel("COURSE NAME : "+courseName);
 		lblCourseName.setForeground(new Color(0, 0, 140));
-		lblCourseName.setFont(new Font("Simplified Arabic Fixed", Font.BOLD, 20));
+		lblCourseName.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		lblCourseName.setBounds(10, 26, 382, 34);
 		add(lblCourseName);
 		//addTimer
 		
 		c=new Clock(HH,MM,SS);
-		c.setBounds(720,11,260,124);
+		c.setBounds(1000,11,260,124);
 		add(c);
 		//add QuestionPanel
 		questionPanel= new QuestionPanel(courseName);
-		questionPanel.setBounds(10, 71, 689, 427);
+		questionPanel.setBounds(100, 71, 1000, 1000);
 		add(questionPanel);
 		
 		//add submit button 
@@ -140,20 +140,20 @@ public class BeginTest extends JPanel {
 				c.t.stop();//if submit button clicks then stop the thread of clock
 			}
 		});
-		btnSubmit.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(123, 104, 238)));
+		btnSubmit.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(215,215,255)));
 		btnSubmit.setForeground(new Color(0, 0, 140));
-		btnSubmit.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnSubmit.setBounds(787, 150, 152, 100);
+		btnSubmit.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnSubmit.setBounds(1150, 550, 120, 50);
 		btnSubmit.setFocusable(false);
 		add(btnSubmit);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("..\\images\\PIC30.PNG"));
+		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
 		lblNewLabel.setForeground(Color.PINK);
 		lblNewLabel.setBackground(Color.PINK);
-		lblNewLabel.setBorder(new LineBorder(new Color(210, 180, 140), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(215, 215, 255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel.setBounds(0, 0, 990, 558);
+		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
 		
 	}

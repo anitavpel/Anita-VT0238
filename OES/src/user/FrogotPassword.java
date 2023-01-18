@@ -1,5 +1,4 @@
 package user;
-
 import java.awt.Color;
 import java.awt.ComponentOrientation;
 import java.awt.Cursor;
@@ -40,15 +39,20 @@ public class FrogotPassword extends JPanel implements FocusListener{
 			}
 		});
 		
+		lblNewLabel_1 = new JLabel();
+		lblNewLabel_1.setFont(new Font("Kayak Sans", Font.PLAIN, 32));
+		lblNewLabel_1.setForeground(new Color(255, 0, 0));
+		lblNewLabel_1.setBounds(217, 423, 557, 62);
+		add(lblNewLabel_1);
 		btnNewButton.setForeground(new Color(0, 0, 140));
-		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
+		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBackground(new Color(215, 215, 255));
-		btnNewButton.setBounds(892, 511, 89, 36);
+		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
 		JButton btnGetYourPassword = new JButton("GET YOUR PASSWORD");
 		btnGetYourPassword.setToolTipText("GET YOUR PASSWORD");
-		btnGetYourPassword.setFont(new Font("Sylfaen", Font.PLAIN, 12));
+		btnGetYourPassword.setFont(new Font("Kayak Sans", Font.PLAIN, 12));
 		btnGetYourPassword.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(txtUsername.getForeground()!=SystemColor.controlShadow)
@@ -72,8 +76,8 @@ public class FrogotPassword extends JPanel implements FocusListener{
 		});
 		btnGetYourPassword.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
 		btnGetYourPassword.setForeground(new Color(0, 0, 140));
-		btnGetYourPassword.setFont(new Font("Comic Sans MS", Font.BOLD, 10));
-		btnGetYourPassword.setBounds(413, 270, 164, 36);
+		btnGetYourPassword.setFont(new Font("Kayak Sans", Font.BOLD, 10));
+		btnGetYourPassword.setBounds(600, 377, 133, 29);
 		add(btnGetYourPassword);
 		
 		txtUsername = new JTextField();
@@ -85,31 +89,31 @@ public class FrogotPassword extends JPanel implements FocusListener{
 		txtUsername.setText("USERNAME");
 		txtUsername.setToolTipText("USERNAME");
 		txtUsername.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		txtUsername.setBorder(UIManager.getBorder("ToolTip.border"));
+		txtUsername.setBorder(UIManager.getBorder("Kayak Sans"));
 		txtUsername.setBackground(new Color(255, 255, 255));
-		txtUsername.setBounds(347, 206, 297, 36);
+		txtUsername.setBounds(500, 300, 350, 50);
 		add(txtUsername);
 		txtUsername.addFocusListener(this);
 		
 		btnNewButton.setForeground(new Color(0, 0, 140));
-		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
+		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBackground(new Color(215, 215, 255));
-		btnNewButton.setBounds(0, 511, 89, 36);
+		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("FORGOT PASSWORD");
 		lblOnlineExamination.setForeground(new Color(0, 0, 140));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
-		lblOnlineExamination.setFont(new Font("Lucida Handwriting", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(194, 22, 603, 105);
+		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
+		lblOnlineExamination.setBounds(425, 46, 500, 200);
 		add(lblOnlineExamination);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Anita\\Pictures\\istockphoto-1145350494-612x612.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
 		lblNewLabel.setBorder(new LineBorder(new Color(215, 215, 255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel.setBounds(0, 0, 990, 558);
+		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
 	}
 	public void focusGained(FocusEvent arg0) {
@@ -117,7 +121,7 @@ public class FrogotPassword extends JPanel implements FocusListener{
 		{
 			txtUsername.setText("");
 			txtUsername.setForeground(Color.black);
-			txtUsername.setFont(new Font("Tempus Sans ITC", Font.BOLD, 24));
+			txtUsername.setFont(new Font("Kayak Sans", Font.BOLD, 24));
 		}
 		
 	}
@@ -126,7 +130,7 @@ public class FrogotPassword extends JPanel implements FocusListener{
 		{
 			txtUsername.setForeground(SystemColor.controlShadow);
 			txtUsername.setText("USERNAME");
-			txtUsername.setFont(new Font("Tahoma", Font.PLAIN, 18));	
+			txtUsername.setFont(new Font("Kayak Sans", Font.PLAIN, 18));	
 		}
 	}
 }

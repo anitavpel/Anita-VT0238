@@ -30,9 +30,9 @@ public class Panel1 extends JPanel {
 			}
 		});
 		btnNext.setForeground(new Color(0, 0, 140));
-		btnNext.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
+		btnNext.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNext.setBackground(new Color(215, 215, 255));
-		btnNext.setBounds(892, 511, 89, 36);
+		btnNext.setBounds(1170, 600, 100, 50);
 		add(btnNext);
 		
 		JButton btnNewButton = new JButton("HELP");
@@ -44,42 +44,39 @@ public class Panel1 extends JPanel {
 		});
 		btnNewButton.setForeground(new Color(0, 0, 140));
 		btnNewButton.setBackground(new Color(215, 215, 255));
-		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnNewButton.setBounds(0, 511, 89, 36);
+		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("Virtuoso SoftTech");
 		lblOnlineExamination.setForeground(new Color(22, 25, 144));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
-		lblOnlineExamination.setFont(new Font("Lucida Handwriting", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(198, 130, 603, 105);
+		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 50));
+		lblOnlineExamination.setBounds(300, 250, 703, 150);
 		add(lblOnlineExamination);
 		
 		JLabel lblSystem = new JLabel("Exam Portal");
 		lblSystem.setForeground(new Color(22, 25, 144));
 		lblSystem.setBackground(new Color(215, 215, 255));
 		lblSystem.setHorizontalAlignment(SwingConstants.CENTER);
-		lblSystem.setFont(new Font("Lucida Handwriting", Font.BOLD, 41));
-		lblSystem.setBounds(198, 270, 603, 105);
+		lblSystem.setFont(new Font("Kayak Sans", Font.BOLD, 50));
+		lblSystem.setBounds(300, 370, 703, 150);
 		add(lblSystem);
 		
 		JLabel lblNewLabel1 = new JLabel("");
-		lblNewLabel1.setIcon(new ImageIcon("C:\\Users\\Anita\\Documents\\1669359250444.jpg"));
+		lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web.jpg"));
 		lblNewLabel1.setBorder(new LineBorder(new Color(255, 255, 255), 4));
 		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel1.setBounds(5, 5, 200, 150);
+		lblNewLabel1.setBounds(0, 5, 500, 150);
 		add(lblNewLabel1);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Anita\\Pictures\\istockphoto-1145350494-612x612.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
 		lblNewLabel.setBorder(new LineBorder(new Color(215, 215, 255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel.setBounds(0, 0, 990, 558);
+		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
-		
-		
-		
-		
+	
 	}
 }

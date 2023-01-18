@@ -26,7 +26,7 @@ public class Clock extends JPanel {
 		setLayout(null);
 		Run r=new Run();
 		add(r);
-		r.setBounds(0, 0, 300, 300);
+		r.setBounds(0, 0, 300, 150);
 		r.setBackground(Color.blue);
 		t=new Thread(r);
 		t.start();
@@ -66,9 +66,9 @@ class Run extends JPanel implements Runnable
 		setBackground(new Color(255, 255, 255));
 		JLabel lblXxxxxx = new JLabel(txt);
 		lblXxxxxx.setBackground(new Color(148, 0, 211));
-		lblXxxxxx.setForeground(new Color(148, 0, 211));
+		lblXxxxxx.setForeground(new Color(0,0,0));
 		lblXxxxxx.setHorizontalAlignment(SwingConstants.LEFT);
-		lblXxxxxx.setFont(new Font("Times Roman", Font.BOLD, 60));
+		lblXxxxxx.setFont(new Font("Kayak Sans", Font.BOLD, 40));
 		lblXxxxxx.setBounds(20, 0, 266, 123);
 		add(lblXxxxxx);
 		repaint();

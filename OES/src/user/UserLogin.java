@@ -49,6 +49,7 @@ public class UserLogin extends JPanel implements FocusListener{
 			if(me.getKey().equals(un))
 					{
 						return me.getValue();
+						//setText
 					}
 			}
 		return null;
@@ -105,8 +106,8 @@ public class UserLogin extends JPanel implements FocusListener{
 		});
 		btnForgotPassword.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
 		btnForgotPassword.setForeground(new Color(0, 0, 140));
-		btnForgotPassword.setFont(new Font("Century Gothic", Font.BOLD, 18));
-		btnForgotPassword.setBounds(507, 282, 254, 44);
+		btnForgotPassword.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnForgotPassword.setBounds(661, 282, 254, 44);
 		add(btnForgotPassword);
 		
 		
@@ -119,8 +120,8 @@ public class UserLogin extends JPanel implements FocusListener{
 			}
 		});
 		btnRegisterNow.setForeground(new Color(0, 0, 140));
-		btnRegisterNow.setFont(new Font("Times New Roman", Font.ITALIC, 18));
-		btnRegisterNow.setBounds(418, 377, 133, 29);
+		btnRegisterNow.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
+		btnRegisterNow.setBounds(572, 377, 133, 29);
 		add(btnRegisterNow);
 		
 		JButton btnLogin = new JButton("LOGIN");
@@ -176,8 +177,8 @@ public class UserLogin extends JPanel implements FocusListener{
 		});
 		btnLogin.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
 		btnLogin.setForeground(new Color(0, 0, 140));
-		btnLogin.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnLogin.setBounds(246, 283, 241, 44);
+		btnLogin.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnLogin.setBounds(400, 283, 241, 44);
 		add(btnLogin);
 		
 		txtPassword = new JPasswordField();
@@ -187,12 +188,12 @@ public class UserLogin extends JPanel implements FocusListener{
 		txtPassword.setText("Password");
 		txtPassword.setSelectionColor(new Color(153, 51, 153));
 		txtPassword.setSelectedTextColor(new Color(102, 204, 255));
-		txtPassword.setFont(new Font("Vrinda", Font.PLAIN, 24));
+		txtPassword.setFont(new Font("Kayak Sans", Font.PLAIN, 24));
 		txtPassword.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		txtPassword.setColumns(10);
 		txtPassword.setBorder(UIManager.getBorder("ToolTip.border"));
 		txtPassword.setBackground(new Color(255, 255, 255));
-		txtPassword.setBounds(338, 213, 316, 36);
+		txtPassword.setBounds(500, 213, 316, 36);
 		add(txtPassword);
 		txtPassword.addFocusListener(this);
 		
@@ -207,7 +208,7 @@ public class UserLogin extends JPanel implements FocusListener{
 		txtUsername.setFont(new Font("Vrinda", Font.PLAIN, 24));
 		txtUsername.setBorder(UIManager.getBorder("ToolTip.border"));
 		txtUsername.setBackground(new Color(255, 255, 255));
-		txtUsername.setBounds(338, 166, 316, 36);
+		txtUsername.setBounds(500, 166, 316, 36);
 		add(txtUsername);
 		txtUsername.setColumns(10);
 		txtUsername.addFocusListener(this);
@@ -220,8 +221,8 @@ public class UserLogin extends JPanel implements FocusListener{
 		});
 		btnNewButton.setForeground(new Color(0, 0, 140));
 		btnNewButton.setBackground(new Color(215, 215, 255));
-		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnNewButton.setBounds(10, 511, 89, 36);
+		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("USER LOGIN");
@@ -229,15 +230,15 @@ public class UserLogin extends JPanel implements FocusListener{
 		lblOnlineExamination.setForeground(new Color(22, 25, 144));
 		lblOnlineExamination.setBackground(new Color(102, 255, 255));
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
-		lblOnlineExamination.setFont(new Font("Times New Roman", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(347, 61, 298, 54);
+		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
+		lblOnlineExamination.setBounds(425, 46, 450, 150);
 		add(lblOnlineExamination);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\\\Users\\\\Anita\\\\Pictures\\\\istockphoto-1145350494-612x612.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
 		lblNewLabel.setBorder(new LineBorder(new Color(215, 215, 255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel.setBounds(0, 0, 990, 558);
+		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
 		
 		
@@ -281,13 +282,13 @@ public class UserLogin extends JPanel implements FocusListener{
 	public void focusLost(FocusEvent arg0) {
 		if(txtPassword.getText().equals(""))
 		{
-			txtPassword.setFont(new Font("Vrinda", Font.PLAIN, 24));
+			txtPassword.setFont(new Font("Kayak Sans", Font.PLAIN, 24));
 			txtPassword.setText("Password");
 			txtPassword.setForeground(SystemColor.activeCaptionBorder);;
 		}
 		if(txtUsername.getText().equals(""))
 		{
-			txtUsername.setFont(new Font("Vrinda", Font.PLAIN, 24));
+			txtUsername.setFont(new Font("Kayak Sans", Font.PLAIN, 24));
 			txtUsername.setText("USERNAME");
 			txtUsername.setForeground(SystemColor.activeCaptionBorder);;
 		}

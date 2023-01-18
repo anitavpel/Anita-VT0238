@@ -22,7 +22,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 	/**
 	 * This panel is smaller than the Main BeginTest Panel
 	 */
-
+	//setText
 	private Connect c=new Connect("root","root");
 	private String CourseName;
 	private ResultSet rs;
@@ -75,7 +75,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 		databaseWork();
 		
 		setLayout(null);
-		setBackground(Color.PINK);
+		setBackground(Color.WHITE);
 		ResultManagement();
 	}
 
@@ -101,10 +101,10 @@ public class QuestionPanel extends JPanel implements ActionListener{
 				{
 					makeQuestionVisible(rs.getString("q_id"));
 					
-					Previous = new JButton("LAST");
-					Previous.setForeground(Color.RED);
-					Previous.setFont(new Font("SimSun", Font.BOLD, 18));
-					Previous.setBounds(10, 310, 144, 35);
+					JButton Previous = new JButton("LAST");
+					Previous.setForeground(new Color(0, 0, 140));
+					Previous.setFont(new Font("Kayak Sans", Font.BOLD, 20));
+					Previous.setBounds(30, 310, 100, 35);
 					Previous.setFocusable(false);
 					add(Previous);
 					Previous.addActionListener(new ActionListener() {
@@ -135,9 +135,9 @@ public class QuestionPanel extends JPanel implements ActionListener{
 						}
 					});
 					
-					Next = new JButton("NEXT");
-					Next.setForeground(Color.GREEN);
-					Next.setFont(new Font("SimSun", Font.BOLD, 18));
+				    JButton	Next = new JButton("NEXT");
+					Next.setForeground(new Color(0, 0, 140));
+					Next.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 					Next.setBounds(550, 310, 102, 35);
 					Next.setFocusable(false);
 					add(Next);
@@ -205,7 +205,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 		questionRemaining.setText("Question remaining : "+(qInfo.length-q_attempted));
 		add(panel);
 		
-		panel.setBackground(Color.PINK);
+		panel.setBackground(Color.WHITE);
 		panel.setBounds(10,10,650,300);
 		panel.setLayout(null);
 		
@@ -218,7 +218,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 		panel.add(scrollPane);
 		
 		JLabel lblQXx = new JLabel("Q."+q_number);
-		lblQXx.setFont(new Font("SimSun", Font.BOLD, 18));
+		lblQXx.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		lblQXx.setBounds(10, 12, 49, 35);
 		panel.add(lblQXx);
 				
@@ -229,8 +229,8 @@ public class QuestionPanel extends JPanel implements ActionListener{
 		} catch (SQLException e) {
 			System.out.println(e);
 		}
-		question_statement.setFont(new Font("Gisha", Font.BOLD, 18));
-		question_statement.setBackground(Color.PINK);
+		question_statement.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		question_statement.setBackground(Color.WHITE);
 		question_statement.setEditable(false);
 		panel.add(question_statement);
 		
@@ -243,7 +243,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 		} catch (SQLException e) {
 			System.out.println(e);
 		}
-		o_1.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
+		o_1.setFont(new Font("Kayak Sans", Font.BOLD, 15));
 		o_1.setBounds(57, 169, 462, 23);
 		panel.add(o_1);
 		o_1.addActionListener(this);
@@ -254,7 +254,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 		} catch (SQLException e) {
 			System.out.println(e);
 		}
-		o_2.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
+		o_2.setFont(new Font("Kayak Sans", Font.BOLD, 15));
 		o_2.setBounds(57, 195, 462, 23);
 		panel.add(o_2);
 		o_2.addActionListener(this);
@@ -265,7 +265,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 		} catch (SQLException e) {
 			System.out.println(e);
 		}
-		o_3.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
+		o_3.setFont(new Font("Kayak Sans", Font.BOLD, 15));
 		o_3.setBounds(57, 221, 462, 23);
 		panel.add(o_3);
 		o_3.addActionListener(this);
@@ -276,7 +276,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 		} catch (SQLException e) {
 			System.out.println(e);
 		}
-		o_4.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
+		o_4.setFont(new Font("Kayak Sans", Font.BOLD, 15));
 		o_4.setBounds(57, 247, 462, 23);
 		panel.add(o_4);
 		o_4.addActionListener(this);

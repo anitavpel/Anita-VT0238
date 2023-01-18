@@ -31,7 +31,7 @@ public class Help extends JPanel {
 		txtrAboutHelpLine.setForeground(Color.BLACK);
 		txtrAboutHelpLine.setBackground(Color.WHITE);
 		txtrAboutHelpLine.setLineWrap(true);
-		txtrAboutHelpLine.setFont(new Font("Lucida Bright", Font.BOLD, 15));
+		txtrAboutHelpLine.setFont(new Font("Kayak Sans", Font.BOLD, 15));
 		txtrAboutHelpLine.setRows(30);
 		txtrAboutHelpLine.setText("HELLO!!!\r\n\r\nThis is an ONLINE EXAMINATION SYSTEM in which admin can conduct  an online examination of users .Users have to registered himself/herself first than they must be verified by admin after that he/she can give the examination.\r\nThis project consists of many swing components like JPanel,Jframe,etc.");
 		txtrAboutHelpLine.setBounds(177, 91, 637, 342);
@@ -44,7 +44,7 @@ public class Help extends JPanel {
 		JLabel lblNewLabel_1 = new JLabel("O.E.S");
 		lblNewLabel_1.setForeground(new Color(22, 25, 144));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 36));
+		lblNewLabel_1.setFont(new Font("Kayak Sans", Font.BOLD, 36));
 		lblNewLabel_1.setBounds(415, 24, 160, 47);
 		add(lblNewLabel_1);
 		
@@ -57,15 +57,15 @@ public class Help extends JPanel {
 		});
 		btnNewButton.setForeground(new Color(22, 25, 144));
 		btnNewButton.setBackground(new Color(215, 215, 255));
-		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
+		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBounds(10, 511, 89, 36);
 		add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\\\Users\\\\Anita\\\\Pictures\\\\istockphoto-1145350494-612x612.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
 		lblNewLabel.setBorder(new LineBorder(new Color(215, 215, 255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel.setBounds(0, 0, 990, 558);
+		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
 	}
 }

@@ -1,28 +1,27 @@
 package admin;
 
 import java.awt.Color;
-
-
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
-import main.MainFrame;
-import javax.swing.JComboBox;
-import javax.swing.DefaultComboBoxModel;
+import javax.swing.border.MatteBorder;
 
 import database.Connect;
-import database.UserData;
-import java.awt.SystemColor;
+import database.UserDetails;
+import main.MainFrame;
 
 public class Verification extends JPanel {
 
@@ -95,15 +94,16 @@ public class Verification extends JPanel {
 		setLayout(null);
 		
 		JButton btnSearch = new JButton("SEARCH");
+		btnSearch.setToolTipText("SEARCH");
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//Show details of that username
-				new UserData(Username,true,"Verification");
+				new UserDetails(Username,true,"Verification");
 			}
 		});
-		btnSearch.setForeground(new Color(188, 143, 143));
-		btnSearch.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnSearch.setBackground(SystemColor.textInactiveText);
+		btnSearch.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
+		btnSearch.setForeground(new Color(0, 0, 140));
+		btnSearch.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnSearch.setBounds(739, 223, 125, 36);
 		add(btnSearch);
 		
@@ -117,9 +117,9 @@ public class Verification extends JPanel {
 				new Verification();
 			}
 		});
-		btnVerify.setForeground(new Color(0, 255, 0));
-		btnVerify.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnVerify.setBackground(SystemColor.textInactiveText);
+		btnVerify.setForeground(new Color(0,0,140));
+		btnVerify.setBackground(new Color(215, 215, 255));
+		btnVerify.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnVerify.setBounds(780, 364, 125, 36);
 		add(btnVerify);
 		
@@ -132,20 +132,20 @@ public class Verification extends JPanel {
 				new Verification();
 			}
 		});
-		btnDelete.setForeground(new Color(255, 0, 0));
-		btnDelete.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnDelete.setBackground(SystemColor.textInactiveText);
+		btnDelete.setForeground(new Color(0, 0, 140));
+		btnDelete.setBackground(new Color(215, 215, 255));
+		btnDelete.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnDelete.setBounds(215, 364, 125, 36);
 		add(btnDelete);
 		JLabel lblUsersForVerification = new JLabel("Users for verification");
-		lblUsersForVerification.setForeground(new Color(220, 20, 60));
-		lblUsersForVerification.setFont(new Font("Sylfaen", Font.BOLD, 18));
+		lblUsersForVerification.setForeground(new Color(0, 0, 140));
+		lblUsersForVerification.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		lblUsersForVerification.setBounds(234, 223, 190, 28);
 		add(lblUsersForVerification);
 		
 		comboBox = new JComboBox<String>();
 		comboBox.setModel(new DefaultComboBoxModel<String>(verify));
-		comboBox.setFont(new Font("Shruti", Font.BOLD, 16));
+		comboBox.setFont(new Font("Kayak Sans", Font.BOLD, 16));
 		comboBox.setBounds(434, 223, 266, 30);
 		add(comboBox);
 		Username=verify[0];
@@ -162,25 +162,25 @@ public class Verification extends JPanel {
 				MainFrame.AddPanel(new MainAdmin());
 			}
 		});
-		btnNewButton.setForeground(new Color(0, 0, 205));
+		btnNewButton.setForeground(new Color(0, 0,140));
 		btnNewButton.setBackground(UIManager.getColor("Button.disabledForeground"));
-		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
+		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBounds(10, 512, 125, 36);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("VERIFICATION");
-		lblOnlineExamination.setForeground(new Color(139, 0, 0));
+		lblOnlineExamination.setForeground(new Color(0, 0, 140));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
-		lblOnlineExamination.setFont(new Font("Lucida Handwriting", Font.BOLD, 41));
+		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		lblOnlineExamination.setBounds(194, 28, 603, 105);
 		add(lblOnlineExamination);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("..\\images\\PIC34.PNG"));
-		lblNewLabel.setBorder(new LineBorder(new Color(135, 206, 235), 4));
+		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
+		lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel.setBounds(0, 0, 990, 558);
+		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
 	}
 }

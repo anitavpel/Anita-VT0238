@@ -82,31 +82,31 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		SS = new JTextField();
 		SS.setForeground(Color.LIGHT_GRAY);
 		SS.setText("SECOND");
-		SS.setFont(new Font("Mangal", Font.PLAIN, 18));
+		SS.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		SS.setColumns(10);
-		SS.setBounds(610, 221, 89, 36);
+		SS.setBounds(769, 221, 89, 36);
 		add(SS);
 		SS.addFocusListener(this);
 		
 		MM = new JTextField();
 		MM.setForeground(Color.LIGHT_GRAY);
 		MM.setText("MINUTE");
-		MM.setFont(new Font("Mangal", Font.PLAIN, 18));
+		MM.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		MM.setColumns(10);
-		MM.setBounds(451, 221, 89, 36);
+		MM.setBounds(610, 221, 89, 36);
 		add(MM);
 		MM.addFocusListener(this);
 		
 		JLabel lblEachMark = new JLabel("EACH MARK");
-		lblEachMark.setFont(new Font("Papyrus", Font.BOLD, 18));
-		lblEachMark.setForeground(new Color(248, 248, 255));
-		lblEachMark.setBounds(291, 303, 181, 33);
+		lblEachMark.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		lblEachMark.setForeground(new Color(0, 0, 140));
+		lblEachMark.setBounds(450, 303, 181, 33);
 		add(lblEachMark);
 		
 		eachMark= new JComboBox<Integer>();
-		eachMark.setFont(new Font("SimSun", Font.BOLD, 19));
+		eachMark.setFont(new Font("Kayak Sans", Font.BOLD, 19));
 		eachMark.setModel(new DefaultComboBoxModel<Integer>(new Integer[] {1,2,3,4,5,6,7,8}));
-		eachMark.setBounds(482, 302, 57, 21);
+		eachMark.setBounds(639, 302, 57, 21);
 		add(eachMark);
 		eachMark.addActionListener(new ActionListener() {
 			
@@ -121,22 +121,22 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		HH.setText("HOUR");
 		HH.setFont(new Font("Mangal", Font.PLAIN, 18));
 		HH.setColumns(10);
-		HH.setBounds(291, 221, 89, 36);
+		HH.setBounds(450, 221, 89, 36);
 		add(HH);
 		HH.addFocusListener(this);
 		
 		courseName = new JTextField();
 		courseName.setForeground(Color.LIGHT_GRAY);
-		courseName.setFont(new Font("Mangal", Font.PLAIN, 18));
+		courseName.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		courseName.setText("COURSE NAME");
-		courseName.setBounds(291, 162, 408, 36);
+		courseName.setBounds(450, 162, 408, 36);
 		add(courseName);
 		courseName.setColumns(10);
 		courseName.addFocusListener(this);
 		
-		btnShowCourse.setForeground(new Color(218, 112, 214));
-		btnShowCourse.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnShowCourse.setBounds(472, 417, 256, 36);
+		btnShowCourse.setForeground(new Color(0,0,140));
+		btnShowCourse.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnShowCourse.setBounds(525, 417, 256, 36);
 		add(btnShowCourse);
 		
 		JButton btnNewButton = new JButton("BACK");
@@ -145,25 +145,25 @@ public class AddNewCourse extends JPanel implements FocusListener {
 				MainFrame.AddPanel(new CoursePanel());
 			}
 		});
-		btnNewButton.setForeground(new Color(75, 0, 130));
-		btnNewButton.setBackground(new Color(250, 128, 114));
-		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnNewButton.setBounds(10, 511, 89, 36);
+		btnNewButton.setForeground(new Color(0, 0, 140));
+		btnNewButton.setBackground(new Color(215,215,255));
+		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("ADD COURSE");
-		lblOnlineExamination.setForeground(new Color(176, 224, 230));
+		lblOnlineExamination.setForeground(new Color(0, 0, 140));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
-		lblOnlineExamination.setFont(new Font("Lucida Handwriting", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(194, 30, 603, 105);
+		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
+		lblOnlineExamination.setBounds(350, 30, 603, 105);
 		add(lblOnlineExamination);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("..\\images\\PIC16.PNG"));
+		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
 		lblNewLabel.setBorder(new LineBorder(new Color(0, 128, 0), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel.setBounds(0, 0, 990, 558);
+		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
 	}
 
@@ -172,25 +172,25 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		if(arg0.getSource()==HH && HH.getForeground()==Color.LIGHT_GRAY)
 		{
 			HH.setText("");
-			HH.setFont(new Font("Palatino Linotype", Font.BOLD, 18));
+			HH.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 			HH.setForeground(Color.BLACK);
 		}
 		if(arg0.getSource()==MM && MM.getForeground()==Color.LIGHT_GRAY)
 		{
 			MM.setText("");
-			MM.setFont(new Font("Palatino Linotype", Font.BOLD, 18));
+			MM.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 			MM.setForeground(Color.BLACK);
 		}
 		if(arg0.getSource()==SS && SS.getForeground()==Color.LIGHT_GRAY)
 		{
 			SS.setText("");
-			SS.setFont(new Font("Palatino Linotype", Font.BOLD, 18));
+			SS.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 			SS.setForeground(Color.BLACK);
 		}
 		if(arg0.getSource()==courseName && courseName.getForeground()==Color.LIGHT_GRAY)
 		{
 			courseName.setText("");
-			courseName.setFont(new Font("Palatino Linotype", Font.BOLD, 18));
+			courseName.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 			courseName.setForeground(Color.BLACK);
 		}
 	}
@@ -200,25 +200,25 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		if(HH.getText().equals(""))
 		{
 			HH.setForeground(Color.LIGHT_GRAY);
-			HH.setFont(new Font("Mangal", Font.PLAIN, 18));
+			HH.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 			HH.setText("HOUR");
 		}
 		if(MM.getText().equals(""))
 		{
 			MM.setForeground(Color.LIGHT_GRAY);
-			MM.setFont(new Font("Mangal", Font.PLAIN, 18));
+			MM.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 			MM.setText("MINUTE");
 		}
 		if(SS.getText().equals(""))
 		{
 			SS.setForeground(Color.LIGHT_GRAY);
-			SS.setFont(new Font("Mangal", Font.PLAIN, 18));
+			SS.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 			SS.setText("SECOND");
 		}
 		if(courseName.getText().equals(""))
 		{
 			courseName.setForeground(Color.LIGHT_GRAY);
-			courseName.setFont(new Font("Mangal", Font.PLAIN, 18));
+			courseName.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 			courseName.setText("COURSE NAME");
 		}
 	}

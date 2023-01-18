@@ -133,14 +133,14 @@ public class UserPanel extends JPanel {
 		});
 		btnResult.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
 		btnResult.setForeground(new Color(0, 0, 140));
-		btnResult.setFont(new Font("Comic Sans MS", Font.ITALIC, 18));
-		btnResult.setBounds(815, 64, 166, 42);
+		btnResult.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
+		btnResult.setBounds(1100, 64, 166, 42);
 		add(btnResult);
 		btnStartTest.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
 		
 		btnStartTest.setForeground(new Color(0, 0, 140));
-		btnStartTest.setFont(new Font("Serif", Font.ITALIC, 18));
-		btnStartTest.setBounds(565, 184, 166, 42);
+		btnStartTest.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
+		btnStartTest.setBounds(711, 184, 166, 42);
 		add(btnStartTest);
 		
 		
@@ -149,7 +149,7 @@ public class UserPanel extends JPanel {
 		instructions.setEditable(false);
 		instructions.setDisabledTextColor(new Color(221, 160, 221));
 		instructions.setBackground(new Color(215, 215, 255));
-		instructions.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 18));
+		instructions.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		instructions.setForeground(new Color(123, 104, 238));
 		instructions.setBounds(10, 299, 971, 248);
 		instructions.setVisible(false);
@@ -157,8 +157,8 @@ public class UserPanel extends JPanel {
 		
 		comboBox = new JComboBox<String>();
 		comboBox.setModel(new DefaultComboBoxModel<String>(Courses));
-		comboBox.setFont(new Font("Perpetua Titling MT", Font.BOLD, 21));
-		comboBox.setBounds(355, 180, 171, 36);
+		comboBox.setFont(new Font("Kayak Sans", Font.BOLD, 21));
+		comboBox.setBounds(501, 190, 171, 36);
 		comboBox.setSelectedIndex(-1);
 		add(comboBox);
 		comboBox.addActionListener(new ActionListener() {
@@ -176,8 +176,8 @@ public class UserPanel extends JPanel {
 		JLabel lblSelectCourse = new JLabel("SELECT COURSE");
 		lblSelectCourse.setForeground(new Color(0, 0, 140));
 		lblSelectCourse.setForeground(UIManager.getColor("CheckBoxMenuItem.foreground"));
-		lblSelectCourse.setFont(new Font("Rod", Font.BOLD, 20));
-		lblSelectCourse.setBounds(152, 184, 180, 28);
+		lblSelectCourse.setFont(new Font("Kayak Sans", Font.BOLD, 20));
+		lblSelectCourse.setBounds(300, 184, 300, 28);
 		add(lblSelectCourse);
 		
 		
@@ -192,8 +192,8 @@ public class UserPanel extends JPanel {
 		});
 		btnEditDetails.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
 		btnEditDetails.setForeground(new Color(0, 0, 140));
-		btnEditDetails.setFont(new Font("Comic Sans MS", Font.ITALIC, 18));
-		btnEditDetails.setBounds(815, 11, 166, 42);
+		btnEditDetails.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
+		btnEditDetails.setBounds(1100, 11, 166, 42);
 		add(btnEditDetails);
 		
 		JButton btnLogout = new JButton("LOGOUT");
@@ -207,21 +207,21 @@ public class UserPanel extends JPanel {
 		});
 		btnLogout.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
 		btnLogout.setForeground(new Color(0, 0, 140));
-		btnLogout.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-		btnLogout.setBounds(892, 511, 85, 30);
+		btnLogout.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnLogout.setBounds(1170, 600, 100, 50);
 		add(btnLogout);
 		
 		JLabel WlecomeLabel = new JLabel("WELCOME "+Name);
 		WlecomeLabel.setForeground(new Color(0, 0, 140));
-		WlecomeLabel.setFont(new Font("Raavi", Font.BOLD, 21));
+		WlecomeLabel.setFont(new Font("Kayak Sans", Font.BOLD, 25));
 		WlecomeLabel.setBounds(10, 107, 445, 28);
 		add(WlecomeLabel);
 				
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\\\Users\\\\Anita\\\\Pictures\\\\istockphoto-1145350494-612x612.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
 		lblNewLabel.setBorder(new LineBorder(new Color(215, 215, 255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel.setBounds(0, 0, 990, 558);
+		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
 	}
 }
