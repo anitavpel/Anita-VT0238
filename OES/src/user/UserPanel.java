@@ -20,7 +20,6 @@ import javax.swing.DefaultComboBoxModel;
 import java.sql.*;
 import database.Connect;
 import javax.swing.JTextArea;
-import results.UserResult;
 import startTest.BeginTest;
 
 public class UserPanel extends JPanel {
@@ -42,10 +41,10 @@ public class UserPanel extends JPanel {
 	//initialises the Selected_course and fill values in courses array this function will run one time only
 	private void dataBaseWork()
 	{
-		String course_query="select *from course_details where hide=0";
+		String course_query="select *from course_details";
 		try{
 			Statement stmt=c.con.createStatement();
-			ResultSet rs=stmt.executeQuery("select count(course_name) from course_details where hide=0");
+			ResultSet rs=stmt.executeQuery("select count(course_name) from course_details ");
 			rs.next();
 			int i=rs.getInt(1);
 			rs=stmt.executeQuery(course_query);
@@ -106,7 +105,6 @@ public class UserPanel extends JPanel {
 		dataBaseWork(Username);
 		
 		JButton btnStartTest = new JButton("START TEST");
-		btnStartTest.setToolTipText("RESULT");
 		btnStartTest.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(!Selected_course.equals(""))
@@ -124,18 +122,7 @@ public class UserPanel extends JPanel {
 			}
 		});
 		
-		JButton btnResult = new JButton("RESULT");
-		btnResult.setToolTipText("RESULT");
-		btnResult.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				//Show Result of current user
-				new UserResult(Username,"user");			}
-		});
-		btnResult.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
-		btnResult.setForeground(new Color(0, 0, 140));
-		btnResult.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
-		btnResult.setBounds(1100, 64, 166, 42);
-		add(btnResult);
+		
 		btnStartTest.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
 		
 		btnStartTest.setForeground(new Color(0, 0, 140));
@@ -173,7 +160,7 @@ public class UserPanel extends JPanel {
 			}
 		});
 				
-		JLabel lblSelectCourse = new JLabel("SELECT COURSE");
+		JLabel lblSelectCourse = new JLabel("SELECT SECTION");
 		lblSelectCourse.setForeground(new Color(0, 0, 140));
 		lblSelectCourse.setForeground(UIManager.getColor("CheckBoxMenuItem.foreground"));
 		lblSelectCourse.setFont(new Font("Kayak Sans", Font.BOLD, 20));
@@ -214,7 +201,7 @@ public class UserPanel extends JPanel {
 		JLabel WlecomeLabel = new JLabel("WELCOME "+Name);
 		WlecomeLabel.setForeground(new Color(0, 0, 140));
 		WlecomeLabel.setFont(new Font("Kayak Sans", Font.BOLD, 25));
-		WlecomeLabel.setBounds(10, 107, 445, 28);
+		WlecomeLabel.setBounds(5, 5, 445, 28);
 		add(WlecomeLabel);
 				
 		JLabel lblNewLabel = new JLabel("");

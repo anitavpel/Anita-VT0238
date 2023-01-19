@@ -2,6 +2,7 @@ package course;
 
 import java.awt.Color;
 
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,7 +26,8 @@ import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import javax.swing.JCheckBox;
-import com.mysql.jdbc.PreparedStatement;
+import com.mysql.cj.jdbc.ClientPreparedStatement;
+
 import database.Connect;
 
 public class EditCourse extends JPanel implements ItemListener{
@@ -39,7 +41,6 @@ public class EditCourse extends JPanel implements ItemListener{
 	private static int TotalQuestions;
 	private Connect c=new Connect("root","root");
 	private JTabbedPane jt;
-	private boolean hide;
 	private static int eachMark;
 	private static int selectedMark=eachMark;
 	private static int correctOption=1;
@@ -55,7 +56,7 @@ public class EditCourse extends JPanel implements ItemListener{
 			rs=st.executeQuery(query);
 			rs.next();
 			TotalQuestions=rs.getInt("total_question");
-			hide=(boolean)rs.getBoolean("hide");
+			
 			time=rs.getString("time");
 			eachMark=rs.getInt("question_mark");
 			System.out.println("course : "+rs.getString("course_name")+time+rs.getInt("question_mark"));
@@ -142,7 +143,7 @@ public class EditCourse extends JPanel implements ItemListener{
 				String query="UPDATE course_details SET course_name=?,time=?,question_mark=?"
 						+ " WHERE course_name='"+CourseName+"'";
 				try{
-					PreparedStatement ps=(PreparedStatement)c.con.prepareStatement(query);
+					ClientPreparedStatement ps=(ClientPreparedStatement)c.con.prepareStatement(query);
 					ps.setString(1, updateCourseName.getText());
 					ps.setString(2, updateHH.getText()+":"+updateMM.getText()+":"+updateSS.getText());
 					ps.setInt(3, selectedMark);
@@ -233,16 +234,7 @@ public class EditCourse extends JPanel implements ItemListener{
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		add(lblOnlineExamination);
 		
-		JCheckBox chckbxHide = new JCheckBox("HIDE");
-		chckbxHide.setOpaque(false);
-		chckbxHide.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		chckbxHide.setBounds(781, 26, 76, 24);
-		add(chckbxHide);
-		chckbxHide.addItemListener(this);
-		if(hide)
-			chckbxHide.setSelected(true);
-		else
-			chckbxHide.setSelected(false);
+		
 			
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
