@@ -1,6 +1,7 @@
 package user;
 
 import java.awt.Color;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,13 +15,13 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.MatteBorder;
 
 import main.MainFrame;
+import startTest.BeginTest;
+
 import javax.swing.JComboBox;
-import javax.swing.UIManager;
 import javax.swing.DefaultComboBoxModel;
 import java.sql.*;
 import database.Connect;
 import javax.swing.JTextArea;
-import startTest.BeginTest;
 
 public class UserPanel extends JPanel {
 
@@ -34,10 +35,7 @@ public class UserPanel extends JPanel {
 	private String Username;
 	private JComboBox<String> comboBox;
 	private String Selected_course="";
-	private String totalQuestions;
 	private String eachMark;
-	private String time;
-	
 	//initialises the Selected_course and fill values in courses array this function will run one time only
 	private void dataBaseWork()
 	{
@@ -67,8 +65,8 @@ public class UserPanel extends JPanel {
 			ResultSet rs=stmt.executeQuery("select *from course_details where course_name='"+Course+"'");
 			rs.next();
 			int i=(int)rs.getInt("total_question");
-			time=rs.getString("time");
-			totalQuestions=rs.getString("total_question");
+			rs.getString("time");
+			rs.getString("total_question");
 			eachMark=rs.getString("question_mark");
 			System.out.println("Questions are available : "+i);
 			return i;
@@ -96,6 +94,8 @@ public class UserPanel extends JPanel {
 		}
 	}
 	JTextArea instructions;
+	protected String totalQuestions;
+	protected String time;
 	
 	
 	public UserPanel(String username) {
@@ -130,14 +130,13 @@ public class UserPanel extends JPanel {
 		btnStartTest.setBounds(711, 184, 166, 42);
 		add(btnStartTest);
 		
-		
 		instructions = new JTextArea();
 		instructions.setToolTipText("INSTRUCTIONS");
 		instructions.setEditable(false);
-		instructions.setDisabledTextColor(new Color(221, 160, 221));
-		instructions.setBackground(new Color(215, 215, 255));
-		instructions.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		instructions.setForeground(new Color(123, 104, 238));
+		instructions.setDisabledTextColor(new Color(0,0,140));
+		instructions.setBackground(new Color(215,215,255));
+		instructions.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 18));
+		instructions.setForeground(new Color(0,0,140));
 		instructions.setBounds(10, 299, 971, 248);
 		instructions.setVisible(false);
 		add(instructions);
@@ -154,17 +153,16 @@ public class UserPanel extends JPanel {
 				Selected_course=(String)comboBox.getSelectedItem();
 				courseDetail(Selected_course);
 				
-				instructions.setText("////////////////////////////////////\r\n              INSTRUCTIONS   \r\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\r\n\r\n1. There are total "+totalQuestions+" questions each with "+eachMark+" marks in this course.\r\n2. Maximum time is "+time+" .\r\n3. There is no negative marking for any question.\r\n4. After time up you will be automatically logged out.\r\n5. You can see the time left on the upper right corner.\r\n6.Wish You All The Best.");
+				instructions.setText("////////////////////////////////////\r\n              INSTRUCTIONS   \r\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\r\n\r\n1. There are total " + totalQuestions + " questions each with " + eachMark +  " marks in this course.\r\n2. Maximum time is " + time + " .\r\n3. There is no negative marking for any question.\r\n4. After time up you will be automatically logged out.\r\n5. You can see the time left on the upper right corner.\r\n6.Wish You All The Best.");
 				instructions.setVisible(true);
 				revalidate();
 			}
 		});
 				
-		JLabel lblSelectCourse = new JLabel("SELECT SECTION");
+		JLabel lblSelectCourse = new JLabel("SELECT SUBJECT");
 		lblSelectCourse.setForeground(new Color(0, 0, 140));
-		lblSelectCourse.setForeground(UIManager.getColor("CheckBoxMenuItem.foreground"));
-		lblSelectCourse.setFont(new Font("Kayak Sans", Font.BOLD, 20));
-		lblSelectCourse.setBounds(300, 184, 300, 28);
+		lblSelectCourse.setFont(new Font("Kayak Sans", Font.BOLD, 25));
+		lblSelectCourse.setBounds(300, 193, 300, 28);
 		add(lblSelectCourse);
 		
 		
@@ -210,5 +208,9 @@ public class UserPanel extends JPanel {
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
+	}
+
+	public UserPanel() {
+		// TODO Auto-generated constructor stub
 	}
 }

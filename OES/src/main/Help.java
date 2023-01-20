@@ -1,7 +1,6 @@
 package main;
 
 import java.awt.Color;
-
 import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -47,7 +46,7 @@ public class Help extends JPanel {
 		lblNewLabel_1.setFont(new Font("Kayak Sans", Font.BOLD, 36));
 		lblNewLabel_1.setBounds(415, 24, 160, 47);
 		add(lblNewLabel_1);
-		
+	
 		JButton btnNewButton = new JButton("BACK");
 		btnNewButton.setFocusable(false);
 		btnNewButton.addActionListener(new ActionListener() {
