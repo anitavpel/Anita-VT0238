@@ -25,6 +25,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
+import javax.swing.JSeparator;
 import javax.swing.JCheckBox;
 import com.mysql.cj.jdbc.ClientPreparedStatement;
 
@@ -119,7 +120,7 @@ public class EditCourse extends JPanel implements ItemListener{
 		updateEachMark = new JComboBox<Integer>();
 		updateEachMark.setModel(new DefaultComboBoxModel<Integer>(new Integer[] {1,2,3,4,5,6,7,8}));
 		updateEachMark.setFont(new Font("Kayak Sans", Font.BOLD, 19));
-		updateEachMark.setBounds(862, 261, 57, 21);
+		updateEachMark.setBounds(931, 261, 57, 21);
 		updateEachMark.setSelectedIndex(eachMark-1);
 		add(updateEachMark);
 		updateEachMark.addActionListener(new ActionListener() {
@@ -131,7 +132,7 @@ public class EditCourse extends JPanel implements ItemListener{
 		});
 		
 		JLabel lblTotalQuestions = new JLabel("Total Questions : "+TotalQuestions);
-		lblTotalQuestions.setBounds(781, 314, 159, 24);
+		lblTotalQuestions.setBounds(850, 314, 159, 24);
 		add(lblTotalQuestions);
 		
 		JButton save = new JButton("Save");
@@ -171,26 +172,26 @@ public class EditCourse extends JPanel implements ItemListener{
 		add(back);
 
 		JLabel label_1 = new JLabel(":");
-		label_1.setBounds(884, 213, 9, 24);
+		label_1.setBounds(897, 213, 9, 24);
 		add(label_1);
 		
 		JLabel label = new JLabel(":");
-		label.setBounds(828, 213, 9, 24);
+		label.setBounds(897, 213, 9, 24);
 		add(label);
 		
 		updateSS = new JTextField();
 		updateSS.setColumns(10);
-		updateSS.setBounds(895, 215, 45, 20);
+		updateSS.setBounds(964, 215, 45, 20);
 		add(updateSS);
 		
 		updateMM = new JTextField();
 		updateMM.setColumns(10);
-		updateMM.setBounds(838, 215, 45, 20);
+		updateMM.setBounds(907, 215, 45, 20);
 		add(updateMM);
 		
 		updateHH = new JTextField();
 		updateHH.setColumns(10);
-		updateHH.setBounds(781, 215, 45, 20);
+		updateHH.setBounds(850, 215, 45, 20);
 		add(updateHH);
 		
 		updateHH.setText(time.substring(0, 2));
@@ -198,30 +199,31 @@ public class EditCourse extends JPanel implements ItemListener{
 		updateSS.setText(time.substring(6, 8));
 		
 		updateCourseName = new JTextField();
-		updateCourseName.setBounds(781, 136, 185, 20);
+		updateCourseName.setBounds(850, 136, 185, 20);
 		add(updateCourseName);
 		updateCourseName.setColumns(10);
 		updateCourseName.setText(CourseName);
 		
 		JLabel lblEachMark = new JLabel("Each Mark");
-		lblEachMark.setBounds(781, 261, 87, 24);
+		lblEachMark.setBounds(850, 261, 87, 24);
 		add(lblEachMark);
 		
 		JLabel lblTime = new JLabel("Time");
-		lblTime.setBounds(781, 177, 87, 24);
+		lblTime.setBounds(850, 177, 87, 24);
 		add(lblTime);
 		
 		JLabel lblCourseName = new JLabel("Course Name");
-		lblCourseName.setBounds(781, 113, 87, 24);
+		lblCourseName.setBounds(850, 113, 87, 24);
 		add(lblCourseName);
+		save.setForeground(new Color( 0, 0,140));
+		save.setBackground(new Color(215,215,255));
 		save.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
-		save.setBounds(1170, 600, 100, 50);
+		save.setBounds(1170, 500, 100, 50);
 		add(save);
 				
 		jt=new JTabbedPane();
 		jt.setBounds(20, 90, 741, 459);
 		jt.addTab("New",New());
-		jt.addTab("View",View());
 		jt.addTab("Update",Update());
 		jt.addTab("Remove",Remove());
 		add(jt);
@@ -233,6 +235,17 @@ public class EditCourse extends JPanel implements ItemListener{
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		add(lblOnlineExamination);
+		
+		JSeparator separator = new JSeparator();
+		separator = new JSeparator(SwingConstants.VERTICAL);
+		separator.setBounds(775,5,1920,570);
+		add(separator);
+		
+
+		JSeparator separator1 = new JSeparator();
+		separator1 = new JSeparator(SwingConstants.HORIZONTAL);
+		separator1.setBounds(5,575,1920,1080);
+		add(separator1);
 		
 		
 			
@@ -379,119 +392,6 @@ public class EditCourse extends JPanel implements ItemListener{
 		return New;
 	}
 
-	private JLabel VcorrectOptionLabel ;
-	private JComboBox<String> VqIdCombo;
-	private JTextArea VqStatement;
-	private JTextField Vo1;
-	private JTextField Vo2;
-	private JTextField Vo4;
-	private JTextField Vo3;
-	
-	private JPanel View()
-	{
-		JPanel View=new JPanel();
-		View.setBackground(Color.WHITE);
-		View.setLayout(null);
-		
-		VcorrectOptionLabel = new JLabel();
-		VcorrectOptionLabel.setFont(new Font("Kayak Sans", Font.PLAIN, 16));
-		VcorrectOptionLabel.setBounds(246, 381, 105, 21);
-		View.add(VcorrectOptionLabel);
-		
-		JLabel label = new JLabel(" Question ID : ");
-		label.setBounds(10, 12, 148, 23);
-		label.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		View.add(label);
-		
-		JLabel label_1 = new JLabel("Question statement : ");
-		label_1.setBounds(20, 46, 218, 23);
-		label_1.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		View.add(label_1);
-		
-		VqIdCombo = new JComboBox<String>();
-		VqIdCombo.setModel(new DefaultComboBoxModel<String>(QuestionID));
-		VqIdCombo.setBounds(168, 16, 153, 23);
-		View.add(VqIdCombo);
-		VqIdCombo.addActionListener(new ActionListener() {
-			
-			public void actionPerformed(ActionEvent arg0) {
-				
-				ResultSet rs;
-				try{
-					rs=databaseResultSet("select *from questions where q_id='"+(String)VqIdCombo.getSelectedItem()+"'");
-					rs.next();
-					VqStatement.setText(rs.getString("q_statement"));
-					Vo1.setText(rs.getString("option_1"));
-					Vo2.setText(rs.getString("option_2"));
-					Vo3.setText(rs.getString("option_3"));
-					Vo4.setText(rs.getString("option_4"));
-					VcorrectOptionLabel.setText(rs.getString("correct_option"));
-				}
-				catch(SQLException e)
-				{
-					System.out.println("Error in view action listener.");
-				}
-				
-			}
-		});
-		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(53, 79, 661, 141);
-		View.add(scrollPane);
-		
-		VqStatement = new JTextArea();
-		VqStatement.setEditable(false);
-		VqStatement.setFont(new Font("Kayak Sans", Font.BOLD, 20));
-		VqStatement.setBorder(new LineBorder(new Color(65, 105, 225), 2, true));
-		scrollPane.setViewportView(VqStatement);
-		
-		JLabel label_2 = new JLabel("Option 1");
-		label_2.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		label_2.setBounds(47, 232, 91, 23);
-		View.add(label_2);
-		
-		JLabel label_3 = new JLabel("Option 2");
-		label_3.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		label_3.setBounds(47, 266, 91, 23);
-		View.add(label_3);
-		
-		JLabel label_4 = new JLabel("Option 3");
-		label_4.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		label_4.setBounds(47, 300, 91, 23);
-		View.add(label_4);
-		
-		JLabel label_5 = new JLabel("Option 4");
-		label_5.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		label_5.setBounds(47, 334, 91, 23);
-		View.add(label_5);
-		
-		JLabel label_6 = new JLabel("Correct option : ");
-		label_6.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		label_6.setBounds(47, 381, 187, 23);
-		View.add(label_6);
-		
-		Vo1 = new JTextField();
-		Vo1.setFont(new Font("Kayak Sans", Font.BOLD, 12));
-		Vo1.setBounds(156, 232, 560, 20);
-		View.add(Vo1);
-		
-		Vo2 = new JTextField();
-		Vo2.setFont(new Font("Kayak Sans", Font.BOLD, 12));
-		Vo2.setBounds(156, 270, 560, 20);
-		View.add(Vo2);
-		
-		Vo3 = new JTextField();
-		Vo3.setFont(new Font("Kayak Sans", Font.BOLD, 12));
-		Vo3.setBounds(156, 299, 560, 20);
-		View.add(Vo3);
-		
-		Vo4 = new JTextField();
-		Vo4.setFont(new Font("Kayak Sans", Font.BOLD, 12));
-		Vo4.setBounds(156, 337, 560, 20);
-		View.add(Vo4);
-		return View;
-	}
-	
 	private JTextArea UqStatement;
 	private JTextField Uo1;
 	private JTextField Uo2;
@@ -503,7 +403,7 @@ public class EditCourse extends JPanel implements ItemListener{
 	private JPanel Update()
 	{
 		JPanel Update=new JPanel();
-		Update.setBackground(new Color(255, 105, 180));
+		Update.setBackground(new Color(255,255,255));
 		Update.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -659,7 +559,7 @@ public class EditCourse extends JPanel implements ItemListener{
 	private JPanel Remove()
 	{
 		JPanel Remove=new JPanel();
-		Remove.setBackground(new Color(0,0,140));
+		Remove.setBackground(new Color(255,255,255));
 		Remove.setLayout(null);
 		
 		RcorrectOptionLabel = new JLabel("");

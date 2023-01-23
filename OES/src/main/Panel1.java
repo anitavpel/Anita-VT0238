@@ -1,7 +1,6 @@
 package main;
 
 import javax.swing.JPanel;
-
 import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -30,9 +29,9 @@ public class Panel1 extends JPanel {
 				MainFrame.AddPanel(new LoginPanel());
 			}
 		});
-		btnNext.setForeground(new Color(0, 0, 140));
+		btnNext.setForeground(new Color(0,0,140));
 		btnNext.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnNext.setBackground(new Color(215, 215, 255));
+		btnNext.setBackground(new Color(215,215,255));
 		btnNext.setBounds(1170, 600, 100, 50);
 		add(btnNext);
 		
@@ -43,14 +42,14 @@ public class Panel1 extends JPanel {
 				MainFrame.AddPanel(new Help());
 			}
 		});
-		btnNewButton.setForeground(new Color(0, 0, 140));
-		btnNewButton.setBackground(new Color(215, 215, 255));
+		btnNewButton.setForeground(new Color(0,0,140));
+		btnNewButton.setBackground(new Color(215,215,255));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("Virtuoso SoftTech");
-		lblOnlineExamination.setForeground(new Color(22, 25, 144));
+		lblOnlineExamination.setForeground(new Color(0,0,140));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 50));
@@ -58,15 +57,15 @@ public class Panel1 extends JPanel {
 		add(lblOnlineExamination);
 		
 		JLabel lblSystem = new JLabel("Exam Portal");
-		lblSystem.setForeground(new Color(22, 25, 144));
+		lblSystem.setForeground(new Color(0,0,140));
 		lblSystem.setBackground(new Color(215, 215, 255));
 		lblSystem.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSystem.setFont(new Font("Kayak Sans", Font.BOLD, 50));
 		lblSystem.setBounds(300, 370, 703, 150);
 		add(lblSystem);
 		
-		JLabel lblNewLabel1 = new JLabel("");
-		lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web.jpg"));
+	    JLabel lblNewLabel1 = new JLabel("");
+	    lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web.jpg"));
 		lblNewLabel1.setBorder(new LineBorder(new Color(255, 255, 255), 4));
 		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel1.setBounds(0, 5, 500, 150);
