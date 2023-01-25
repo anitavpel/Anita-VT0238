@@ -12,7 +12,6 @@ import java.sql.Statement;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
@@ -20,11 +19,14 @@ import javax.swing.border.MatteBorder;
 
 import database.Connect;
 import main.MainFrame;
-import main.Panel1;
 
 public class BeginTest extends JPanel {
 
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Create the panel.
+	 */
+	private static String username;
 	private static String courseName;
 	QuestionPanel questionPanel;
 	static int eachMarks;
@@ -36,6 +38,37 @@ public class BeginTest extends JPanel {
 	{
 		
 	}
+	private static String[] computeResult()
+	{
+		String Result[]=new String[9];
+		int totalQuestions=QuestionPanel.qInfo.length;
+		int timeTaken=Clock.time;
+		int CQ=0;
+		for(String s[]:QuestionPanel.qInfo)
+		{
+			if(s[1].equals(s[2]) && !(s[1].equals("-1")))
+				CQ++;
+		}
+		String time;
+		int temp=timeTaken%60;
+		time=":"+temp;
+		temp=(timeTaken-temp)/60;
+		time=":"+(temp%60)+time;
+		temp=(temp-temp%60)/60;
+		time=temp+time;
+		
+		Result[0]=courseName;
+		Result[1]=time;//timeTaken;
+		Result[2]=""+totalQuestions;  //total questions
+		Result[3]=""+QuestionPanel.q_attempted;//attemptedQuestion;
+		Result[4]=""+CQ;//correct questions;
+		Result[5]=""+(QuestionPanel.q_attempted-CQ);//wrong;
+		Result[6]=""+(CQ*eachMarks);//marksobtained;
+		Result[7]=""+(totalQuestions*eachMarks);//total marks;
+		Result[8]=""+(((float)(CQ*eachMarks)/(totalQuestions*eachMarks))*100);//percentage;
+		return Result;
+	}
+	
 	private void executeQuery()
 	{
 		Connect c=new Connect("root","root");
@@ -64,13 +97,14 @@ public class BeginTest extends JPanel {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		MainFrame.AddPanel(new Panel1());
+		MainFrame.AddPanel(new ShowResult(computeResult(),username));
 		QuestionPanel.q_attempted=0;
 		Clock.time=0;
 	}
 	
 	public BeginTest(String Username,String CourseName,String eachMarks) {
 		courseName=CourseName;
+		username=Username;
 		executeQuery();
 		BeginTest.eachMarks=Integer.parseInt(eachMarks);
 		makeGUI();
@@ -102,24 +136,8 @@ public class BeginTest extends JPanel {
 		btnSubmit.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent arg0) {
-				int result = JOptionPane.showConfirmDialog(null, "Do you really want to submit?", "Confirm Submission", JOptionPane.YES_NO_OPTION);
-		        if (result == JOptionPane.YES_OPTION) {
-		        	
-		            // Submit the form
-		        	JOptionPane.showMessageDialog(null, "Test Submitted successfully, All the best for Result");
-		        	endTest();
-					c.t.stop();//if submit button clicks then stop the thread of clock
-		        }
-		        else {
-		        	continueTest();
-					
-				}
-				
-			}
-
-			private void continueTest() {
-				// TODO Auto-generated method stub
-				
+				endTest();
+				c.t.stop();//if submit button clicks then stop the thread of clock
 			}
 		});
 		btnSubmit.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(215,215,255)));

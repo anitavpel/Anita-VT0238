@@ -2,7 +2,6 @@ package user;
 
 import java.awt.Color;
 
-
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,9 +35,8 @@ public class UserLogin extends JPanel implements FocusListener{
 	private static final long serialVersionUID = 1L;
 	private JTextField txtUsername;
 	private JPasswordField txtPassword;
-	private static int loginAttempts = 0;
-    private static final int MAX_LOGIN_ATTEMPTS = 1;
-    Connect c=new Connect("root","root");
+
+	Connect c=new Connect("root","root");
 	/**
 	 * Create the panel.
 	 */
@@ -130,10 +128,6 @@ public class UserLogin extends JPanel implements FocusListener{
 		btnLogin.setToolTipText("LOGIN");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (loginAttempts >= MAX_LOGIN_ATTEMPTS) {
-		            JOptionPane.showMessageDialog( null, "Maximum login attempts reached. Please contact the administrator.");
-		            return;
-		        }
 				if(txtUsername.getForeground()!=SystemColor.activeCaptionBorder)
 				{
 					if(txtPassword.getForeground()!=SystemColor.activeCaptionBorder)
@@ -179,22 +173,6 @@ public class UserLogin extends JPanel implements FocusListener{
 				{
 					JOptionPane.showMessageDialog(null,"Enter username.");
 				}
-				
-				
-				JTextField username = new JTextField();
-				JTextField password = new JPasswordField();
-				if (validateCredentials(username, password)) {
-		            JOptionPane.showMessageDialog(null, "Login successful!");
-		            // redirect to next page or perform any other action
-		        } else {
-		            loginAttempts++;
-		            JOptionPane.showMessageDialog(null, "Welcome " + (MAX_LOGIN_ATTEMPTS - loginAttempts) + " login attempts remaining.");
-		        }
-			}
-
-			private boolean validateCredentials(Object username, Object password) {
-				// TODO Auto-generated method stub
-				return false;
 			}
 		});
 		btnLogin.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));

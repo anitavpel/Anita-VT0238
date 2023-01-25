@@ -1,6 +1,7 @@
 package admin;
 
 import java.awt.Color;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,6 +24,7 @@ import main.MainFrame;
 public class MainAdmin extends JPanel {
 
 	private static final long serialVersionUID = 1L;
+	protected static final String Username = null;
 	/**
 	 * Create the panel.
 	 */
@@ -45,6 +47,8 @@ public class MainAdmin extends JPanel {
 	}
 	public MainAdmin() {
 		setLayout(null);
+		
+		
 		
 		JButton btnUsers = new JButton("USERS");
 		btnUsers.setFocusable(false);

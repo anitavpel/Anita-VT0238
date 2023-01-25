@@ -18,7 +18,6 @@ import javax.swing.JSeparator;
 import javax.swing.JRadioButton;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.JTextArea;
 import database.FormData;
 import java.awt.SystemColor;
 
@@ -35,7 +34,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 	public JTextField EMAIL;
 	public JTextField MOBILE;
 	public JTextField COLLEGE;
-	public JTextArea ADDRESS;
+	public JTextField ADDRESS;
 	public char Gender;
 	public int Date;
 	public int Month;
@@ -140,10 +139,10 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		reset.setBounds(400, 470, 116, 35);
 		add(reset);
 		
-		ADDRESS = new JTextArea("");
+		ADDRESS = new JTextField("");
 		ADDRESS.setFont(new Font("Kayak Sans", Font.BOLD, 14));
 		ADDRESS.setColumns(10);
-		ADDRESS.setBounds(276, 340, 331, 64);
+		ADDRESS.setBounds(395, 340, 331, 64);
 		add(ADDRESS);
 		
 		JLabel lblAddress = new JLabel("ADDRESS");
@@ -442,7 +441,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		submit.setBounds(623, 489, 130, 40);
 		add(submit);
 		
-		ADDRESS = new JTextArea(e.ADDRESS);
+		ADDRESS = new JTextField(e.ADDRESS);
 		ADDRESS.setFont(new Font("Kayak Sans", Font.BOLD, 14));
 		ADDRESS.setColumns(10);
 		ADDRESS.setBounds(277, 359, 331, 64);

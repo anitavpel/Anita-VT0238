@@ -13,7 +13,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
-import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import javax.swing.border.MatteBorder;
 
@@ -41,8 +40,8 @@ public class FrogotPassword extends JPanel implements FocusListener{
 		
 		lblNewLabel_1 = new JLabel();
 		lblNewLabel_1.setFont(new Font("Kayak Sans", Font.PLAIN, 32));
-		lblNewLabel_1.setForeground(new Color(255, 0, 0));
-		lblNewLabel_1.setBounds(217, 423, 557, 62);
+		lblNewLabel_1.setForeground(new Color(0,0,140));
+		lblNewLabel_1.setBounds(500, 423, 557, 62);
 		add(lblNewLabel_1);
 		btnNewButton.setForeground(new Color(0, 0, 140));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
@@ -88,10 +87,11 @@ public class FrogotPassword extends JPanel implements FocusListener{
 		txtUsername.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 		txtUsername.setText("USERNAME");
 		txtUsername.setToolTipText("USERNAME");
-		txtUsername.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		txtUsername.setBorder(UIManager.getBorder("Kayak Sans"));
+		txtUsername.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		
 		txtUsername.setBackground(new Color(255, 255, 255));
 		txtUsername.setBounds(500, 300, 350, 50);
+		
 		add(txtUsername);
 		txtUsername.addFocusListener(this);
 		

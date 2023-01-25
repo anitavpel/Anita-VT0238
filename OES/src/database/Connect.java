@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 
 public class Connect {
 	public Connection con;
+	protected Object t;
 	public Connect(String username,String password) {
 		
 		try{
