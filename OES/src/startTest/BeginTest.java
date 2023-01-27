@@ -12,6 +12,7 @@ import java.sql.Statement;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
@@ -136,8 +137,28 @@ public class BeginTest extends JPanel {
 		btnSubmit.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent arg0) {
+				
+				int result = JOptionPane.showConfirmDialog(null, "Do you really want to submit?", "Confirm Submission", JOptionPane.YES_NO_OPTION);
+		        if (result == JOptionPane.YES_OPTION) {
+		        	
+		            // Submit the form
+		        	JOptionPane.showMessageDialog(null, "Test Submitted successfully, All the best for Result");
+		        	
+		        	
+		        	
 				endTest();
 				c.t.stop();//if submit button clicks then stop the thread of clock
+			}
+		        else {
+		        	continueTest();
+					
+				}
+				
+			}
+
+			private void continueTest() {
+				// TODO Auto-generated method stub
+				
 			}
 		});
 		btnSubmit.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(215,215,255)));

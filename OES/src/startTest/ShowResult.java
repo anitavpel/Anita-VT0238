@@ -14,6 +14,8 @@ import javax.swing.border.LineBorder;
 import database.Connect;
 import user.UserPanel;
 import main.MainFrame;
+import main.Panel1;
+
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -48,16 +50,16 @@ public class ShowResult extends JPanel {
 			System.out.println("Error in saving result : "+e);
 		}
 		
-		JButton Discard = new JButton("DISCARD");
+		JButton Discard = new JButton("LOGOUT");
 		Discard.setFocusable(false);
 		Discard.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				MainFrame.AddPanel(new UserPanel(Username));
+				MainFrame.AddPanel(new Panel1());
 			}
 		});
 		Discard.setForeground(new Color(0, 0, 140));
 		Discard.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		Discard.setBounds(10, 550, 152, 50);
+		Discard.setBounds(500, 550, 152, 50);
 		add(Discard);
 		
 		JLabel lblOnlineExamination = new JLabel("Thank You, Your response has been saved");

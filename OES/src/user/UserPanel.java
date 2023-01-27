@@ -114,7 +114,15 @@ public class UserPanel extends JPanel {
 					//Start test of selected course if no of questions available are greater than 1.
 					if(courseDetail(Selected_course)>0)	
 					{
-						MainFrame.AddPanel(new BeginTest(Username,Selected_course,eachMark));
+						Statement stmt;
+						try {
+							stmt = c.con.createStatement();
+							String query1 = "update userdetails set LoginAttempts = LoginAttempts - 1 where username='"+username+"'";
+							int rs = stmt.executeUpdate(query1);							
+							MainFrame.AddPanel(new BeginTest(Username,Selected_course,eachMark));
+						} catch(SQLException e){
+							System.out.print(e);
+						}
 					}
 					else
 						JOptionPane.showMessageDialog(null, "Questions are not available.\nPlease contact to admin.");

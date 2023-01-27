@@ -143,7 +143,24 @@ public class UserLogin extends JPanel implements FocusListener{
 							{
 								if(checkVerification(username))
 								{
-									MainFrame.AddPanel(new UserPanel(username));
+									try {
+										String query1 = "select LoginAttempts from userdetails where username='"+username+"'";
+										Statement stmt = c.con.createStatement();
+										ResultSet rs = stmt.executeQuery(query1);
+										int num=0;
+										System.out.println(rs.next());
+										num = rs.getInt("LoginAttempts");
+										if(num<=0) {
+											JOptionPane.showMessageDialog(null, "Login attempts reached, please contact admin.");
+										}
+										else {
+											MainFrame.AddPanel(new UserPanel(username));
+										}
+									}
+									catch (Exception e) {
+										// TODO: handle exception
+										System.out.println(e);
+									}
 								}
 								else
 								{

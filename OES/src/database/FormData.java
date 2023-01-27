@@ -15,8 +15,8 @@ public class FormData {
 	{
 		try{
 		String query1="INSERT INTO userdetails "
-				+ "(username,password,firstname,middlename,lastname,gender,`E-mail`,Mobile,DOB,Address,College,RegDate) "
-				+ "VALUES(?,?,?,?,?,?,?,?,?,?,?,current_timestamp)";
+				+ "(username,password,firstname,middlename,lastname,gender,`E-mail`,Mobile,DOB,Address,College,RegDate,LoginAttempts) "
+				+ "VALUES(?,?,?,?,?,?,?,?,?,?,?,current_timestamp,5)";
 		String date=""+rf.Year+"-"+rf.Month+"-"+rf.Date+"";
 		
 		ClientPreparedStatement ps=(ClientPreparedStatement)c.con.prepareStatement(query1);
