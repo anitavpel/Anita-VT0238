@@ -1,6 +1,7 @@
 package user;
 
 import java.awt.Color;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,7 +21,6 @@ import javax.swing.DefaultComboBoxModel;
 import java.sql.*;
 import database.Connect;
 import javax.swing.JTextArea;
-import results.UserResult;
 import startTest.BeginTest;
 
 public class UserPanel extends JPanel {
@@ -118,6 +118,7 @@ public class UserPanel extends JPanel {
 						try {
 							stmt = c.con.createStatement();
 							String query1 = "update userdetails set LoginAttempts = LoginAttempts - 1 where username='"+username+"'";
+							@SuppressWarnings("unused")
 							int rs = stmt.executeUpdate(query1);							
 							MainFrame.AddPanel(new BeginTest(Username,Selected_course,eachMark));
 						} catch(SQLException e){
@@ -132,18 +133,7 @@ public class UserPanel extends JPanel {
 			}
 		});
 		
-		JButton btnResult = new JButton("RESULT");
-		btnResult.setToolTipText("RESULT");
-		btnResult.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				//Show Result of current user
-				new UserResult(Username,"user");			}
-		});
-		btnResult.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
-		btnResult.setForeground(new Color(0, 0, 140));
-		btnResult.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
-		btnResult.setBounds(1100, 64, 166, 42);
-		add(btnResult);
+		
 		btnStartTest.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
 		
 		btnStartTest.setForeground(new Color(0, 0, 140));

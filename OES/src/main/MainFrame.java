@@ -1,8 +1,10 @@
 package main;
 
 import javax.swing.JFrame;
+
 import javax.swing.JPanel;
 import javax.swing.UIManager;
+
 import java.awt.Rectangle;
 
 public class MainFrame extends JFrame {
@@ -52,4 +54,6 @@ public class MainFrame extends JFrame {
 	{
 		return MainPanel.getBounds();
 	}
+
+	
 }

@@ -142,8 +142,7 @@ public class BeginTest extends JPanel {
 		        if (result == JOptionPane.YES_OPTION) {
 		        	
 		            // Submit the form
-		        	JOptionPane.showMessageDialog(null, "Test Submitted successfully, All the best for Result");
-		        	
+		        
 		        	
 		        	
 				endTest();

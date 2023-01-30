@@ -155,6 +155,7 @@ public class UserLogin extends JPanel implements FocusListener{
 										}
 										else {
 											MainFrame.AddPanel(new UserPanel(username));
+											
 										}
 									}
 									catch (Exception e) {
