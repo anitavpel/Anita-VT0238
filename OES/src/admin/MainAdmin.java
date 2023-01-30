@@ -48,24 +48,10 @@ public class MainAdmin extends JPanel {
 	public MainAdmin() {
 		setLayout(null);
 		
+
+		
 		
 
-		JButton EditAttempts = new JButton("EDIT LOGIN ATTEMPTS");
-		EditAttempts.setFocusable(false);
-		EditAttempts.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				if(executeQuery("select *from userdetails"))
-					MainFrame.AddPanel(new EditAttempts());
-				else
-					JOptionPane.showMessageDialog(null, "No users found.");
-			}
-		});
-		
-		EditAttempts.setForeground(new Color(0,0,140));
-		EditAttempts.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		EditAttempts.setBackground(new Color(215,215,255));
-		EditAttempts.setBounds(511, 519, 332, 79);
-		add(EditAttempts);
 		
 		
 		JButton btnUsers = new JButton("USERS");

@@ -1,6 +1,7 @@
 package database;
 
 import java.awt.Color;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,6 +14,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JSeparator;
@@ -21,6 +23,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
+import admin.LoginAttempts;
 import admin.UsersData;
 import admin.Verification;
 import main.MainFrame;
@@ -28,6 +31,23 @@ import results.UserResult;
 
 public class UserDetails extends JPanel{
 	private static final long serialVersionUID = 1L;
+	
+	private boolean executeQuery(String query)
+	{
+		Connect c=new Connect("root","root");
+		try{
+			Statement st=c.con.createStatement();
+			if(st.executeQuery(query).next())
+				return true;
+			else
+				return false;
+		}
+		catch(SQLException e)
+		{
+			System.out.println(e);
+		}
+		return false;
+	}
 
 	public UserDetails() {
 	}
@@ -39,6 +59,7 @@ public class UserDetails extends JPanel{
 	public String LAST;
 	public String EMAIL;
 	public String MOBILE;
+	public String LOGINATTEMPTS;
 	public String COLLEGE;
 	public String ADDRESS;
 	public String Gender;
@@ -57,6 +78,7 @@ public class UserDetails extends JPanel{
 	public JTextField JLAST;
 	public JTextField JEMAIL;
 	public JTextField JMOBILE;
+	public JTextField JLOGINATTEMPTS;
 	public JTextField JCOLLEGE;
 	public JTextArea JADDRESS;
 	public char JGender;
@@ -64,6 +86,7 @@ public class UserDetails extends JPanel{
 	public int JMonth;
 	public int JYear;
 	private String PanelName;
+	
 	
 	JComboBox<String> year;
 	JComboBox<String> month;
@@ -86,6 +109,7 @@ public class UserDetails extends JPanel{
 			LAST=rs.getString("LastName");
 			EMAIL=rs.getString("E-mail");
 			MOBILE=rs.getString("Mobile");
+			LOGINATTEMPTS=rs.getString("LoginAttempts");
 			COLLEGE=rs.getString("College");
 			ADDRESS=rs.getString("Address");
 			Gender=rs.getString("Gender");
@@ -140,10 +164,24 @@ public class UserDetails extends JPanel{
 		add(lblRegNo);
 		
 		
+		JLOGINATTEMPTS = new JTextField(LOGINATTEMPTS);
+		JLOGINATTEMPTS.setBounds(277, 395, 331, 64);
+		add(JLOGINATTEMPTS);
+		JLOGINATTEMPTS.setEditable(false);
+		
+		
+		JLabel lblLoginAttempts = new JLabel("LOGINATTEMPTS");
+		lblLoginAttempts.setForeground(new Color(0,0,140));
+		lblLoginAttempts.setFont(new Font("Kayak Sans", Font.BOLD, 13));
+		lblLoginAttempts.setBounds(182, 395, 85, 26);
+		add(lblLoginAttempts);
+		
 		JADDRESS = new JTextArea(ADDRESS);
 		JADDRESS.setBounds(277, 359, 331, 64);
 		add(JADDRESS);
 		JADDRESS.setEditable(false);
+		
+		
 		
 		JLabel lblAddress = new JLabel("ADDRESS");
 		lblAddress.setForeground(new Color(0,0,140));
@@ -354,6 +392,26 @@ public class UserDetails extends JPanel{
 		lblPassword.setBounds(523, 136, 85, 26);
 		add(lblPassword);
 		
+		
+
+		JButton EditAttempts = new JButton("EDIT LOGIN ATTEMPTS");
+		EditAttempts.setFocusable(false);
+		EditAttempts.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(executeQuery("select *from userdetails"))
+					MainFrame.AddPanel(new LoginAttempts(USERNAME));
+				else
+					JOptionPane.showMessageDialog(null, "No users found.");
+			}
+		});
+		
+		EditAttempts.setForeground(new Color(0,0,140));
+		EditAttempts.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		EditAttempts.setBackground(new Color(215,215,255));
+		EditAttempts.setBounds(846, 186, 135, 43);
+		add(EditAttempts);
+		
+		
 		JButton btnNewButton = new JButton("RESULT");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -366,7 +424,7 @@ public class UserDetails extends JPanel{
 		add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Anita\\Pictures\\istockphoto-1145350494-612x612.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
 		lblNewLabel.setFont(new Font("Kayak Sans", Font.BOLD, 14));
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
