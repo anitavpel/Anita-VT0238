@@ -59,7 +59,7 @@ public class ShowResult extends JPanel {
 		});
 		Discard.setForeground(new Color(0, 0, 140));
 		Discard.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		Discard.setBounds(500, 550, 152, 50);
+		Discard.setBounds(550, 550, 152, 50);
 		add(Discard);
 		
 		JLabel lblOnlineExamination = new JLabel("Thank You, Your response has been saved");
@@ -67,7 +67,7 @@ public class ShowResult extends JPanel {
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(500, 43, 270, 72);
+		lblOnlineExamination.setBounds(5, 200, 270, 72);
 		add(lblOnlineExamination);
 		
 		JLabel lblNewLabel = new JLabel("");
