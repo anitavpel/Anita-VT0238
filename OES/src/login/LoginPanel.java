@@ -40,8 +40,8 @@ public class LoginPanel extends JPanel {
 				MainFrame.AddPanel(new AdminPanel());
 			}
 		});
-		btnAdmin.setForeground(new Color(0, 0, 140));
-		btnAdmin.setBackground(new Color(215, 215, 255));
+		btnAdmin.setForeground(new Color(255,255,255));
+		btnAdmin.setBackground(new Color(20, 112, 185));
 		btnAdmin.setFont(new Font("Kayak Sans", Font.BOLD, 30));
 		btnAdmin.setBounds(256, 322, 700, 99);
 		add(btnAdmin);
@@ -53,27 +53,34 @@ public class LoginPanel extends JPanel {
 				MainFrame.AddPanel(new UserLogin());
 			}
 		});
-		btnUser.setForeground(new Color(0, 0, 140));
-		btnUser.setBackground(new Color(215, 215, 255));
+		btnUser.setForeground(new Color(255,255,255));
+		btnUser.setBackground(new Color(20, 112, 185));
 		btnUser.setFont(new Font("Kayak Sans", Font.BOLD, 30));
 		btnUser.setBounds(256, 212, 700, 99);
 		add(btnUser);
-		btnNewButton.setForeground(new Color(0, 0, 140));
-		btnNewButton.setBackground(new Color(215, 215, 255));
+		btnNewButton.setForeground(new Color(255,255,255));
+		btnNewButton.setBackground(new Color(20, 112, 185));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("LOGIN");
-		lblOnlineExamination.setForeground(new Color(34, 110, 171));
+		lblOnlineExamination.setForeground(new Color(20, 112, 185));
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		lblOnlineExamination.setBounds(388, 46, 450, 150);
 		add(lblOnlineExamination);
 		
+		
+		 JLabel lblNewLabel1 = new JLabel("");
+		    lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
+			lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+			lblNewLabel1.setBounds(5, 5, 500, 150);
+			add(lblNewLabel1);
+			
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-		lblNewLabel.setBorder(new LineBorder(new Color(215, 215, 255), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);

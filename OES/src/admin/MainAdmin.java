@@ -72,14 +72,14 @@ public class MainAdmin extends JPanel {
 				AdminPanel.password=JOptionPane.showInputDialog(null, "New password");
 			}
 		});
-		btnChangePassword.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
-		btnChangePassword.setForeground(new Color(0, 0, 140));
+		btnChangePassword.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
+		btnChangePassword.setForeground(new Color(20, 112, 185));
 		btnChangePassword.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
 		btnChangePassword.setBounds(1100, 11, 166, 42);
 		add(btnChangePassword);
-		btnUsers.setForeground(new Color(0,0,140));
+		btnUsers.setForeground(new Color(255,255,255));
 		btnUsers.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnUsers.setBackground(new Color(215,215,255));
+		btnUsers.setBackground(new Color(20, 112, 185));
 		btnUsers.setBounds(511, 429, 332, 79);
 		add(btnUsers);
 		
@@ -93,9 +93,9 @@ public class MainAdmin extends JPanel {
 					JOptionPane.showMessageDialog(null, "No result found.");
 			}
 		});
-		btnResults.setForeground(new Color(0,0,140));
+		btnResults.setForeground(new Color(255,255,255));
 		btnResults.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnResults.setBackground(new Color(215,215,255));
+		btnResults.setBackground(new Color(20, 112, 185));
 		btnResults.setBounds(511, 159, 332, 79);
 		add(btnResults);
 		
@@ -109,9 +109,9 @@ public class MainAdmin extends JPanel {
 					JOptionPane.showMessageDialog(null, "No users for verification.");
 			}
 		});
-		btnVerification.setForeground(new Color( 0, 0,140));
+		btnVerification.setForeground(new Color(255,255,255));
 		btnVerification.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnVerification.setBackground(new Color(215,215,255));
+		btnVerification.setBackground(new Color(20, 112, 185));
 		btnVerification.setBounds(511, 249, 332, 79);
 		add(btnVerification);
 		
@@ -122,9 +122,9 @@ public class MainAdmin extends JPanel {
 				MainFrame.AddPanel(new CoursePanel());
 			}
 		});
-		btnManageCourses.setForeground(new Color( 0, 0,140));
+		btnManageCourses.setForeground(new Color(255,255,255));
 		btnManageCourses.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnManageCourses.setBackground(new Color(215,215,255));
+		btnManageCourses.setBackground(new Color(20, 112, 185));
 		btnManageCourses.setBounds(511, 339, 332, 79);
 		add(btnManageCourses);
 		
@@ -136,23 +136,30 @@ public class MainAdmin extends JPanel {
 				JOptionPane.showMessageDialog(null, "Successfully Logout.");	
 			}
 		});
-		btnNewButton.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
-		btnNewButton.setForeground(new Color(0, 0, 140));
+		btnNewButton.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
+		btnNewButton.setForeground(new Color(20, 112, 185));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBounds(1170, 600, 100, 50);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("ADMIN");
-		lblOnlineExamination.setForeground(new Color(0,0,140));
+		lblOnlineExamination.setForeground(new Color(20, 112, 185));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		lblOnlineExamination.setBounds(400, 28, 603, 105);
 		add(lblOnlineExamination);
 		
+		
+		JLabel lblNewLabel1 = new JLabel("");
+		lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
+		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel1.setBounds(5, 5, 500, 150);
+		add(lblNewLabel1);
+			
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-		lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);

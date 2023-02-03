@@ -108,7 +108,7 @@ public class UserResult {
 		String ColHeads[]={"Course","Total Ques.","Attempted Ques.","Correct Ques.","Wrong Ques.","Total Marks","Marks Obtained","Percentage","Time taken","Test date"};
 		
 		JLabel label = new JLabel(USERNAME);
-		label.setForeground(new Color(0, 0, 205));
+		label.setForeground(new Color(20, 112, 185));
 		label.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		label.setBounds(1000, 70, 180, 28);
 		p.add(label);
@@ -124,14 +124,14 @@ public class UserResult {
 		p.add(panel);
 		panel.setLayout(null);
 				
-		btnNewButton.setForeground(new Color(0, 0, 140));
-		btnNewButton.setBackground(new Color(215, 215, 255));
+		btnNewButton.setForeground(new Color(255,255,255));
+		btnNewButton.setBackground(new Color(20, 112, 185));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBounds(10, 600, 89, 50);
 		p.add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("RESULT");
-		lblOnlineExamination.setForeground(new Color(0,0,140));
+		lblOnlineExamination.setForeground(new Color(20, 112, 185));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
@@ -140,7 +140,7 @@ public class UserResult {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-		lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		p.add(lblNewLabel);

@@ -108,13 +108,13 @@ public class CourseResult{
 		String ColHeads[]={"Username","Name","Total Ques.","Attempted Ques.","Correct Ques.","Wrong Ques.","Total Marks","Obtained Marks","Percentage","Time taken","Test date"};
 		
 		JLabel lblCourseName_1 = new JLabel(CourseName);
-		lblCourseName_1.setForeground(new Color(0,0,140));
+		lblCourseName_1.setForeground(new Color(20, 112, 185));
 		lblCourseName_1.setFont(new Font("Kayak Sans", Font.BOLD, 22));
 		lblCourseName_1.setBounds(906, 84, 180, 23);
 		p.add(lblCourseName_1);
 		
 		JLabel lblCourseName = new JLabel("Course Name : ");
-		lblCourseName.setForeground(new Color(0,0,0));
+		lblCourseName.setForeground(new Color(20, 112, 185));
 		lblCourseName.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		lblCourseName.setBounds(800, 84, 113, 23);
 		p.add(lblCourseName);
@@ -128,14 +128,14 @@ public class CourseResult{
 		result.setBounds(10, 11, 951, 418);
 		panel.add(result);
 			
-		btnNewButton.setForeground(new Color(0,0,140));
-		btnNewButton.setBackground(new Color(215,215,255));
+		btnNewButton.setForeground(new Color(255,255,255));
+		btnNewButton.setBackground(new Color(20, 112, 185));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBounds(10, 600, 89, 50);
 		p.add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("Course Result");
-		lblOnlineExamination.setForeground(new Color(0,0,140));
+		lblOnlineExamination.setForeground(new Color(20, 112, 185));
 		lblOnlineExamination.setBackground(Color.pink);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
@@ -144,7 +144,7 @@ public class CourseResult{
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-		lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		p.add(lblNewLabel);

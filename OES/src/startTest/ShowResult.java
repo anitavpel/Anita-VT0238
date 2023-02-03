@@ -57,22 +57,29 @@ public class ShowResult extends JPanel {
 				MainFrame.AddPanel(new Panel1());
 			}
 		});
-		Discard.setForeground(new Color(0, 0, 140));
+		Discard.setForeground(new Color(20, 112, 185));
 		Discard.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		Discard.setBounds(550, 550, 152, 50);
 		add(Discard);
 		
 		JLabel lblOnlineExamination = new JLabel("Thank You, Your response has been saved");
-		lblOnlineExamination.setForeground(new Color(0, 0, 140));
+		lblOnlineExamination.setForeground(new Color(20, 112, 185));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(5, 200, 270, 72);
+		lblOnlineExamination.setBounds(270, 200, 800, 100);
 		add(lblOnlineExamination);
 		
+		
+		JLabel lblNewLabel1 = new JLabel("");
+		lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
+		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel1.setBounds(5, 5, 500, 150);
+		add(lblNewLabel1);
+
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-		lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
