@@ -36,8 +36,8 @@ public class LoginAttempts extends JPanel {
 	public LoginAttempts(String username) {
 		setLayout(null);
 		JLabel lblOnlineExamination = new JLabel("EDIT ATTEMPTS");
-	lblOnlineExamination.setForeground(new Color(20, 112, 185));
-	lblOnlineExamination.setBackground(new Color(20, 112, 185));
+	lblOnlineExamination.setForeground(new Color(0, 0, 140));
+	lblOnlineExamination.setBackground(new Color(0, 0, 140));
 	lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 	lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 	lblOnlineExamination.setBounds(425, 46, 450, 150);
@@ -47,7 +47,7 @@ public class LoginAttempts extends JPanel {
 	
 	
 	updateAttempts = new JComboBox<Integer>();
-	updateAttempts.setModel(new DefaultComboBoxModel<Integer>(new Integer[] {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}));
+	updateAttempts.setModel(new DefaultComboBoxModel<Integer>(new Integer[] {1,2,3,4,5,6,7,8}));
 	updateAttempts.setFont(new Font("Kayak Sans", Font.BOLD, 19));
 	updateAttempts.setBounds(500, 223, 266, 30);
 	updateAttempts.setSelectedIndex(eachattempt-1);
@@ -82,8 +82,8 @@ public class LoginAttempts extends JPanel {
 		}
 		
 	});
-	btnsave.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
-	btnsave.setForeground(new Color(20, 112, 185));
+	btnsave.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
+	btnsave.setForeground(new Color(0, 0, 140));
 	btnsave.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 	btnsave.setBounds(800, 223, 125, 36);
 	add(btnsave);
@@ -94,14 +94,14 @@ public class LoginAttempts extends JPanel {
 			MainFrame.AddPanel(new UsersData());
 		}
 	});
-	btnNewButton.setForeground(new Color(255,255,255));
-	btnNewButton.setBackground(new Color(20, 112, 185));
+	btnNewButton.setForeground(new Color(0, 0, 140));
+	btnNewButton.setBackground(new Color(215,215,255));
 	btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 	btnNewButton.setBounds(10, 600, 89, 50);
 	add(btnNewButton);
 	
 	JLabel lblNewLabel = new JLabel("");
-	lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
+	lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
 	lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 	lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
 	lblNewLabel.setBounds(0, 0, 1920, 1080);
@@ -109,5 +109,16 @@ public class LoginAttempts extends JPanel {
 	
 	
 }
+
+
+
+
+	
+	
+
+
+
+
+	
 }
 	

@@ -72,8 +72,8 @@ public class UsersData extends JPanel {
 					new UserDetails(Username,true,"UsersData");
 				}
 			});
-			btnSearch.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
-			btnSearch.setForeground(new Color(20, 112, 185));
+			btnSearch.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
+			btnSearch.setForeground(new Color(0,0,140));
 			btnSearch.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 			btnSearch.setBounds(800, 223, 125, 36);
 			add(btnSearch);
@@ -81,7 +81,7 @@ public class UsersData extends JPanel {
 			
 			
 			JLabel lblUsersForVerification = new JLabel("Available Users");
-			lblUsersForVerification.setForeground(new Color(20, 112, 185));
+			lblUsersForVerification.setForeground(new Color(0,0,140));
 			lblUsersForVerification.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 			lblUsersForVerification.setBounds(300, 223, 156, 28);
 			add(lblUsersForVerification);
@@ -105,14 +105,14 @@ public class UsersData extends JPanel {
 					MainFrame.AddPanel(new MainAdmin());
 				}
 			});
-			btnNewButton.setForeground(new Color(20, 112, 185));
+			btnNewButton.setForeground(new Color(0, 0, 140));
 			btnNewButton.setBackground(UIManager.getColor("Button.disabledForeground"));
 			btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 			btnNewButton.setBounds(10, 600, 89, 50);
 			add(btnNewButton);
 			
 			JLabel lblOnlineExamination = new JLabel("USERS");
-			lblOnlineExamination.setForeground(new Color(20, 112, 185));
+			lblOnlineExamination.setForeground(new Color( 0, 0,140));
 			lblOnlineExamination.setBackground(Color.GREEN);
 			lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 			lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
@@ -121,7 +121,7 @@ public class UsersData extends JPanel {
 			
 			JLabel lblNewLabel = new JLabel("");
 			lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-			lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
+			lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
 			lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 			lblNewLabel.setBounds(0, 0, 1920, 1080);
 			add(lblNewLabel);

@@ -123,13 +123,13 @@ public class RegistrationForm extends JPanel implements ActionListener {
 				}
 			}
 		});
-		submit.setForeground(new Color(20, 112, 185));
+		submit.setForeground(new Color(0, 0, 140));
 		submit.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		submit.setBounds(600, 470, 127, 35);
 		add(submit);
 		
 		JButton reset = new JButton("RESET");
-		reset.setForeground(new Color(20, 112, 185));
+		reset.setForeground(new Color(0, 0, 140));
 		reset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				MainFrame.AddPanel(new RegistrationForm());
@@ -146,7 +146,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		add(ADDRESS);
 		
 		JLabel lblAddress = new JLabel("ADDRESS");
-		lblAddress.setForeground(new Color(20, 112, 185));
+		lblAddress.setForeground(new Color(0, 0, 140));
 		lblAddress.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblAddress.setBounds(300, 339, 85, 26);
 		add(lblAddress);
@@ -158,7 +158,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		add(COLLEGE);
 		//connect
 		JLabel lblCollege = new JLabel("COLLEGE");
-		lblCollege.setForeground(new Color(20, 112, 185));
+		lblCollege.setForeground(new Color(0, 0, 140));
 		lblCollege.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblCollege.setBounds(300, 302, 85, 26);
 		add(lblCollege);
@@ -230,7 +230,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		
 		
 		JLabel label = new JLabel("MOBILE NO.");
-		label.setForeground(new Color(20, 112, 185));
+		label.setForeground(new Color(0, 0, 140));
 		label.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		label.setBounds(641, 192, 99, 26);
 		add(label);
@@ -242,7 +242,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		add(MOBILE);
 		
 		JLabel lblDob = new JLabel("D.O.B");
-		lblDob.setForeground(new Color(20, 112, 185));
+		lblDob.setForeground(new Color(0, 0, 140));
 		lblDob.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblDob.setBounds(300, 265, 85, 26);
 		add(lblDob);
@@ -254,14 +254,14 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		add(EMAIL);
 		
 		JLabel lblEmail = new JLabel("E-MAIL");
-		lblEmail.setForeground(new Color(20, 112, 185));
+		lblEmail.setForeground(new Color(0, 0, 140));
 		lblEmail.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblEmail.setBounds(300, 228, 85, 26);
 		add(lblEmail);
 		
 		JRadioButton other = new JRadioButton("OTHER");
 		other.setOpaque(false);
-		other.setForeground(new Color(20, 112, 185));
+		other.setForeground(new Color(0, 0, 140));
 		other.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		other.setBounds(532, 193, 73, 23);
 		add(other);
@@ -269,7 +269,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		
 		JRadioButton female = new JRadioButton("FEMALE");
 		female.setOpaque(false);
-		female.setForeground(new Color(20, 112, 185));
+		female.setForeground(new Color(0, 0, 140));
 		female.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		female.setBounds(457, 193, 73, 23);
 		add(female);
@@ -277,7 +277,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		
 		JRadioButton male = new JRadioButton("MALE");
 		male.setFont(new Font("Kayak Sans", Font.BOLD, 13));
-		male.setForeground(new Color(20, 112, 185));
+		male.setForeground(new Color(0, 0, 140));
 		male.setOpaque(false);
 		male.setBounds(395, 193, 60, 23);
 		add(male);
@@ -289,7 +289,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		bg.add(other);
 		
 		JLabel lblGender = new JLabel("GENDER");
-		lblGender.setForeground(new Color(20, 112, 185));
+		lblGender.setForeground(new Color(0, 0, 140));
 		lblGender.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblGender.setBounds(300, 191, 85, 26);
 		add(lblGender);
@@ -313,7 +313,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		add(FIRST);
 		
 		JLabel lblName = new JLabel("NAME");
-		lblName.setForeground(new Color(20, 112, 185));
+		lblName.setForeground(new Color(0, 0, 140));
 		lblName.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblName.setBounds(300, 154, 85, 26);
 		add(lblName);
@@ -325,7 +325,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		add(PASSWORD);
 		
 		JSeparator separator = new JSeparator();
-		separator.setForeground(new Color(20, 112, 185));
+		separator.setForeground(new Color(0, 0, 140));
 		separator.setBounds(300, 73, 513, 2);
 		add(separator);
 		
@@ -336,7 +336,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		USERNAME.setColumns(10);
 		
 		JLabel lblUsername = new JLabel("USERNAME");
-		lblUsername.setForeground(new Color(20, 112, 185));
+		lblUsername.setForeground(new Color(0, 0, 140));
 		lblUsername.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblUsername.setBounds(300, 117, 85, 26);
 		add(lblUsername);
@@ -348,7 +348,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 				MainFrame.AddPanel(new UserLogin());
 			}
 		});
-		back.setForeground(new Color(20, 112, 185));
+		back.setForeground(new Color(0, 0, 140));
 		back.setBackground(SystemColor.controlHighlight);
 		back.setBackground(new Color(215, 215, 255));
 		back.setFont(new Font("Kayak Sans", Font.BOLD, 18));
@@ -356,21 +356,21 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		
 		JLabel lblOnlineExamination = new JLabel("REGISTRATION FORM");
 		lblOnlineExamination.setBounds(300, 18, 535, 57);
-		lblOnlineExamination.setForeground(new Color(20, 112, 185));
+		lblOnlineExamination.setForeground(new Color(0, 0, 140));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		add(lblOnlineExamination);
 		
 		JLabel lblPassword = new JLabel("PASSWORD");
-		lblPassword.setForeground(new Color(20, 112, 185));
+		lblPassword.setForeground(new Color(0, 0, 140));
 		lblPassword.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblPassword.setBounds(600, 117, 85, 26);
 		add(lblPassword);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(215, 215, 255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
@@ -414,29 +414,29 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		});
 		
 		JLabel label_2 = new JLabel(e.RegDate);
-		label_2.setForeground(new Color(20, 112, 185));
+		label_2.setForeground(new Color(0,0,140));
 		label_2.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		label_2.setBounds(568, 86, 242, 26);
 		add(label_2);
 		
 		JLabel lblRegDate = new JLabel("REG Date : ");
-		lblRegDate.setForeground(new Color(20, 112, 185));
+		lblRegDate.setForeground(new Color(0,0,0));
 		lblRegDate.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblRegDate.setBounds(468, 86, 109, 26);
 		add(lblRegDate);
 		
 		JLabel label_1 = new JLabel(e.RegNo);
-		label_1.setForeground(new Color(20, 112, 185));
+		label_1.setForeground(new Color( 0, 0,140));
 		label_1.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		label_1.setBounds(149, 90, 85, 26);
 		add(label_1);
 		
 		JLabel lblRegNo = new JLabel("REG NO. : ");
-		lblRegNo.setForeground(new Color(20, 112, 185));
+		lblRegNo.setForeground(new Color(0,0,0));
 		lblRegNo.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblRegNo.setBounds(58, 90, 97, 26);
 		add(lblRegNo);
-		submit.setForeground(new Color(20, 112, 185));
+		submit.setForeground(new Color(0,0,140));
 		submit.setFont(new Font("Kayak Sans", Font.ITALIC, 32));
 		submit.setBounds(623, 489, 130, 40);
 		add(submit);
@@ -448,7 +448,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		add(ADDRESS);
 		
 		JLabel lblAddress = new JLabel("ADDRESS");
-		lblAddress.setForeground(new Color(20, 112, 185));
+		lblAddress.setForeground(new Color(0, 0,140));
 		lblAddress.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblAddress.setBounds(182, 358, 85, 26);
 		add(lblAddress);
@@ -460,7 +460,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		add(COLLEGE);
 		
 		JLabel lblCollege = new JLabel("COLLEGE");
-		lblCollege.setForeground(new Color(20, 112, 185));
+		lblCollege.setForeground(new Color(0, 0,140));
 		lblCollege.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblCollege.setBounds(182, 321, 85, 26);
 		add(lblCollege);
@@ -497,7 +497,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		Date=e.Date;
 		
 		JLabel label = new JLabel("MOBILE NO.");
-		label.setForeground(new Color(20, 112, 185));
+		label.setForeground(new Color(0, 0,140));
 		label.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		label.setBounds(523, 211, 99, 26);
 		add(label);
@@ -509,7 +509,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		add(MOBILE);
 		
 		JLabel lblDob = new JLabel("D.O.B");
-		lblDob.setForeground(new Color(20, 112, 185));
+		lblDob.setForeground(new Color(0, 0,140));
 		lblDob.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblDob.setBounds(182, 284, 85, 26);
 		add(lblDob);
@@ -521,7 +521,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		add(EMAIL);
 		
 		JLabel lblEmail = new JLabel("E-MAIL");
-		lblEmail.setForeground(new Color(20, 112, 185));
+		lblEmail.setForeground(new Color(0, 0,140));
 		lblEmail.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblEmail.setBounds(182, 247, 85, 26);
 		add(lblEmail);
@@ -529,7 +529,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		JRadioButton other = new JRadioButton("OTHER");
 		other.setEnabled(false);
 		other.setOpaque(false);
-		other.setForeground(new Color(20, 112, 185));
+		other.setForeground(new Color(0, 0,140));
 		other.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		other.setBounds(414, 212, 73, 23);
 		add(other);
@@ -537,7 +537,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		JRadioButton female = new JRadioButton("FEMALE");
 		female.setEnabled(false);
 		female.setOpaque(false);
-		female.setForeground(new Color(20, 112, 185));
+		female.setForeground(new Color(0, 0,140));
 		female.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		female.setBounds(339, 212, 73, 23);
 		add(female);
@@ -545,13 +545,13 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		JRadioButton male = new JRadioButton("MALE");
 		male.setEnabled(false);
 		male.setFont(new Font("Kayak Sans", Font.BOLD, 13));
-		male.setForeground(new Color(20, 112, 185));
+		male.setForeground(new Color(0, 0,140));
 		male.setOpaque(false);
 		male.setBounds(277, 212, 60, 23);
 		add(male);
 				
 		JLabel lblGender = new JLabel("GENDER");
-		lblGender.setForeground(new Color(20, 112, 185));
+		lblGender.setForeground(new Color(0, 0,140));
 		lblGender.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblGender.setBounds(182, 210, 85, 26);
 		add(lblGender);
@@ -585,7 +585,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		add(FIRST);
 		
 		JLabel lblName = new JLabel("NAME");
-		lblName.setForeground(new Color(20, 112, 185));
+		lblName.setForeground(new Color(0, 0,140));
 		lblName.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblName.setBounds(182, 173, 85, 26);
 		add(lblName);
@@ -597,7 +597,7 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		add(PASSWORD);
 		
 		JSeparator separator = new JSeparator();
-		separator.setForeground(new Color(20, 112, 185));
+		separator.setForeground(new Color(0, 0,140));
 		separator.setBounds(239, 73, 513, 2);
 		add(separator);
 		
@@ -608,13 +608,13 @@ public class RegistrationForm extends JPanel implements ActionListener {
 		USERNAME.setColumns(10);
 		
 		JLabel lblUsername = new JLabel("USERNAME");
-		lblUsername.setForeground(new Color(20, 112, 185));
+		lblUsername.setForeground(new Color(0, 0,140));
 		lblUsername.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblUsername.setBounds(182, 136, 85, 26);
 		add(lblUsername);
 		
 		JButton back = new JButton("BACK");
-		back.setBackground(new Color(20, 112, 185));
+		back.setBackground(new Color(0, 0,140));
 		back.setBounds(10, 511, 99, 35);
 		back.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -622,21 +622,21 @@ public class RegistrationForm extends JPanel implements ActionListener {
 					MainFrame.AddPanel(new UserPanel(USERNAME.getText()));
 			}
 		});
-		back.setForeground(new Color(255,255,255));
-		back.setBackground(new Color(20, 112, 185));
+		back.setForeground(new Color(0, 0,140));
+		back.setBackground(new Color(215,215,255));
 		back.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		add(back);
 		
 		JLabel lblOnlineExamination = new JLabel("USER DETAILS");
 		lblOnlineExamination.setBounds(228, 18, 535, 57);
-		lblOnlineExamination.setForeground(new Color(20, 112, 185));
+		lblOnlineExamination.setForeground(new Color(0, 0,140));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		add(lblOnlineExamination);
 		
 		JLabel lblPassword = new JLabel("PASSWORD");
-		lblPassword.setForeground(new Color(20, 112, 185));
+		lblPassword.setForeground(new Color(0, 0,140));
 		lblPassword.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblPassword.setBounds(523, 136, 85, 26);
 		add(lblPassword);

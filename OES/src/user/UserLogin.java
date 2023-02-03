@@ -104,8 +104,8 @@ public class UserLogin extends JPanel implements FocusListener{
 				MainFrame.AddPanel(new FrogotPassword());
 			}
 		});
-		btnForgotPassword.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
-		btnForgotPassword.setForeground(new Color(20, 112, 185));
+		btnForgotPassword.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
+		btnForgotPassword.setForeground(new Color(0, 0, 140));
 		btnForgotPassword.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnForgotPassword.setBounds(661, 282, 254, 44);
 		add(btnForgotPassword);
@@ -113,13 +113,13 @@ public class UserLogin extends JPanel implements FocusListener{
 		
 		JButton btnRegisterNow = new JButton("REGISTER");
 		btnRegisterNow.setToolTipText("Register(if new user)");
-		btnRegisterNow.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
+		btnRegisterNow.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
 		btnRegisterNow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				MainFrame.AddPanel(new RegistrationForm());
 			}
 		});
-		btnRegisterNow.setForeground(new Color(20, 112, 185));
+		btnRegisterNow.setForeground(new Color(0, 0, 140));
 		btnRegisterNow.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
 		btnRegisterNow.setBounds(572, 377, 133, 29);
 		add(btnRegisterNow);
@@ -193,8 +193,8 @@ public class UserLogin extends JPanel implements FocusListener{
 				}
 			}
 		});
-		btnLogin.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
-		btnLogin.setForeground(new Color(20, 112, 185));
+		btnLogin.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
+		btnLogin.setForeground(new Color(0, 0, 140));
 		btnLogin.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnLogin.setBounds(400, 283, 241, 44);
 		add(btnLogin);
@@ -237,31 +237,24 @@ public class UserLogin extends JPanel implements FocusListener{
 				MainFrame.AddPanel(new LoginPanel());
 			}
 		});
-		btnNewButton.setForeground(new Color(255,255,255));
-		btnNewButton.setBackground(new Color(20, 112, 185));
+		btnNewButton.setForeground(new Color(0, 0, 140));
+		btnNewButton.setBackground(new Color(215, 215, 255));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("USER LOGIN");
 		lblOnlineExamination.setBorder(null);
-		lblOnlineExamination.setForeground(new Color(20, 112, 185));
-		lblOnlineExamination.setBackground(new Color(20, 112, 185));
+		lblOnlineExamination.setForeground(new Color(22, 25, 144));
+		lblOnlineExamination.setBackground(new Color(102, 255, 255));
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		lblOnlineExamination.setBounds(425, 46, 450, 150);
 		add(lblOnlineExamination);
 		
-		
-		JLabel lblNewLabel1 = new JLabel("");
-		lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
-		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel1.setBounds(5, 5, 500, 150);
-		add(lblNewLabel1);
-		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(215, 215, 255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
@@ -292,13 +285,13 @@ public class UserLogin extends JPanel implements FocusListener{
 		if(arg0.getSource()==txtPassword && txtPassword.getForeground()==SystemColor.activeCaptionBorder)
 		{
 			txtPassword.setText("");
-			txtPassword.setFont(new Font("Kayak Sans", Font.PLAIN, 24));
+			txtPassword.setFont(new Font("Lucida Bright", Font.PLAIN, 24));
 			txtPassword.setForeground(Color.black);
 		}
 		if(arg0.getSource()==txtUsername && txtUsername.getForeground()==SystemColor.activeCaptionBorder)
 		{
 			txtUsername.setText("");
-			txtUsername.setFont(new Font("Kayak Sans", Font.BOLD, 24));
+			txtUsername.setFont(new Font("Tempus Sans ITC", Font.BOLD, 24));
 			txtUsername.setForeground(Color.black);
 		}
 	}

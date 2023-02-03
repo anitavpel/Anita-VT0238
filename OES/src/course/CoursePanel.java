@@ -71,7 +71,7 @@ public class CoursePanel extends JPanel {
 					JOptionPane.showMessageDialog(null, "No course selected.\nSelect course first.");
 			}
 		});
-		btnViewCourse.setForeground(new Color(20, 112, 185));
+		btnViewCourse.setForeground(new Color(0, 0, 140));
 		btnViewCourse.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnViewCourse.setBounds(622, 224, 206, 36);
 		add(btnViewCourse);
@@ -97,7 +97,7 @@ public class CoursePanel extends JPanel {
 				}
 			}
 		});
-		btnDeleteCourse.setForeground(new Color(20, 112, 185));
+		btnDeleteCourse.setForeground(new Color(0, 0, 140));
 		btnDeleteCourse.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnDeleteCourse.setBounds(622, 271, 206, 36);
 		add(btnDeleteCourse);
@@ -109,7 +109,7 @@ public class CoursePanel extends JPanel {
 				MainFrame.AddPanel(new AddNewCourse());
 			}
 		});
-		btnAddNewCourse.setForeground(new Color(20, 112, 185));
+		btnAddNewCourse.setForeground(new Color(0, 0, 140));
 		btnAddNewCourse.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnAddNewCourse.setBounds(400, 318, 444, 88);
 		add(btnAddNewCourse);
@@ -120,14 +120,14 @@ public class CoursePanel extends JPanel {
 				MainFrame.AddPanel(new MainAdmin());
 			}
 		});
-		btnNewButton.setForeground(new Color(255,255,255));
-		btnNewButton.setBackground(new Color(20, 112, 185));
+		btnNewButton.setForeground(new Color(0, 0, 140));
+		btnNewButton.setBackground(new Color(215, 215, 255));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 
 		JLabel lblOnlineExamination = new JLabel("MANAGE COURSES");
-		lblOnlineExamination.setForeground(new Color(20, 112, 185));
+		lblOnlineExamination.setForeground(new Color(0, 0, 140));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
@@ -136,7 +136,7 @@ public class CoursePanel extends JPanel {
 
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(215, 215, 255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);

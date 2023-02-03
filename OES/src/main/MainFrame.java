@@ -19,7 +19,6 @@ public class MainFrame extends JFrame {
 		frame.setVisible(true);
 		//frame.add(new Help());
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-				 
 	}
 
 	/**

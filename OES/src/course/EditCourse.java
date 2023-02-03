@@ -137,6 +137,7 @@ public class EditCourse extends JPanel implements ItemListener{
 		
 		JButton save = new JButton("Save");
 		save.setBorder(new LineBorder(new Color(0, 0, 140), 1, true));
+		save.setForeground(new Color(0,0,140));
 		save.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -157,28 +158,23 @@ public class EditCourse extends JPanel implements ItemListener{
 				JOptionPane.showMessageDialog(null, "Course saved successfully.");
 			}
 		});
-		save.setForeground(new Color(255,255,255));
-		save.setBackground(new Color(20, 112, 185));
-		save.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		save.setBounds(10, 600, 89, 50);
-		add(save);
 		
 		JButton back = new JButton("BACK");
-		back.setBorder(new LineBorder(new Color(20, 112, 185), 1, true));
+		back.setBorder(new LineBorder(new Color(0, 0, 140), 1, true));
 		back.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				MainFrame.AddPanel(new CoursePanel());
 			}
 		});
-		back.setForeground(new Color(255,255,255));
-		back.setBackground(new Color(20, 112, 185));
-		back.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		back.setForeground(new Color(0,0,140));
+		back.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		back.setBounds(10, 600, 89, 50);
 		add(back);
 
 		JLabel label_1 = new JLabel(":");
 		label_1.setBounds(897, 213, 9, 24);
 		add(label_1);
+		
 		JLabel label = new JLabel(":");
 		label.setBounds(897, 213, 9, 24);
 		add(label);
@@ -219,8 +215,8 @@ public class EditCourse extends JPanel implements ItemListener{
 		JLabel lblCourseName = new JLabel("Course Name");
 		lblCourseName.setBounds(850, 113, 87, 24);
 		add(lblCourseName);
-		save.setForeground(new Color(255,255,255));
-		save.setBackground(new Color(20, 112, 185));
+		save.setForeground(new Color( 0, 0,140));
+		save.setBackground(new Color(215,215,255));
 		save.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		save.setBounds(1170, 500, 100, 50);
 		add(save);
@@ -256,7 +252,7 @@ public class EditCourse extends JPanel implements ItemListener{
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		add(lblNewLabel);
 		
@@ -285,7 +281,7 @@ public class EditCourse extends JPanel implements ItemListener{
 
 		
 		NqStatement = new JTextArea();
-		NqStatement.setBorder(new LineBorder(new Color(20, 112, 185), 2, true));
+		NqStatement.setBorder(new LineBorder(new Color(65, 105, 225), 2, true));
 		NqStatement.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		
 		NqID = new JTextField();
@@ -330,7 +326,7 @@ public class EditCourse extends JPanel implements ItemListener{
 		New.add(lblCorrectOption);
 		
 		NcorrectOptionS = new JComboBox<String>();
-		NcorrectOptionS.setFont(new Font("Kayak Sans", Font.PLAIN, 13));
+		NcorrectOptionS.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		NcorrectOptionS.setModel(new DefaultComboBoxModel<String>(new String[] {"Option 1", "Option 2", "Option 3", "Option 4"}));
 		NcorrectOptionS.setBounds(250, 380, 78, 23);
 		New.add(NcorrectOptionS);
@@ -388,8 +384,8 @@ public class EditCourse extends JPanel implements ItemListener{
 				}
 			}
 		});
-		btnSave.setForeground(new Color(255,255,255));
-		btnSave.setBackground(new Color(20, 112, 185));
+		btnSave.setForeground(new Color( 0, 0,140));
+		btnSave.setBackground(new Color(215,215,255));
 		btnSave.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		btnSave.setBounds(594, 375, 120, 37);
 		New.add(btnSave);
@@ -546,7 +542,7 @@ public class EditCourse extends JPanel implements ItemListener{
 				}
 			}
 		});
-		btnUpdate.setForeground(new Color(20, 112, 185));
+		btnUpdate.setForeground(new Color( 0, 0,140));
 		btnUpdate.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		btnUpdate.setBounds(597, 376, 120, 31);
 		Update.add(btnUpdate);
@@ -617,7 +613,7 @@ public class EditCourse extends JPanel implements ItemListener{
 		RqStatement = new JTextArea();
 		RqStatement.setEditable(false);
 		RqStatement.setFont(new Font("Kayak Sans", Font.BOLD, 20));
-		RqStatement.setBorder(new LineBorder(new Color(20, 112, 185), 2, true));
+		RqStatement.setBorder(new LineBorder(new Color(65, 105, 225), 2, true));
 		scrollPane.setViewportView(RqStatement);
 		
 		JLabel label_2 = new JLabel("Option 1");
@@ -658,7 +654,7 @@ public class EditCourse extends JPanel implements ItemListener{
 				}		
 			}
 		});
-		btnRemove.setForeground(new Color(20, 112, 185));
+		btnRemove.setForeground(new Color( 0, 0,140));
 		btnRemove.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		btnRemove.setBounds(605, 381, 120, 37);
 		Remove.add(btnRemove);

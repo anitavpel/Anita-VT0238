@@ -32,21 +32,19 @@ public class Help extends JPanel {
 		txtrAboutHelpLine.setLineWrap(true);
 		txtrAboutHelpLine.setFont(new Font("Kayak Sans", Font.BOLD, 15));
 		txtrAboutHelpLine.setRows(30);
-		txtrAboutHelpLine.setText("HELLO!!!\r\n\r\nThis is an VIRTUOSO SOFTTECH EXAM PORTAL in which admin can conduct an online examination of users .Users have to registered himself/herself first than they must be verified by admin after that he/she can give the examination.\r\n");
-		txtrAboutHelpLine.setBounds(350, 91, 700, 342);
+		txtrAboutHelpLine.setText("HELLO!!!\r\n\r\nThis is an ONLINE EXAMINATION SYSTEM in which admin can conduct  an online examination of users .Users have to registered himself/herself first than they must be verified by admin after that he/she can give the examination.\r\nThis project consists of many swing components like JPanel,Jframe,etc.");
+		txtrAboutHelpLine.setBounds(177, 91, 637, 342);
 		add(txtrAboutHelpLine);
 		
-		
-		
 		JSeparator separator = new JSeparator();
-		separator.setBounds(400, 78, 491, 2);
+		separator.setBounds(250, 78, 491, 2);
 		add(separator);
 		
-		JLabel lblNewLabel_1 = new JLabel("Virtuoso SoftTech Exam Portal");
-		lblNewLabel_1.setForeground(new Color(20, 112, 185));
+		JLabel lblNewLabel_1 = new JLabel("O.E.S");
+		lblNewLabel_1.setForeground(new Color(22, 25, 144));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setFont(new Font("Kayak Sans", Font.BOLD, 36));
-		lblNewLabel_1.setBounds(400, 24, 500, 47);
+		lblNewLabel_1.setBounds(415, 24, 160, 47);
 		add(lblNewLabel_1);
 	
 		JButton btnNewButton = new JButton("BACK");
@@ -56,15 +54,15 @@ public class Help extends JPanel {
 				MainFrame.AddPanel(new Panel1());
 			}
 		});
-		btnNewButton.setForeground(new Color(255,255,255));
-		btnNewButton.setBackground(new Color(20, 112, 185));
+		btnNewButton.setForeground(new Color(22, 25, 144));
+		btnNewButton.setBackground(new Color(215, 215, 255));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnNewButton.setBounds(10, 600, 89, 36);
+		btnNewButton.setBounds(10, 511, 89, 36);
 		add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(215, 215, 255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);

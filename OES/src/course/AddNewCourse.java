@@ -100,7 +100,7 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		
 		JLabel lblEachMark = new JLabel("EACH MARK");
 		lblEachMark.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		lblEachMark.setForeground(new Color(20, 112, 185));
+		lblEachMark.setForeground(new Color(0, 0, 140));
 		lblEachMark.setBounds(450, 303, 181, 33);
 		add(lblEachMark);
 		
@@ -120,7 +120,7 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		HH = new JTextField();
 		HH.setForeground(Color.LIGHT_GRAY);
 		HH.setText("HOUR");
-		HH.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
+		HH.setFont(new Font("Mangal", Font.PLAIN, 18));
 		HH.setColumns(10);
 		HH.setBounds(450, 221, 89, 36);
 		add(HH);
@@ -135,7 +135,7 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		courseName.setColumns(10);
 		courseName.addFocusListener(this);
 		
-		btnShowCourse.setForeground(new Color(20, 112, 185));
+		btnShowCourse.setForeground(new Color(0,0,140));
 		btnShowCourse.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnShowCourse.setBounds(525, 417, 256, 36);
 		add(btnShowCourse);
@@ -146,14 +146,14 @@ public class AddNewCourse extends JPanel implements FocusListener {
 				MainFrame.AddPanel(new CoursePanel());
 			}
 		});
-		btnNewButton.setForeground(new Color(255,255,255));
-		btnNewButton.setBackground(new Color(20, 112, 185));
+		btnNewButton.setForeground(new Color(0, 0, 140));
+		btnNewButton.setBackground(new Color(215,215,255));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("ADD COURSE");
-		lblOnlineExamination.setForeground(new Color(20, 112, 185));
+		lblOnlineExamination.setForeground(new Color(0, 0, 140));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
@@ -162,7 +162,7 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(0, 128, 0), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);

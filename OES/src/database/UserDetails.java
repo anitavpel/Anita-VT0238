@@ -171,7 +171,7 @@ public class UserDetails extends JPanel{
 		
 		
 		JLabel lblLoginAttempts = new JLabel("ATTEMPTS :");
-		lblLoginAttempts.setForeground(new Color(20, 112, 185));
+		lblLoginAttempts.setForeground(new Color(0,0,140));
 		lblLoginAttempts.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblLoginAttempts.setBounds(354, 395, 85, 26);
 		add(lblLoginAttempts);
@@ -184,7 +184,7 @@ public class UserDetails extends JPanel{
 		
 		
 		JLabel lblAddress = new JLabel("ADDRESS :");
-		lblAddress.setForeground(new Color(20, 112, 185));
+		lblAddress.setForeground(new Color(0,0,140));
 		lblAddress.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblAddress.setBounds(354, 358, 85, 26);
 		add(lblAddress);
@@ -197,13 +197,13 @@ public class UserDetails extends JPanel{
 		JCOLLEGE.setEditable(false);
 		
 		JLabel lblCollege = new JLabel("COLLEGE :");
-		lblCollege.setForeground(new Color(20, 112, 185));
+		lblCollege.setForeground(new Color(0,0,140));
 		lblCollege.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblCollege.setBounds(354, 321, 85, 26);
 		add(lblCollege);
 		
 		year = new JComboBox<String>();
-		year.setBackground(new Color(20, 112, 185));
+		year.setBackground(new Color(0,0,140));
 		year.setLightWeightPopupEnabled(false);
 		year.setEditable(true);
 		year.setEnabled(false);
@@ -216,7 +216,7 @@ public class UserDetails extends JPanel{
 		
 		
 		month = new JComboBox<String>();
-		month.setBackground(new Color(20, 112, 185));
+		month.setBackground(new Color(0,0,140));
 		month.setLightWeightPopupEnabled(false);
 		month.setEditable(true);
 		month.setEnabled(false);
@@ -228,7 +228,7 @@ public class UserDetails extends JPanel{
 		JMonth=Month;
 		
 		date = new JComboBox<String>();
-		date.setBackground(new Color(20, 112, 185));
+		date.setBackground(new Color(0,0,140));
 		date.setLightWeightPopupEnabled(false);
 		date.setEditable(true);
 		date.setEnabled(false);
@@ -240,7 +240,7 @@ public class UserDetails extends JPanel{
 		JDate=Date;
 		
 		JLabel label = new JLabel("MOBILE NO. :");
-		label.setForeground(new Color(20, 112, 185));
+		label.setForeground(new Color(0,0,140));
 		label.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		label.setBounds(695, 211, 99, 26);
 		add(label);
@@ -253,7 +253,7 @@ public class UserDetails extends JPanel{
 		JMOBILE.setEditable(false);
 		
 		JLabel lblDob = new JLabel("D.O.B :");
-		lblDob.setForeground(new Color(20, 112, 185));
+		lblDob.setForeground(new Color(0,0,140));
 		lblDob.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblDob.setBounds(354, 284, 85, 26);
 		add(lblDob);
@@ -266,7 +266,7 @@ public class UserDetails extends JPanel{
 		add(JEMAIL);
 		
 		JLabel lblEmail = new JLabel("E-MAIL :");
-		lblEmail.setForeground(new Color(20, 112, 185));
+		lblEmail.setForeground(new Color(0,0,140));
 		lblEmail.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblEmail.setBounds(354, 247, 85, 26);
 		add(lblEmail);
@@ -274,7 +274,7 @@ public class UserDetails extends JPanel{
 		JRadioButton other = new JRadioButton("OTHER");
 		other.setEnabled(false);
 		other.setOpaque(false);
-		other.setForeground(new Color(20, 112, 185));
+		other.setForeground(new Color(0,0,140));
 		other.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		other.setBounds(586, 212, 73, 23);
 		add(other);
@@ -282,7 +282,7 @@ public class UserDetails extends JPanel{
 		JRadioButton female = new JRadioButton("FEMALE");
 		female.setEnabled(false);
 		female.setOpaque(false);
-		female.setForeground(new Color(20, 112, 185));
+		female.setForeground(new Color(0,0,140));
 		female.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		female.setBounds(511, 212, 73, 23);
 		add(female);
@@ -290,13 +290,13 @@ public class UserDetails extends JPanel{
 		JRadioButton male = new JRadioButton("MALE");
 		male.setEnabled(false);
 		male.setFont(new Font("Kayak Sans", Font.BOLD, 13));
-		male.setForeground(new Color(20, 112, 185));
+		male.setForeground(new Color(0,0,140));
 		male.setOpaque(false);
 		male.setBounds(449, 212, 60, 23);
 		add(male);
 				
 		JLabel lblGender = new JLabel("GENDER :");
-		lblGender.setForeground(new Color(20, 112, 185));
+		lblGender.setForeground(new Color(0,0,140));
 		lblGender.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblGender.setBounds(354, 210, 85, 26);
 		add(lblGender);
@@ -332,7 +332,7 @@ public class UserDetails extends JPanel{
 		add(JFIRST);
 		
 		JLabel lblName = new JLabel("NAME :");
-		lblName.setForeground(new Color(20, 112, 185));
+		lblName.setForeground(new Color(0,0,140));
 		lblName.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblName.setBounds(354, 173, 85, 26);
 		add(lblName);
@@ -345,7 +345,7 @@ public class UserDetails extends JPanel{
 		JPASSWORD.setEditable(false);
 		
 		JSeparator separator = new JSeparator();
-		separator.setForeground(new Color(20, 112, 185));
+		separator.setForeground(new Color(0,0,140));
 		separator.setBounds(411, 73, 513, 2);
 		add(separator);
 		
@@ -357,7 +357,7 @@ public class UserDetails extends JPanel{
 		JUSERNAME.setColumns(10);
 		
 		JLabel lblUsername = new JLabel("USERNAME :");
-		lblUsername.setForeground(new Color(20, 112, 185));
+		lblUsername.setForeground(new Color(0,0,140));
 		lblUsername.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblUsername.setBounds(354, 136, 85, 26);
 		add(lblUsername);
@@ -373,21 +373,21 @@ public class UserDetails extends JPanel{
 					MainFrame.AddPanel(new UsersData());
 			}
 		});
-		back.setForeground(new Color(255,255,255));
-		back.setBackground(new Color(20, 112, 185));
+		back.setForeground(new Color(0,0,140));
+		back.setBackground(new Color(215,215,255));
 		back.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		add(back);
 		
 		JLabel lblOnlineExamination = new JLabel("USER DETAILS");
 		lblOnlineExamination.setBounds(400, 18, 535, 57);
-		lblOnlineExamination.setForeground(new Color(20, 112, 185));
+		lblOnlineExamination.setForeground(new Color(0,0,140));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		add(lblOnlineExamination);
 		
 		JLabel lblPassword = new JLabel("PASSWORD :");
-		lblPassword.setForeground(new Color(20, 112, 185));
+		lblPassword.setForeground(new Color(0,0,140));
 		lblPassword.setFont(new Font("Kayak Sans", Font.BOLD, 13));
 		lblPassword.setBounds(695, 136, 85, 26);
 		add(lblPassword);
@@ -404,7 +404,7 @@ public class UserDetails extends JPanel{
 			}
 		});
 		
-		EditAttempts.setForeground(new Color(20, 112, 185));
+		EditAttempts.setForeground(new Color(0,0,140));
 		EditAttempts.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		EditAttempts.setBounds(695, 500, 250, 43);
 		add(EditAttempts);
@@ -416,7 +416,7 @@ public class UserDetails extends JPanel{
 				new UserResult(USERNAME,"admin");
 			}
 		});
-		btnNewButton.setForeground(new Color(20, 112, 185));
+		btnNewButton.setForeground(new Color(0,0,140));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.PLAIN, 16));
 		btnNewButton.setBounds(300, 500, 135, 43);
 		add(btnNewButton);
@@ -425,7 +425,7 @@ public class UserDetails extends JPanel{
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
 		lblNewLabel.setFont(new Font("Kayak Sans", Font.BOLD, 14));
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
-		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		add(lblNewLabel);
 

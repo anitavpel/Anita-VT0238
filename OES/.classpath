@@ -6,7 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="assets/mysql-connector-java-8.0.11.jar">
+	<classpathentry kind="lib" path="C:/Users/Anita/git/Anita-VT0238/OES/mysql-connector-java-8.0.11.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

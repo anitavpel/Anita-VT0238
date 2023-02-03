@@ -72,8 +72,8 @@ public class AdminPanel extends JPanel implements FocusListener{
 				}
 			}
 		});
-		btnLogin.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
-		btnLogin.setForeground(new Color(20, 112, 185));
+		btnLogin.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
+		btnLogin.setForeground(new Color(0, 0, 140));
 		btnLogin.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnLogin.setBounds(550, 300, 190, 56);
 		add(btnLogin);
@@ -85,29 +85,22 @@ public class AdminPanel extends JPanel implements FocusListener{
 				MainFrame.AddPanel(new LoginPanel());
 			}
 		});
-		btnNewButton.setForeground(new Color(255,255,255));
-		btnNewButton.setBackground(new Color(20, 112, 185));
+		btnNewButton.setForeground(new Color(0, 0, 140));
+		btnNewButton.setBackground(new Color(215,215,255));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("ADMIN LOGIN");
-		lblOnlineExamination.setForeground(new Color(20, 112, 185));
+		lblOnlineExamination.setForeground(new Color(0, 0, 140));
 		lblOnlineExamination.setBackground(new Color(0, 0, 140));
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		lblOnlineExamination.setBounds(425, 46, 450, 150);
 		add(lblOnlineExamination);
 		
-		
-		JLabel lblNewLabel1 = new JLabel("");
-		lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
-		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel1.setBounds(5, 5, 500, 150);
-		add(lblNewLabel1);
-
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(215,215,255), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
