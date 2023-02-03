@@ -1,5 +1,9 @@
 package database;
 
+import java.io.IOException;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.sql.Connection;
 
 
@@ -13,12 +17,22 @@ import javax.swing.JOptionPane;
 public class Connect {
 	public Connection con;
 	protected Object t;
-	public Connect(String username,String password) {
+	public Connect(String username,String password)  {
+		Path host=Path.of("assets\\url.txt");
+		
+		String url=null;
+		try {
+			url = Files.readString(host);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		
+		
 		
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("Driver Loaded");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/oes?useSSL=false",username,password);
+			con=DriverManager.getConnection("jdbc:mysql://"+url+"/oes?allowPublicKeyRetrieval=true&useSSL=false",username,password);
 			System.out.println("Connection Established.");
 		}
 		catch(ClassNotFoundException e)

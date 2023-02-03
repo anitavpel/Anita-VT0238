@@ -134,9 +134,9 @@ public class UserPanel extends JPanel {
 		});
 		
 		
-		btnStartTest.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
+		btnStartTest.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
 		
-		btnStartTest.setForeground(new Color(0, 0, 140));
+		btnStartTest.setForeground(new Color(20, 112, 185));
 		btnStartTest.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
 		btnStartTest.setBounds(711, 184, 166, 42);
 		add(btnStartTest);
@@ -145,10 +145,10 @@ public class UserPanel extends JPanel {
 		instructions = new JTextArea();
 		instructions.setToolTipText("INSTRUCTIONS");
 		instructions.setEditable(false);
-		instructions.setDisabledTextColor(new Color(221, 160, 221));
-		instructions.setBackground(new Color(215, 215, 255));
+		instructions.setDisabledTextColor(new Color(20, 112, 185));
+		instructions.setBackground(new Color(255, 255, 255));
 		instructions.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		instructions.setForeground(new Color(123, 104, 238));
+		instructions.setForeground(new Color(20, 112, 185));
 		instructions.setBounds(10, 299, 971, 248);
 		instructions.setVisible(false);
 		add(instructions);
@@ -172,7 +172,7 @@ public class UserPanel extends JPanel {
 		});
 				
 		JLabel lblSelectCourse = new JLabel("SELECT COURSE");
-		lblSelectCourse.setForeground(new Color(0, 0, 140));
+		lblSelectCourse.setForeground(new Color(20, 112, 185));
 		lblSelectCourse.setForeground(UIManager.getColor("CheckBoxMenuItem.foreground"));
 		lblSelectCourse.setFont(new Font("Kayak Sans", Font.BOLD, 20));
 		lblSelectCourse.setBounds(300, 184, 300, 28);
@@ -189,7 +189,7 @@ public class UserPanel extends JPanel {
 			}
 		});
 		btnEditDetails.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
-		btnEditDetails.setForeground(new Color(0, 0, 140));
+		btnEditDetails.setForeground(new Color(20, 112, 185));
 		btnEditDetails.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
 		btnEditDetails.setBounds(1100, 11, 166, 42);
 		add(btnEditDetails);
@@ -204,20 +204,20 @@ public class UserPanel extends JPanel {
 			}
 		});
 		btnLogout.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
-		btnLogout.setForeground(new Color(0, 0, 140));
+		btnLogout.setForeground(new Color(20, 112, 185));
 		btnLogout.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnLogout.setBounds(1170, 600, 100, 50);
 		add(btnLogout);
 		
 		JLabel WlecomeLabel = new JLabel("WELCOME "+Name);
-		WlecomeLabel.setForeground(new Color(0, 0, 140));
+		WlecomeLabel.setForeground(new Color(20, 112, 185));
 		WlecomeLabel.setFont(new Font("Kayak Sans", Font.BOLD, 25));
 		WlecomeLabel.setBounds(10, 107, 445, 28);
 		add(WlecomeLabel);
 				
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
-		lblNewLabel.setBorder(new LineBorder(new Color(215, 215, 255), 4));
+		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
