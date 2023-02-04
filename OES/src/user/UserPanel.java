@@ -2,6 +2,7 @@ package user;
 
 import java.awt.Color;
 
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,11 +13,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
-import javax.swing.border.MatteBorder;
-
 import main.MainFrame;
 import javax.swing.JComboBox;
-import javax.swing.UIManager;
 import javax.swing.DefaultComboBoxModel;
 import java.sql.*;
 import database.Connect;
@@ -106,7 +104,6 @@ public class UserPanel extends JPanel {
 		dataBaseWork(Username);
 		
 		JButton btnStartTest = new JButton("START TEST");
-		btnStartTest.setToolTipText("RESULT");
 		btnStartTest.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(!Selected_course.equals(""))
@@ -134,29 +131,28 @@ public class UserPanel extends JPanel {
 		});
 		
 		
-		btnStartTest.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
-		
-		btnStartTest.setForeground(new Color(20, 112, 185));
-		btnStartTest.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
-		btnStartTest.setBounds(711, 184, 166, 42);
+		btnStartTest.setForeground(new Color(255,255,255));
+		btnStartTest.setBackground(new Color(20,112,185));
+		btnStartTest.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnStartTest.setBounds(750, 298, 166, 42);
 		add(btnStartTest);
-		
+
 		
 		instructions = new JTextArea();
 		instructions.setToolTipText("INSTRUCTIONS");
 		instructions.setEditable(false);
-		instructions.setDisabledTextColor(new Color(20, 112, 185));
-		instructions.setBackground(new Color(255, 255, 255));
+		instructions.setDisabledTextColor(new Color(255, 255, 255));
+		instructions.setBackground(new Color(20, 112, 185));
 		instructions.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		instructions.setForeground(new Color(20, 112, 185));
-		instructions.setBounds(10, 299, 971, 248);
+		instructions.setForeground(new Color(255, 255, 255));
+		instructions.setBounds(250, 380, 800, 248);
 		instructions.setVisible(false);
 		add(instructions);
 		
 		comboBox = new JComboBox<String>();
 		comboBox.setModel(new DefaultComboBoxModel<String>(Courses));
 		comboBox.setFont(new Font("Kayak Sans", Font.BOLD, 21));
-		comboBox.setBounds(501, 190, 171, 36);
+		comboBox.setBounds(501, 298, 200, 36);
 		comboBox.setSelectedIndex(-1);
 		add(comboBox);
 		comboBox.addActionListener(new ActionListener() {
@@ -165,37 +161,35 @@ public class UserPanel extends JPanel {
 				Selected_course=(String)comboBox.getSelectedItem();
 				courseDetail(Selected_course);
 				
-				instructions.setText("////////////////////////////////////\r\n              INSTRUCTIONS   \r\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\r\n\r\n1. There are total "+totalQuestions+" questions each with "+eachMark+" marks in this course.\r\n2. Maximum time is "+time+" .\r\n3. There is no negative marking for any question.\r\n4. After time up you will be automatically logged out.\r\n5. You can see the time left on the upper right corner.\r\n6.Wish You All The Best.");
+				instructions.setText("                      \r\n                                                                    INSTRUCTIONS                                \r\n\r\n1. There are total "+totalQuestions+" questions each with "+eachMark+" marks in this course.\r\n2. Maximum time is "+time+" .\r\n3. There is no negative marking for any question.\r\n4. After time up you will be automatically logged out.\r\n5. You can see the time left on the upper right corner.\r\n6. Wish You All The Best.");
 				instructions.setVisible(true);
 				revalidate();
 			}
 		});
 				
-		JLabel lblSelectCourse = new JLabel("SELECT COURSE");
+		JLabel lblSelectCourse = new JLabel("SELECT COURSE :");
 		lblSelectCourse.setForeground(new Color(20, 112, 185));
-		lblSelectCourse.setForeground(UIManager.getColor("CheckBoxMenuItem.foreground"));
-		lblSelectCourse.setFont(new Font("Kayak Sans", Font.BOLD, 20));
-		lblSelectCourse.setBounds(300, 184, 300, 28);
+		lblSelectCourse.setFont(new Font("Kayak Sans", Font.BOLD, 25));
+		lblSelectCourse.setBounds(270, 300, 300, 28);
 		add(lblSelectCourse);
 		
 		
 		
-		JButton btnEditDetails = new JButton("EDIT DETAILS");
-		btnEditDetails.setToolTipText("EDIT DETAILS");
+		JButton btnEditDetails = new JButton("PROFILE");
 		btnEditDetails.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//Edit Details of User with the username
 				new EditDetails(Username);
 			}
 		});
-		btnEditDetails.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
-		btnEditDetails.setForeground(new Color(20, 112, 185));
-		btnEditDetails.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
-		btnEditDetails.setBounds(1100, 11, 166, 42);
+		
+		btnEditDetails.setForeground(new Color(20,112,185));
+		btnEditDetails.setBackground(new Color(255,255,255));
+		btnEditDetails.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnEditDetails.setBounds(900, 50, 166, 42);
 		add(btnEditDetails);
 		
 		JButton btnLogout = new JButton("LOGOUT");
-		btnLogout.setToolTipText("LOGOUT");
 		btnLogout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//Save Data if any.
@@ -203,18 +197,34 @@ public class UserPanel extends JPanel {
 				JOptionPane.showMessageDialog(null, "Logout Successfully");
 			}
 		});
-		btnLogout.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(123, 104, 238)));
 		btnLogout.setForeground(new Color(20, 112, 185));
+		btnLogout.setBackground(new Color(255,255,255));
 		btnLogout.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnLogout.setBounds(1170, 600, 100, 50);
+		btnLogout.setBounds(1100, 50, 166, 42);
 		add(btnLogout);
 		
-		JLabel WlecomeLabel = new JLabel("WELCOME "+Name);
+		JLabel WlecomeLabel = new JLabel("Welcome "+Name+" !");
 		WlecomeLabel.setForeground(new Color(20, 112, 185));
-		WlecomeLabel.setFont(new Font("Kayak Sans", Font.BOLD, 25));
-		WlecomeLabel.setBounds(10, 107, 445, 28);
+		WlecomeLabel.setFont(new Font("Kayak Sans", Font.BOLD, 30));
+		WlecomeLabel.setBounds(450, 200, 445, 28);
 		add(WlecomeLabel);
+		
+		
+		
+		JLabel lblNewLabel1 = new JLabel("");
+		lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
+		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel1.setBounds(5, 5, 500, 150);
+		add(lblNewLabel1);
+		
+		JLabel lblNewLabel2 = new JLabel("");
+		lblNewLabel2.setIcon(new ImageIcon("assets\\A.png"));
+		lblNewLabel2.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel2.setBounds(4,4, 1920, 150);
+		add(lblNewLabel2);
 				
+
+		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
 		lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));

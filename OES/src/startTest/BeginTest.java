@@ -115,14 +115,14 @@ public class BeginTest extends JPanel {
 	{
 		
 		JLabel lblCourseName = new JLabel("COURSE NAME : "+courseName);
-		lblCourseName.setForeground(new Color(20, 112, 185));
-		lblCourseName.setFont(new Font("Kayak Sans", Font.BOLD, 20));
+		lblCourseName.setForeground(new Color(255,255,255));
+		lblCourseName.setFont(new Font("Kayak Sans", Font.BOLD, 25));
 		lblCourseName.setBounds(10, 26, 382, 34);
 		add(lblCourseName);
 		//addTimer
 		
 		c=new Clock(HH,MM,SS);
-		c.setBounds(1100,11,260,124);
+		c.setBounds(1100,11,166,42);
 		c.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(20, 112, 185)));
 		
 		add(c);
@@ -169,6 +169,13 @@ public class BeginTest extends JPanel {
 		btnSubmit.setBounds(1150, 550, 120, 50);
 		btnSubmit.setFocusable(false);
 		add(btnSubmit);
+		
+		
+		JLabel lblNewLabel2 = new JLabel("");
+		lblNewLabel2.setIcon(new ImageIcon("assets\\A.png"));
+		lblNewLabel2.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel2.setBounds(4,4, 1920, 100);
+		add(lblNewLabel2);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));

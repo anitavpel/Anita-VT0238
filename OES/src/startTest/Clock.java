@@ -69,7 +69,7 @@ class Run extends JPanel implements Runnable
 		lblXxxxxx.setForeground(new Color(0,0,0));
 		lblXxxxxx.setHorizontalAlignment(SwingConstants.LEFT);
 		lblXxxxxx.setFont(new Font("Kayak Sans", Font.BOLD, 40));
-		lblXxxxxx.setBounds(20, 0, 266, 123);
+		lblXxxxxx.setBounds(20, 0, 166, 42);
 		add(lblXxxxxx);
 		repaint();
 		revalidate();

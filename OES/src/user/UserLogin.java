@@ -2,6 +2,7 @@ package user;
 
 import java.awt.Color;
 
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,7 +27,6 @@ import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.Map;
-import javax.swing.border.MatteBorder;
 import database.Connect;
 import javax.swing.JPasswordField;
 import java.awt.SystemColor;
@@ -97,35 +97,35 @@ public class UserLogin extends JPanel implements FocusListener{
 			}
 		}).start();
 		
-		JButton btnForgotPassword = new JButton("Forget Password");
-		btnForgotPassword.setToolTipText("Forget Password");
+		
+		JButton btnForgotPassword = new JButton("FORGOT PASSWORD?");
 		btnForgotPassword.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				MainFrame.AddPanel(new FrogotPassword());
 			}
 		});
-		btnForgotPassword.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
-		btnForgotPassword.setForeground(new Color(20, 112, 185));
+	
+		btnForgotPassword.setForeground(new Color(255,255,255));
+		btnForgotPassword.setBackground(new Color(20,112,185));
 		btnForgotPassword.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnForgotPassword.setBounds(661, 282, 254, 44);
+		btnForgotPassword.setBounds(660, 500, 230,29);
 		add(btnForgotPassword);
-		
-		
-		JButton btnRegisterNow = new JButton("REGISTER");
-		btnRegisterNow.setToolTipText("Register(if new user)");
-		btnRegisterNow.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
+
+		JButton btnRegisterNow = new JButton("NEW USER?");
+		btnRegisterNow.setFocusable(false);
 		btnRegisterNow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				MainFrame.AddPanel(new RegistrationForm());
 			}
 		});
-		btnRegisterNow.setForeground(new Color(20, 112, 185));
-		btnRegisterNow.setFont(new Font("Kayak Sans", Font.ITALIC, 18));
-		btnRegisterNow.setBounds(572, 377, 133, 29);
+		btnRegisterNow.setForeground(new Color(255,255,255));
+		btnRegisterNow.setBackground(new Color(20, 112, 185));
+		btnRegisterNow.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		btnRegisterNow.setBounds(460,500, 170, 29);
 		add(btnRegisterNow);
 		
 		JButton btnLogin = new JButton("LOGIN");
-		btnLogin.setToolTipText("LOGIN");
+		btnLogin.setFocusable(false);
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(txtUsername.getForeground()!=SystemColor.activeCaptionBorder)
@@ -193,10 +193,10 @@ public class UserLogin extends JPanel implements FocusListener{
 				}
 			}
 		});
-		btnLogin.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
-		btnLogin.setForeground(new Color(20, 112, 185));
+		btnLogin.setForeground(new Color(255,255,255));
+		btnLogin.setBackground(new Color(20, 112, 185));
 		btnLogin.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnLogin.setBounds(400, 283, 241, 44);
+		btnLogin.setBounds(560, 380, 241, 50);
 		add(btnLogin);
 		
 		txtPassword = new JPasswordField();
@@ -211,7 +211,7 @@ public class UserLogin extends JPanel implements FocusListener{
 		txtPassword.setColumns(10);
 		txtPassword.setBorder(UIManager.getBorder("ToolTip.border"));
 		txtPassword.setBackground(new Color(255, 255, 255));
-		txtPassword.setBounds(500, 213, 316, 36);
+		txtPassword.setBounds(520, 300, 316, 36);
 		add(txtPassword);
 		txtPassword.addFocusListener(this);
 		
@@ -226,7 +226,7 @@ public class UserLogin extends JPanel implements FocusListener{
 		txtUsername.setFont(new Font("Vrinda", Font.PLAIN, 24));
 		txtUsername.setBorder(UIManager.getBorder("ToolTip.border"));
 		txtUsername.setBackground(new Color(255, 255, 255));
-		txtUsername.setBounds(500, 166, 316, 36);
+		txtUsername.setBounds(520,250, 316, 36);
 		add(txtUsername);
 		txtUsername.setColumns(10);
 		txtUsername.addFocusListener(this);
@@ -243,13 +243,13 @@ public class UserLogin extends JPanel implements FocusListener{
 		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
-		JLabel lblOnlineExamination = new JLabel("USER LOGIN");
+		JLabel lblOnlineExamination = new JLabel("Login To Your Account");
 		lblOnlineExamination.setBorder(null);
 		lblOnlineExamination.setForeground(new Color(20, 112, 185));
 		lblOnlineExamination.setBackground(new Color(20, 112, 185));
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(425, 46, 450, 150);
+		lblOnlineExamination.setBounds(455, 100, 450, 170);
 		add(lblOnlineExamination);
 		
 		
@@ -258,6 +258,8 @@ public class UserLogin extends JPanel implements FocusListener{
 		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel1.setBounds(5, 5, 500, 150);
 		add(lblNewLabel1);
+		
+		
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));

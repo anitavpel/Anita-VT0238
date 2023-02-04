@@ -43,7 +43,7 @@ public class LoginPanel extends JPanel {
 		btnAdmin.setForeground(new Color(255,255,255));
 		btnAdmin.setBackground(new Color(20, 112, 185));
 		btnAdmin.setFont(new Font("Kayak Sans", Font.BOLD, 30));
-		btnAdmin.setBounds(256, 322, 700, 99);
+		btnAdmin.setBounds(420, 400, 500, 99);
 		add(btnAdmin);
 		
 		btnUser = new JButton("USER");
@@ -56,7 +56,7 @@ public class LoginPanel extends JPanel {
 		btnUser.setForeground(new Color(255,255,255));
 		btnUser.setBackground(new Color(20, 112, 185));
 		btnUser.setFont(new Font("Kayak Sans", Font.BOLD, 30));
-		btnUser.setBounds(256, 212, 700, 99);
+		btnUser.setBounds(420, 290, 500, 99);
 		add(btnUser);
 		btnNewButton.setForeground(new Color(255,255,255));
 		btnNewButton.setBackground(new Color(20, 112, 185));
@@ -68,7 +68,7 @@ public class LoginPanel extends JPanel {
 		lblOnlineExamination.setForeground(new Color(20, 112, 185));
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(388, 46, 450, 150);
+		lblOnlineExamination.setBounds(440, 150, 450, 150);
 		add(lblOnlineExamination);
 		
 		
