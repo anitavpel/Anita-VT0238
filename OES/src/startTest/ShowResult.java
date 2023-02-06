@@ -51,18 +51,18 @@ public class ShowResult extends JPanel {
 		}
 		
 		JButton Discard = new JButton("LOGOUT");
-		Discard.setFocusable(false);
 		Discard.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				MainFrame.AddPanel(new Panel1());
 			}
 		});
-		Discard.setForeground(new Color(20, 112, 185));
+		Discard.setForeground(new Color(255,255,255));
+		Discard.setBackground(new Color(20,112,185));
 		Discard.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		Discard.setBounds(550, 550, 152, 50);
+		Discard.setBounds(5, 550, 152, 50);
 		add(Discard);
 		
-		JLabel lblOnlineExamination = new JLabel("Thank You, Your response has been saved");
+		JLabel lblOnlineExamination = new JLabel("Thank You, Your response has been saved!");
 		lblOnlineExamination.setForeground(new Color(20, 112, 185));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
@@ -76,6 +76,15 @@ public class ShowResult extends JPanel {
 		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel1.setBounds(5, 5, 500, 150);
 		add(lblNewLabel1);
+		
+		JLabel lblNewLabel2 = new JLabel("");
+		lblNewLabel2.setIcon(new ImageIcon("assets\\A.png"));
+		lblNewLabel2.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel2.setBounds(4,4, 1920, 150);
+		add(lblNewLabel2);
+				
+
+		
 
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));

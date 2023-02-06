@@ -1,6 +1,7 @@
 package admin;
 
 import java.awt.Color;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,8 +15,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
-import javax.swing.border.MatteBorder;
-
 import database.Connect;
 import main.MainFrame;
 import results.CourseResult;
@@ -72,24 +71,24 @@ public class CoursesResult extends JPanel {
 						new CourseResult(CourseName);
 					}
 				});
-				btnSearch.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
-				btnSearch.setForeground(new Color(20, 112, 185));
+				btnSearch.setForeground(new Color(255,255,255));
+				btnSearch.setBackground(new Color(20,112,185));
 				btnSearch.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-				btnSearch.setBounds(800, 223, 125, 36);
+				btnSearch.setBounds(800, 298, 166, 42);
 				add(btnSearch);
 				
 				
 				
-				JLabel lblUsersForVerification = new JLabel("Available Courses");
+				JLabel lblUsersForVerification = new JLabel("AVAILABLE COURSES:");
 				lblUsersForVerification.setForeground(new Color(20, 112, 185));
-				lblUsersForVerification.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-				lblUsersForVerification.setBounds(300, 223, 156, 28);
+				lblUsersForVerification.setFont(new Font("Kayak Sans", Font.BOLD, 25));
+				lblUsersForVerification.setBounds(290, 300, 300, 28);
 				add(lblUsersForVerification);
 				
 				comboBox = new JComboBox<String>();
 				comboBox.setModel(new DefaultComboBoxModel<String>(DATA));
 				comboBox.setFont(new Font("Kayak Sans", Font.BOLD, 16));
-				comboBox.setBounds(500, 223, 266, 30);
+				comboBox.setBounds(550, 298, 200, 36);
 				add(comboBox);
 				CourseName=DATA[0];
 				comboBox.addActionListener(new ActionListener() {
@@ -112,12 +111,25 @@ public class CoursesResult extends JPanel {
 				add(btnNewButton);
 				
 				JLabel lblOnlineExamination = new JLabel("COURSES");
-				lblOnlineExamination.setForeground(new Color(20, 112, 185));
+				lblOnlineExamination.setForeground(new Color(255,255,255));
 				lblOnlineExamination.setBackground(Color.GREEN);
 				lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 				lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
-				lblOnlineExamination.setBounds(400, 28, 378, 82);
+				lblOnlineExamination.setBounds(450, 50, 378, 82);
 				add(lblOnlineExamination);
+				
+				
+				JLabel lblNewLabel1 = new JLabel("");
+				lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
+				lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+				lblNewLabel1.setBounds(5,5, 500, 150);
+				add(lblNewLabel1);
+				
+				JLabel lblNewLabel2 = new JLabel("");
+				lblNewLabel2.setIcon(new ImageIcon("assets\\A.png"));
+				lblNewLabel2.setHorizontalAlignment(SwingConstants.LEFT);
+				lblNewLabel2.setBounds(4,4, 1920, 150);
+				add(lblNewLabel2);
 				
 				JLabel lblNewLabel = new JLabel("");
 				lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));

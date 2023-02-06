@@ -85,7 +85,7 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		SS.setText("SECOND");
 		SS.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		SS.setColumns(10);
-		SS.setBounds(769, 221, 89, 36);
+		SS.setBounds(769, 300, 89, 36);
 		add(SS);
 		SS.addFocusListener(this);
 		
@@ -94,20 +94,20 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		MM.setText("MINUTE");
 		MM.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		MM.setColumns(10);
-		MM.setBounds(610, 221, 89, 36);
+		MM.setBounds(610, 300, 89, 36);
 		add(MM);
 		MM.addFocusListener(this);
 		
-		JLabel lblEachMark = new JLabel("EACH MARK");
+		JLabel lblEachMark = new JLabel("EACH MARK :");
 		lblEachMark.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		lblEachMark.setForeground(new Color(20, 112, 185));
-		lblEachMark.setBounds(450, 303, 181, 33);
+		lblEachMark.setBounds(550, 400, 181, 33);
 		add(lblEachMark);
 		
 		eachMark= new JComboBox<Integer>();
 		eachMark.setFont(new Font("Kayak Sans", Font.BOLD, 19));
 		eachMark.setModel(new DefaultComboBoxModel<Integer>(new Integer[] {1,2,3,4,5,6,7,8}));
-		eachMark.setBounds(639, 302, 57, 21);
+		eachMark.setBounds(680, 404, 57, 21);
 		add(eachMark);
 		eachMark.addActionListener(new ActionListener() {
 			
@@ -122,7 +122,7 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		HH.setText("HOUR");
 		HH.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		HH.setColumns(10);
-		HH.setBounds(450, 221, 89, 36);
+		HH.setBounds(450, 300, 89, 36);
 		add(HH);
 		HH.addFocusListener(this);
 		
@@ -130,14 +130,15 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		courseName.setForeground(Color.LIGHT_GRAY);
 		courseName.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
 		courseName.setText("COURSE NAME");
-		courseName.setBounds(450, 162, 408, 36);
+		courseName.setBounds(450, 250, 408, 36);
 		add(courseName);
 		courseName.setColumns(10);
 		courseName.addFocusListener(this);
 		
-		btnShowCourse.setForeground(new Color(20, 112, 185));
+		btnShowCourse.setForeground(new Color(255,255,255));
+		btnShowCourse.setBackground(new Color(20,112,185));
 		btnShowCourse.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnShowCourse.setBounds(525, 417, 256, 36);
+		btnShowCourse.setBounds(525, 500, 256, 50);
 		add(btnShowCourse);
 		
 		JButton btnNewButton = new JButton("BACK");
@@ -153,12 +154,26 @@ public class AddNewCourse extends JPanel implements FocusListener {
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("ADD COURSE");
-		lblOnlineExamination.setForeground(new Color(20, 112, 185));
+		lblOnlineExamination.setForeground(new Color(255,255,255));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		lblOnlineExamination.setBounds(350, 30, 603, 105);
 		add(lblOnlineExamination);
+		
+		
+
+		JLabel lblNewLabel1 = new JLabel("");
+		lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
+		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel1.setBounds(5, 5, 500, 150);
+		add(lblNewLabel1);
+		
+		JLabel lblNewLabel2 = new JLabel("");
+		lblNewLabel2.setIcon(new ImageIcon("assets\\A.png"));
+		lblNewLabel2.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel2.setBounds(4,4, 1920, 150);
+		add(lblNewLabel2);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));

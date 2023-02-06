@@ -26,6 +26,7 @@ public class CoursePanel extends JPanel {
 	 */
 	public CourseDetails CD;
 	private JComboBox<String> comboBox;
+	private JComboBox<String> comboBox1;
 	private String SelectedCourse = "";
 
 	private boolean deleteCourse(String courseName) {
@@ -50,7 +51,7 @@ public class CoursePanel extends JPanel {
 		comboBox = new JComboBox<String>();
 		comboBox.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		comboBox.setModel(new DefaultComboBoxModel<String>(CD.Courses));
-		comboBox.setBounds(400, 223, 206, 36);
+		comboBox.setBounds(375, 255, 206, 36);
 		comboBox.setSelectedIndex(-1);
 		add(comboBox);
 //		SelectedCourse=CD.Courses[0];
@@ -73,9 +74,25 @@ public class CoursePanel extends JPanel {
 		});
 		btnViewCourse.setForeground(new Color(20, 112, 185));
 		btnViewCourse.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnViewCourse.setBounds(622, 224, 206, 36);
+		btnViewCourse.setBounds(375, 400, 206, 36);
 		add(btnViewCourse);
 
+		
+		comboBox1 = new JComboBox<String>();
+		comboBox1.setFont(new Font("Kayak Sans", Font.BOLD, 18));
+		comboBox1.setModel(new DefaultComboBoxModel<String>(CD.Courses));
+		comboBox1.setBounds(750, 255, 206, 36);
+		comboBox1.setSelectedIndex(-1);
+		add(comboBox1);
+//		SelectedCourse=CD.Courses[0];
+		comboBox1.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				SelectedCourse = (String) comboBox1.getSelectedItem();
+			}
+		});
+
+		
 		JButton btnDeleteCourse = new JButton("DELETE COURSE");
 		btnDeleteCourse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -97,9 +114,12 @@ public class CoursePanel extends JPanel {
 				}
 			}
 		});
+		
+		
+		
 		btnDeleteCourse.setForeground(new Color(20, 112, 185));
 		btnDeleteCourse.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnDeleteCourse.setBounds(622, 271, 206, 36);
+		btnDeleteCourse.setBounds(750,400, 206, 36);
 		add(btnDeleteCourse);
 
 		JButton btnAddNewCourse = new JButton("ADD NEW COURSE");
@@ -111,7 +131,7 @@ public class CoursePanel extends JPanel {
 		});
 		btnAddNewCourse.setForeground(new Color(20, 112, 185));
 		btnAddNewCourse.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnAddNewCourse.setBounds(400, 318, 444, 88);
+		btnAddNewCourse.setBounds(530, 520, 300, 50);
 		add(btnAddNewCourse);
 
 		JButton btnNewButton = new JButton("BACK");
@@ -126,13 +146,50 @@ public class CoursePanel extends JPanel {
 		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 
+		
+		
+		
 		JLabel lblOnlineExamination = new JLabel("MANAGE COURSES");
-		lblOnlineExamination.setForeground(new Color(20, 112, 185));
+		lblOnlineExamination.setForeground(new Color(255,255,255));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
 		lblOnlineExamination.setBounds(350, 30, 603, 105);
 		add(lblOnlineExamination);
+		
+		
+		JLabel lblNewLabel4 = new JLabel("");
+		lblNewLabel4.setIcon(new ImageIcon("assets\\C.png"));
+		lblNewLabel4.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel4.setBounds(700,200, 300, 300);
+		add(lblNewLabel4);
+		
+		
+		JLabel lblNewLabel3 = new JLabel("");
+		lblNewLabel3.setIcon(new ImageIcon("assets\\C.png"));
+		lblNewLabel3.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel3.setBounds(330,200, 300, 300);
+		add(lblNewLabel3);
+		
+		JLabel lblNewLabel5 = new JLabel("");
+		lblNewLabel5.setIcon(new ImageIcon("assets\\C.png"));
+		lblNewLabel5.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel5.setBounds(480,500, 400, 100);
+		add(lblNewLabel5);
+		
+
+		JLabel lblNewLabel1 = new JLabel("");
+		lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
+		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel1.setBounds(5, 5, 500, 150);
+		add(lblNewLabel1);
+		
+		JLabel lblNewLabel2 = new JLabel("");
+		lblNewLabel2.setIcon(new ImageIcon("assets\\A.png"));
+		lblNewLabel2.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel2.setBounds(4,4, 1920, 150);
+		add(lblNewLabel2);
+		
 
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));

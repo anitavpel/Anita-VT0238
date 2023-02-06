@@ -134,7 +134,7 @@ public class UserPanel extends JPanel {
 		btnStartTest.setForeground(new Color(255,255,255));
 		btnStartTest.setBackground(new Color(20,112,185));
 		btnStartTest.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnStartTest.setBounds(750, 298, 166, 42);
+		btnStartTest.setBounds(770, 298, 166, 42);
 		add(btnStartTest);
 
 		
@@ -152,7 +152,7 @@ public class UserPanel extends JPanel {
 		comboBox = new JComboBox<String>();
 		comboBox.setModel(new DefaultComboBoxModel<String>(Courses));
 		comboBox.setFont(new Font("Kayak Sans", Font.BOLD, 21));
-		comboBox.setBounds(501, 298, 200, 36);
+		comboBox.setBounds(520, 298, 200, 36);
 		comboBox.setSelectedIndex(-1);
 		add(comboBox);
 		comboBox.addActionListener(new ActionListener() {
@@ -170,7 +170,7 @@ public class UserPanel extends JPanel {
 		JLabel lblSelectCourse = new JLabel("SELECT COURSE :");
 		lblSelectCourse.setForeground(new Color(20, 112, 185));
 		lblSelectCourse.setFont(new Font("Kayak Sans", Font.BOLD, 25));
-		lblSelectCourse.setBounds(270, 300, 300, 28);
+		lblSelectCourse.setBounds(290, 300, 300, 28);
 		add(lblSelectCourse);
 		
 		
@@ -232,4 +232,6 @@ public class UserPanel extends JPanel {
 		lblNewLabel.setBounds(0, 0, 1920, 1080);
 		add(lblNewLabel);
 	}
+
+	
 }

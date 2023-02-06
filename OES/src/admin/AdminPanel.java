@@ -17,8 +17,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
-import javax.swing.border.MatteBorder;
-
 import login.LoginPanel;
 import main.MainFrame;
 
@@ -40,7 +38,7 @@ public class AdminPanel extends JPanel implements FocusListener{
 		pwdPassword.setEchoChar('*');
 		pwdPassword.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		pwdPassword.setText("Password");
-		pwdPassword.setBounds(540, 230, 215, 40);
+		pwdPassword.setBounds(520, 300, 316, 36);
 		add(pwdPassword);
 		pwdPassword.addFocusListener(this);
 	
@@ -50,13 +48,13 @@ public class AdminPanel extends JPanel implements FocusListener{
 		txtUsername.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 		txtUsername.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		txtUsername.setText("USERNAME");
-		txtUsername.setBounds(540, 190, 215, 36);
+		txtUsername.setBounds(520,250, 316, 36);
 		add(txtUsername);
 		txtUsername.setColumns(10);
 		txtUsername.addFocusListener(this);
 		
 		JButton btnLogin = new JButton("LOGIN");
-		btnLogin.setToolTipText("LOGIN");
+		
 		btnLogin.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent arg0) {
@@ -72,10 +70,10 @@ public class AdminPanel extends JPanel implements FocusListener{
 				}
 			}
 		});
-		btnLogin.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
-		btnLogin.setForeground(new Color(20, 112, 185));
+		btnLogin.setForeground(new Color(255,255,255));
+		btnLogin.setBackground(new Color(20, 112, 185));
 		btnLogin.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnLogin.setBounds(550, 300, 190, 56);
+		btnLogin.setBounds(560, 380, 241, 50);
 		add(btnLogin);
 		
 	
@@ -93,10 +91,10 @@ public class AdminPanel extends JPanel implements FocusListener{
 		
 		JLabel lblOnlineExamination = new JLabel("ADMIN LOGIN");
 		lblOnlineExamination.setForeground(new Color(20, 112, 185));
-		lblOnlineExamination.setBackground(new Color(0, 0, 140));
+		lblOnlineExamination.setBackground(new Color(20, 112, 185));
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(425, 46, 450, 150);
+		lblOnlineExamination.setBounds(455, 100, 450, 170);
 		add(lblOnlineExamination);
 		
 		

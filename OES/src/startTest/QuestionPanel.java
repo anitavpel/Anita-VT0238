@@ -91,7 +91,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 			questionAttempted.setBounds(10, 500, 144, 35);
 			questionAttempted.setVisible(true);
 			questionRemaining=new JLabel();
-			questionRemaining.setBounds(650, 500, 144, 35);
+			questionRemaining.setBounds(780, 500, 144, 35);
 			questionRemaining.setVisible(true);
 			add(questionAttempted);
 			add(questionRemaining);
@@ -138,7 +138,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 				    JButton	Next = new JButton("NEXT");
 					Next.setForeground(new Color(0, 0, 140));
 					Next.setFont(new Font("Kayak Sans", Font.BOLD, 20));
-					Next.setBounds(650, 450, 102, 35);
+					Next.setBounds(780, 450, 102, 35);
 					Next.setFocusable(false);
 					add(Next);
 					Next.addActionListener(new ActionListener() {
@@ -206,7 +206,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 		add(panel);
 		
 		panel.setBackground(Color.WHITE);
-		panel.setBounds(10,10,700,430);
+		panel.setBounds(10,10,900,430);
 		panel.setLayout(null);
 		
 		panel.removeAll();
@@ -214,7 +214,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 		
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(65,20, 630, 220);
+		scrollPane.setBounds(65,20, 800, 220);
 		panel.add(scrollPane);
 		
 		JLabel lblQXx = new JLabel("Q."+q_number);
@@ -244,7 +244,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 			System.out.println(e);
 		}
 		o_1.setFont(new Font("Kayak Sans", Font.BOLD, 15));
-		o_1.setBounds(65, 272, 630, 23);
+		o_1.setBounds(65, 272, 800, 23);
 		panel.add(o_1);
 		o_1.addActionListener(this);
 		
@@ -255,7 +255,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 			System.out.println(e);
 		}
 		o_2.setFont(new Font("Kayak Sans", Font.BOLD, 15));
-		o_2.setBounds(65, 298, 630, 23);
+		o_2.setBounds(65, 298, 800, 23);
 		panel.add(o_2);
 		o_2.addActionListener(this);
 					
@@ -266,7 +266,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 			System.out.println(e);
 		}
 		o_3.setFont(new Font("Kayak Sans", Font.BOLD, 15));
-		o_3.setBounds(65, 324, 630, 23);
+		o_3.setBounds(65, 324, 800, 23);
 		panel.add(o_3);
 		o_3.addActionListener(this);
 		
@@ -277,7 +277,7 @@ public class QuestionPanel extends JPanel implements ActionListener{
 			System.out.println(e);
 		}
 		o_4.setFont(new Font("Kayak Sans", Font.BOLD, 15));
-		o_4.setBounds(65, 350, 630, 23);
+		o_4.setBounds(65, 350, 800, 23);
 		panel.add(o_4);
 		o_4.addActionListener(this);
 		

@@ -108,24 +108,24 @@ public class CourseResult{
 		String ColHeads[]={"Username","Name","Total Ques.","Attempted Ques.","Correct Ques.","Wrong Ques.","Total Marks","Obtained Marks","Percentage","Time taken","Test date"};
 		
 		JLabel lblCourseName_1 = new JLabel(CourseName);
-		lblCourseName_1.setForeground(new Color(20, 112, 185));
+		lblCourseName_1.setForeground(new Color(255,255,255));
 		lblCourseName_1.setFont(new Font("Kayak Sans", Font.BOLD, 22));
-		lblCourseName_1.setBounds(906, 84, 180, 23);
+		lblCourseName_1.setBounds(1200, 100, 180, 23);
 		p.add(lblCourseName_1);
 		
-		JLabel lblCourseName = new JLabel("Course Name : ");
-		lblCourseName.setForeground(new Color(20, 112, 185));
-		lblCourseName.setFont(new Font("Kayak Sans", Font.PLAIN, 18));
-		lblCourseName.setBounds(800, 84, 113, 23);
+		JLabel lblCourseName = new JLabel("COURSE NAME: ");
+		lblCourseName.setForeground(new Color(255,255,255));
+		lblCourseName.setFont(new Font("Kayak Sans", Font.BOLD, 22));
+		lblCourseName.setBounds(1050,100, 113, 23);
 		p.add(lblCourseName);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(150, 118, 961, 430);
+		panel.setBounds(10, 160, 1250, 430);
 		p.add(panel);
 		panel.setLayout(null);
 		
 		Result result = new Result(11,ColHeads,DATA.length,DATA);
-		result.setBounds(10, 11, 951, 418);
+		result.setBounds(10, 11, 1250, 418);
 		panel.add(result);
 			
 		btnNewButton.setForeground(new Color(255,255,255));
@@ -134,13 +134,25 @@ public class CourseResult{
 		btnNewButton.setBounds(10, 600, 89, 50);
 		p.add(btnNewButton);
 		
-		JLabel lblOnlineExamination = new JLabel("Course Result");
-		lblOnlineExamination.setForeground(new Color(20, 112, 185));
+		JLabel lblOnlineExamination = new JLabel("COURSE RESULT");
+		lblOnlineExamination.setForeground(new Color(255,255,255));
 		lblOnlineExamination.setBackground(Color.pink);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(400, 33, 343, 71);
+		lblOnlineExamination.setBounds(400, 40, 535, 57);
 		p.add(lblOnlineExamination);
+		
+		JLabel lblNewLabel1 = new JLabel("");
+		lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
+		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel1.setBounds(5, 5, 500, 150);
+		p.add(lblNewLabel1);
+		
+		JLabel lblNewLabel2 = new JLabel("");
+		lblNewLabel2.setIcon(new ImageIcon("assets\\A.png"));
+		lblNewLabel2.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel2.setBounds(4,4, 1920, 140);
+		p.add(lblNewLabel2);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));

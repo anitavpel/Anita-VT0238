@@ -29,7 +29,7 @@ public class Result extends JPanel {
 		{
 			ScrollPane jsp=new ScrollPane();
 			jsp.add(makeResult());
-			jsp.setBounds(0, 0, 951, 420);
+			jsp.setBounds(0, 0, 1240, 420);
 			add(jsp);
 		}
 		else
@@ -42,7 +42,7 @@ public class Result extends JPanel {
 		Panel p=new Panel();
 		p.setBounds(new Rectangle(0, 0, 200+150*noOfCol,100+32*noOfRows));
 		
-		p.setBackground(new Color(255, 215, 0));
+		p.setBackground(new Color(174, 226, 255));
 		p.setLayout(null);
 		
 		int distanceBetweenTwoRows=10;

@@ -1,5 +1,6 @@
 package user;
 import java.awt.Color;
+
 import java.awt.ComponentOrientation;
 import java.awt.Cursor;
 import java.awt.Font;
@@ -14,8 +15,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
-import javax.swing.border.MatteBorder;
-
 import main.MainFrame;
 import javax.swing.JTextField;
 import java.awt.SystemColor;
@@ -73,8 +72,9 @@ public class FrogotPassword extends JPanel implements FocusListener{
 				}
 			}
 		});
-		btnGetYourPassword.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
-		btnGetYourPassword.setForeground(new Color(20, 112, 185));
+		
+		btnGetYourPassword.setForeground(new Color(255,255,255));
+		btnGetYourPassword.setBackground(new Color(20, 112, 185));
 		btnGetYourPassword.setFont(new Font("Kayak Sans", Font.BOLD, 10));
 		btnGetYourPassword.setBounds(600, 377, 133, 29);
 		add(btnGetYourPassword);
@@ -102,12 +102,27 @@ public class FrogotPassword extends JPanel implements FocusListener{
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("FORGOT PASSWORD");
-		lblOnlineExamination.setForeground(new Color(20, 112, 185));
+		lblOnlineExamination.setForeground(new Color(255,255,255));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(425, 46, 500, 200);
+		lblOnlineExamination.setBounds(425, 20, 500, 200);
 		add(lblOnlineExamination);
+		
+		
+		
+		JLabel lblNewLabel1 = new JLabel("");
+		lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
+		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel1.setBounds(5, 5, 500, 150);
+		add(lblNewLabel1);
+		
+		JLabel lblNewLabel2 = new JLabel("");
+		lblNewLabel2.setIcon(new ImageIcon("assets\\A.png"));
+		lblNewLabel2.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel2.setBounds(4,4, 1920, 150);
+		add(lblNewLabel2);
+				
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));

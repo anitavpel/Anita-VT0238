@@ -125,12 +125,6 @@ public class BeginTest extends JPanel {
 		c.setBounds(1100,11,166,42);
 		c.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(20, 112, 185)));
 		
-		add(c);
-		//add QuestionPanel
-		questionPanel= new QuestionPanel(courseName);
-		questionPanel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(20, 112, 185)));
-		questionPanel.setBounds(100, 71, 1000, 1000);
-		add(questionPanel);
 		
 		//add submit button 
 		setLayout(null);
@@ -163,12 +157,22 @@ public class BeginTest extends JPanel {
 				
 			}
 		});
-		btnSubmit.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(20, 112, 185)));
-		btnSubmit.setForeground(new Color(20, 112, 185));
+		
+		btnSubmit.setForeground(new Color(255,255,255));
+		btnSubmit.setBackground(new Color(20,112,185));
 		btnSubmit.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 		btnSubmit.setBounds(1150, 550, 120, 50);
 		btnSubmit.setFocusable(false);
 		add(btnSubmit);
+		
+		
+		
+		add(c);
+		//add QuestionPanel
+		questionPanel= new QuestionPanel(courseName);
+		questionPanel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(20, 112, 185)));
+		questionPanel.setBounds(4, 100, 1920, 1080);
+		add(questionPanel);
 		
 		
 		JLabel lblNewLabel2 = new JLabel("");
