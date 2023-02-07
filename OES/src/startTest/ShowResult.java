@@ -59,7 +59,7 @@ public class ShowResult extends JPanel {
 		Discard.setForeground(new Color(255,255,255));
 		Discard.setBackground(new Color(20,112,185));
 		Discard.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		Discard.setBounds(5, 550, 152, 50);
+		Discard.setBounds(600, 550, 152, 50);
 		add(Discard);
 		
 		JLabel lblOnlineExamination = new JLabel("Thank You, Your response has been saved!");

@@ -36,11 +36,10 @@ public class LoginAttempts extends JPanel {
 	public LoginAttempts(String username) {
 		setLayout(null);
 		JLabel lblOnlineExamination = new JLabel("EDIT ATTEMPTS");
-	lblOnlineExamination.setForeground(new Color(20, 112, 185));
-	lblOnlineExamination.setBackground(new Color(20, 112, 185));
+	lblOnlineExamination.setForeground(new Color(255,255,255));
 	lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 	lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
-	lblOnlineExamination.setBounds(425, 46, 450, 150);
+	lblOnlineExamination.setBounds(350, 50, 603, 105);
 	add(lblOnlineExamination);
 	
 	
@@ -99,6 +98,20 @@ public class LoginAttempts extends JPanel {
 	btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
 	btnNewButton.setBounds(10, 600, 89, 50);
 	add(btnNewButton);
+	
+	
+
+	JLabel lblNewLabel1 = new JLabel("");
+	lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
+	lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+	lblNewLabel1.setBounds(5, 5, 500, 150);
+	add(lblNewLabel1);
+	
+	JLabel lblNewLabel2 = new JLabel("");
+	lblNewLabel2.setIcon(new ImageIcon("assets\\A.png"));
+	lblNewLabel2.setHorizontalAlignment(SwingConstants.LEFT);
+	lblNewLabel2.setBounds(4,4, 1920, 150);
+	add(lblNewLabel2);
 	
 	JLabel lblNewLabel = new JLabel("");
 	lblNewLabel.setBorder(new LineBorder(new Color(20, 112, 185), 4));

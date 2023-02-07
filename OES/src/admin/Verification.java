@@ -2,6 +2,7 @@ package admin;
 
 import java.awt.Color;
 
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,8 +18,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
-import javax.swing.border.MatteBorder;
-
 import database.Connect;
 import database.UserDetails;
 import main.MainFrame;
@@ -101,10 +100,10 @@ public class Verification extends JPanel {
 				new UserDetails(Username,true,"Verification");
 			}
 		});
-		btnSearch.setBorder(new MatteBorder(2, 2, 1, 1, (Color) new Color(20, 112, 185)));
-		btnSearch.setForeground(new Color(20, 112, 185));
+		btnSearch.setForeground(new Color(255,255,255));
+		btnSearch.setBackground(new Color(20,112,185));
 		btnSearch.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnSearch.setBounds(739, 223, 125, 36);
+		btnSearch.setBounds(850, 223, 125, 36);
 		add(btnSearch);
 		
 		JButton btnVerify = new JButton("VERIFY");
@@ -135,18 +134,18 @@ public class Verification extends JPanel {
 		btnDelete.setForeground(new Color(255,255,255));
 		btnDelete.setBackground(new Color(20, 112, 185));
 		btnDelete.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnDelete.setBounds(215, 364, 125, 36);
+		btnDelete.setBounds(400, 364, 125, 36);
 		add(btnDelete);
 		JLabel lblUsersForVerification = new JLabel("Users for verification");
 		lblUsersForVerification.setForeground(new Color(20, 112, 185));
 		lblUsersForVerification.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		lblUsersForVerification.setBounds(234, 223, 190, 28);
+		lblUsersForVerification.setBounds(320, 223, 190, 28);
 		add(lblUsersForVerification);
 		
 		comboBox = new JComboBox<String>();
 		comboBox.setModel(new DefaultComboBoxModel<String>(verify));
 		comboBox.setFont(new Font("Kayak Sans", Font.BOLD, 16));
-		comboBox.setBounds(434, 223, 266, 30);
+		comboBox.setBounds(520, 223, 266, 30);
 		add(comboBox);
 		Username=verify[0];
 		comboBox.addActionListener(new ActionListener() {
@@ -165,16 +164,29 @@ public class Verification extends JPanel {
 		btnNewButton.setForeground(new Color(255,255,255));
 		btnNewButton.setBackground(new Color(20, 112, 185));
 		btnNewButton.setFont(new Font("Kayak Sans", Font.BOLD, 18));
-		btnNewButton.setBounds(10, 512, 125, 36);
+		btnNewButton.setBounds(10, 600, 89, 50);
 		add(btnNewButton);
 		
 		JLabel lblOnlineExamination = new JLabel("VERIFICATION");
-		lblOnlineExamination.setForeground(new Color(20, 112, 185));
+		lblOnlineExamination.setForeground(new Color(255,255,255));
 		lblOnlineExamination.setBackground(Color.GREEN);
 		lblOnlineExamination.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOnlineExamination.setFont(new Font("Kayak Sans", Font.BOLD, 41));
-		lblOnlineExamination.setBounds(194, 28, 603, 105);
+		lblOnlineExamination.setBounds(350, 50, 603, 105);
 		add(lblOnlineExamination);
+		
+		
+		JLabel lblNewLabel1 = new JLabel("");
+		lblNewLabel1.setIcon(new ImageIcon("assets\\logo-web-transparent.png"));
+		lblNewLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel1.setBounds(5, 5, 500, 150);
+		add(lblNewLabel1);
+		
+		JLabel lblNewLabel2 = new JLabel("");
+		lblNewLabel2.setIcon(new ImageIcon("assets\\A.png"));
+		lblNewLabel2.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel2.setBounds(4,4, 1920, 150);
+		add(lblNewLabel2);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("assets\\image.jpg"));
